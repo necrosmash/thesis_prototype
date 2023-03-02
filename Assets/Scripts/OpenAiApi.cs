@@ -10,9 +10,10 @@ public class OpenAiApi : MonoBehaviour
     string prompt;
 
     public Model model;
+    public string apiKey;
 
-    public string daVinciUrl = "https://api.openai.com/v1/completions";
-    public string chatGptUrl = "https://api.openai.com/v1/chat/completions";
+    private string daVinciUrl = "https://api.openai.com/v1/completions";
+    private string chatGptUrl = "https://api.openai.com/v1/chat/completions";
 
     public enum Model
     {
@@ -47,7 +48,7 @@ public class OpenAiApi : MonoBehaviour
     private UnityWebRequest GenerateRequest(string url, string postData)
     {
         UnityWebRequest request = UnityWebRequest.Post(url, postData, "application/json");
-        request.SetRequestHeader("Authorization", "Bearer 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");
+        request.SetRequestHeader("Authorization", "Bearer " + apiKey);
 
         return request;
     }
