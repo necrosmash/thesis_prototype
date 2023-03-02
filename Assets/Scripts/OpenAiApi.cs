@@ -18,7 +18,8 @@ public class OpenAiApi : MonoBehaviour
     public enum Model
     {
         davinci,
-        chatgpt
+        chatgpt,
+        test
     }
 
     // Start is called before the first frame update
@@ -38,9 +39,12 @@ public class OpenAiApi : MonoBehaviour
             case Model.chatgpt:
                 StartCoroutine(Post(GenerateRequest(chatGptUrl, chatgptPostData)));
                 break;
-            default:
             case Model.davinci:
                 StartCoroutine(Post(GenerateRequest(daVinciUrl, davinciPostData)));
+                break;
+            default:
+            case Model.test:
+                response = DaVinciResponse.GenerateTestResponse();
                 break;
         }
     }
