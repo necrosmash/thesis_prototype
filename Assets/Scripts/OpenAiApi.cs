@@ -6,11 +6,15 @@ using UnityEngine.Networking;
 
 public class OpenAiApi : MonoBehaviour
 {
-    APIResponse response;
-    string prompt;
+    public APIResponse response { get; private set; }
+    
+    private string prompt;
 
-    public Model model;
-    public string apiKey;
+    [SerializeField]
+    private Model model;
+
+    [SerializeField]
+    private string apiKey;
 
     private string daVinciUrl = "https://api.openai.com/v1/completions";
     private string chatGptUrl = "https://api.openai.com/v1/chat/completions";
