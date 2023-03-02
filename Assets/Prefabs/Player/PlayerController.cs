@@ -4,21 +4,17 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : GamePiece
 {
 
-    public Grid grid;
-    public Tilemap tilemap;
-
-    Vector3Int startingTile = new Vector3Int(0, 0, 0);
-    Vector3Int currentTile;
+    void Awake(){
+        base.Awake();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
-        movePlayer(startingTile);
-
+        base.Start();
     }
 
     // Update is called once per frame
@@ -45,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (tempNextTile != currentTile){
             if (checkMoveLegal(tempNextTile)){
-                movePlayer(tempNextTile);
+                movePiece(tempNextTile);
             }
         }
 
@@ -59,11 +55,6 @@ public class PlayerMovement : MonoBehaviour
 
         return false;
 
-    }
-
-    void movePlayer(Vector3Int newTile){
-        transform.position = grid.GetCellCenterWorld(newTile);
-        currentTile = newTile;
     }
 
 }
