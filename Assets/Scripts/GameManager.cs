@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
-    // public GameObject obstaclePrefab;
+    public GameObject obstaclePrefab;
 
     PlayerController player;
     List<EnemyController> enemies = new List<EnemyController>();
+    List<ObstacleController> obstacles = new List<ObstacleController>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour
         return tempEnemy;
 
     }
+
+
 
 
 
