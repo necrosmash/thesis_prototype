@@ -15,7 +15,7 @@ public class GamePiece : MonoBehaviour
     protected Tilemap tilemap;
 
 
-    protected void Awake(){
+    protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         grid = gameManager.grid;
@@ -28,18 +28,18 @@ public class GamePiece : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    protected void Start()
+    protected virtual void Start()
     {
         movePiece(startingTile);
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
-        
+
     }
 
-    protected void movePiece(Vector3Int newTile){
+    protected virtual void movePiece(Vector3Int newTile){
 
         transform.position = grid.GetCellCenterWorld(newTile);
         currentTile = newTile;

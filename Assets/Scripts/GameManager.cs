@@ -42,44 +42,7 @@ public class GameManager : MonoBehaviour
             // TODO: Replace positions with data from API or randomised data
             EnemyController tempEnemy = createEnemy(new Vector3Int(i+1, i+1, 0));
 
-            tempEnemy.name = orcs[i].name;
-            tempEnemy.description = orcs[i].description;
-
-            switch (orcs[i].weapon){
-                case "sword":{
-                    tempEnemy.weapon = EnemyController.Weapon.Sword;
-                    break;
-                }
-                case "hammer":{
-                    tempEnemy.weapon = EnemyController.Weapon.Hammer;
-                    break;
-                }
-                case "bow":{
-                    tempEnemy.weapon = EnemyController.Weapon.Bow;
-                    break;
-                }
-                default:{
-                    throw new BadBattleInfoException("Weapon does not exist: " + orcs[i].weapon);
-                }
-            }
-
-            switch (orcs[i].size){
-                case "large":{
-                    tempEnemy.size = EnemyController.Size.Large;
-                    break;
-                }
-                case "medium":{
-                    tempEnemy.size = EnemyController.Size.Medium;
-                    break;
-                }
-                case "small":{
-                    tempEnemy.size = EnemyController.Size.Small;
-                    break;
-                }
-                default:{
-                    throw new BadBattleInfoException("Size does not exist: " + orcs[i].size);
-                }
-            }
+            tempEnemy.orc = orcs[i];
 
             enemies.Add(tempEnemy);
 

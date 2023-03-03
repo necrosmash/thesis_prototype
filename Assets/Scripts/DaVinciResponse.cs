@@ -17,6 +17,7 @@ public class DaVinciResponse : APIResponse
         }
 
         battleInfo = JsonUtility.FromJson<BattleInfo>(choices[0].text);
+        battleInfo.setup();
     }
 
     [System.Serializable]
@@ -69,6 +70,8 @@ public class DaVinciResponse : APIResponse
         response.choices[0].index = 0;
         response.choices[0].logprobs = "";
         response.choices[0].text = "\n\n{\n    \"orcs\": [\n        {\n            \"name\": \"Uzguk the Undefeated\",\n            \"description\": \"A giant, hulking orc, Uzguk stands at least eight feet tall and appears to be made of pure muscle. He wears heavy armor, and wields a huge two-handed sword.\",\n            \"weapon\": \"sword\",\n            \"size\": \"large\"\n        },\n        {\n            \"name\": \"Grimgor the Ruthless\",\n            \"description\": \"Grimgor is a much smaller orc, but is no less menacing. He has a wild look in his eyes and carries a heavy hammer.\",\n            \"weapon\": \"hammer\",\n            \"size\": \"medium\"\n        },\n        {\n            \"name\": \"Krok the Swift\",\n            \"description\": \"Krok is a lithe and agile orc who carries a bow and a quiver of arrows.\",\n            \"weapon\": \"bow\",\n            \"size\": \"small\"\n        }\n    ],\n    \"openingScene\": \"The elf stands alone in the clearing, his heart pounding as he faces the three orcs that have cornered him. In the lead is a giant, hulking orc, Uzguk the Undefeated, who wields a huge two-handed sword. Behind him stands Grimgor the Ruthless, a much smaller orc who carries a heavy hammer. Last but not least is Krok the Swift, a lithe and agile orc who carries a bow and a quiver of arrows.\"\n}";
+
+        response.battleInfo.setup();
 
         return response;
     }

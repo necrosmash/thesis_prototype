@@ -7,18 +7,18 @@ using UnityEngine.Tilemaps;
 public class PlayerController : GamePiece
 {
 
-    void Awake(){
+    override protected void Awake(){
         base.Awake();
     }
 
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
         base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    override protected void Update()
     {
         Vector3Int tempNextTile = currentTile;
 
