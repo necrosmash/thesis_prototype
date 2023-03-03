@@ -17,7 +17,6 @@ public class ChatGPTResponse : APIResponse
         }
 
         battleInfo = JsonUtility.FromJson<BattleInfo>(choices[0].message.content);
-        battleInfo.setup();
     }
 
     [System.Serializable]
