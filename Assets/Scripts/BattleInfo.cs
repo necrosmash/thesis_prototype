@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class BattleInfo
 {
@@ -16,14 +17,34 @@ public class BattleInfo
         public string weapon;
         public string size;
 
+        public Weapon weaponEnum;
+        public Size sizeEnum;
+
+
+
+        public enum Size{
+            Small,
+            Medium,
+            Large
+        }
+
+        public enum Weapon{
+            Sword,
+            Hammer,
+            Bow
+        }
+
         // needed for blank prompt info
         public Orc()
         {
+            
             name = string.Empty;
             description = string.Empty;
             weapon = string.Empty;
             size = string.Empty;
+
         }
+
     }
 
     // needed for blank prompt info
@@ -31,4 +52,5 @@ public class BattleInfo
     {
         orcs = new Orc[1];
     }
+
 }
