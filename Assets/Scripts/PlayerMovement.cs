@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 
@@ -24,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MenuCanvas.IsRendered) return;
+
         Vector3Int tempNextTile = currentTile;
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -41,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             tempNextTile.x += 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
         }
 
         if (tempNextTile != currentTile){
