@@ -22,7 +22,7 @@ public class LogViewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!openingSceneRendered && apiClient.response.battleInfo.openingScene != null)
+        if (!openingSceneRendered && apiClient.response != null && apiClient.response.battleInfo.openingScene != null)
         {
             inputField.text = apiClient.response.battleInfo.openingScene;
             inputField.text = "this is some text added after, I guess we can add new text at the top?\n" + inputField.text;
