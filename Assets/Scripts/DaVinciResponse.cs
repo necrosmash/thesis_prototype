@@ -41,18 +41,25 @@ public class DaVinciResponse : APIResponse
         response.battleInfo.orcs[0].name = "Uzguk the Undefeated";
         response.battleInfo.orcs[0].size = "large";
         response.battleInfo.orcs[0].weapon = "sword";
+        response.battleInfo.orcs[0].sizeEnum = BattleInfo.Orc.Size.Large;
+        response.battleInfo.orcs[0].weaponEnum = BattleInfo.Orc.Weapon.Sword;
 
         response.battleInfo.orcs[1] = new BattleInfo.Orc();
         response.battleInfo.orcs[1].description = "Grimgor is a much smaller orc, but is no less menacing. He has a wild look in his eyes and carries a heavy hammer.";
         response.battleInfo.orcs[1].name = "Grimgor the Ruthless";
         response.battleInfo.orcs[1].size = "medium";
         response.battleInfo.orcs[1].weapon = "hammer";
+        response.battleInfo.orcs[1].sizeEnum = BattleInfo.Orc.Size.Medium;
+        response.battleInfo.orcs[1].weaponEnum = BattleInfo.Orc.Weapon.Hammer;
+
 
         response.battleInfo.orcs[2] = new BattleInfo.Orc();
         response.battleInfo.orcs[2].description = "Krok is a lithe and agile orc who carries a bow and a quiver of arrows.";
         response.battleInfo.orcs[2].name = "Krok the Swift";
         response.battleInfo.orcs[2].size = "small";
         response.battleInfo.orcs[2].weapon = "bow";
+        response.battleInfo.orcs[2].sizeEnum = BattleInfo.Orc.Size.Small;
+        response.battleInfo.orcs[2].weaponEnum = BattleInfo.Orc.Weapon.Bow;
 
         response.created = "1677767171";
         response.id = "cmpl-6peAlHEEi7BavkFMc6phwg6VMIefN";
