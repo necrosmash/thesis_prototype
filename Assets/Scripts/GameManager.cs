@@ -66,16 +66,3 @@ public class GameManager : MonoBehaviour
 
 
 }
-
-public class BadBattleInfoException : System.Exception { 
-
-    public BadBattleInfoException()
-    {
-    }
-
-    public BadBattleInfoException(string message)
-        : base(message)
-    {
-    }
-
-}

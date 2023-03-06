@@ -45,16 +45,6 @@ public class BattleInfo
 
         }
 
-        public void setup()
-        {
-
-			//weaponEnum = (Weapon) System.Enum.Parse(typeof(Weapon), weapon);
-			//sizeEnum = (Size) System.Enum.Parse(typeof(Size), size);
-
-            Debug.Log("Hello setup");
-
-		}
-
     }
 
     // needed for blank prompt info
@@ -62,15 +52,5 @@ public class BattleInfo
     {
         orcs = new Orc[1];
     }
-
-	public void setup(){
-
-		for (int i = 0; i < orcs.Length; i++){
-			
-			//orcs[i].setup();
-
-		}
-
-	}
 
 }
