@@ -7,8 +7,11 @@ using UnityEngine.Tilemaps;
 public class GamePiece : MonoBehaviour
 {
 
-    public Vector3Int startingTile;
+    Vector3Int startingTile;
     public Vector3Int currentTile {get; protected set;}
+
+    // This is a gibberish value required to check if the piece was initialised
+    Vector3Int DEFAULT_STARTING_VALUE = new Vector3Int(-1, -1, -1);
 
     protected GameManager gameManager;
     protected Grid grid;
@@ -20,17 +23,15 @@ public class GamePiece : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         grid = gameManager.grid;
         tilemap = gameManager.tilemap;
-
-        if (startingTile == null){
-            startingTile = new Vector3Int(0, 0, 0);
-        }
+        
+        currentTile = DEFAULT_STARTING_VALUE;
 
     }
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        movePiece(startingTile);
+
     }
 
     // Update is called once per frame
@@ -43,6 +44,29 @@ public class GamePiece : MonoBehaviour
 
         transform.position = grid.GetCellCenterWorld(newTile);
         currentTile = newTile;
+
+    }
+
+    public void initialise(Vector3Int newStartingTile)
+    {
+
+        if (currentTile != DEFAULT_STARTING_VALUE)
+        {
+            throw new BadInitialisationException("Already initialised");
+        }
+
+        startingTile = newStartingTile;
+        movePiece(startingTile);
+    }
+
+}
+
+public class BadInitialisationException : System.Exception
+{
+
+    public BadInitialisationException() : base() { }
+    public BadInitialisationException(string message) : base(message)
+    {
 
     }
 }
