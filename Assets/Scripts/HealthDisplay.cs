@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthDisplay : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class HealthDisplay : MonoBehaviour
 
     private int health;
 
+    // can use this to stop processing Update in other GOs
+    public static bool GameOverCalled { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +28,7 @@ public class HealthDisplay : MonoBehaviour
             heart1, heart2 , heart3
         };
 
+        GameOverCalled = false;
         health = 3;
     }
 
@@ -30,8 +36,6 @@ public class HealthDisplay : MonoBehaviour
     {
         health = health - qty < 0 ? 0 : health - qty;
         renderHealth();
-
-        if (health < 1) GameOver();
     }
 
     public void Heal(int qty = 1)
@@ -40,26 +44,34 @@ public class HealthDisplay : MonoBehaviour
         renderHealth();
     }
 
-    // not used now, but can be uncommented to demonstrate the effect.
-    // just change `health` in `Start()` to whatever value you want to display.
-    /*void Update()
+    private void Update()
     {
-        renderHealth();
-    }*/
+        DamageKeystroke(); // for testing
+
+        if (health < 1 && !GameOverCalled) GameOver();
+    }
 
     private void GameOver()
     {
-        Debug.Log("GAME OVER!! OH SHIT!!!!");
+        GameOverCalled = true;
+        SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
     }
 
     private void renderHealth()
     {
         // full hearts for the health we have
         // empty hearts for the health we don't have
-        for(int i = hearts.Count - 1; i >= 0; i--)
+        for (int i = hearts.Count - 1; i >= 0; i--)
         {
             if (health > i) hearts[i].sprite = heartFull;
             else hearts[i].sprite = heartEmpty;
         }
     }
+
+    private void DamageKeystroke()
+    {
+        if (MenuCanvas.IsRendered) return;
+        if (Input.GetKeyDown(KeyCode.H)) health -= 1;
+    }
+
 }

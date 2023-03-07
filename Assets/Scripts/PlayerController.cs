@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 
@@ -20,6 +21,8 @@ public class PlayerController : GamePiece
     // Update is called once per frame
     override protected void Update()
     {
+        if (MenuCanvas.IsRendered) return;
+
         Vector3Int tempNextTile = currentTile;
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
