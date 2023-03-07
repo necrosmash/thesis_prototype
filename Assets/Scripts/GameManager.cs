@@ -13,16 +13,22 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
-    // public GameObject obstaclePrefab;
+    public GameObject obstaclePrefab;
 
     PlayerController player;
     List<EnemyController> enemies = new List<EnemyController>();
+    List<ObstacleController> obstacles = new List<ObstacleController>();
+
+    const int MIN_OBSTACLES = 6;
+    const int MAX_OBSTACLES = 12;
+
 
     // Start is called before the first frame update
     void Start()
     {
 
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerController>();
+        player.initialise(new Vector3Int(0, 0, 0));
         
     }
 
@@ -36,11 +42,20 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // Create enemies
         BattleInfo.Orc[] orcs = openaiapi.response.battleInfo.orcs;
         for (int i = 0; i < orcs.Length; i++){
 
-            // TODO: Replace positions with data from API or randomised data
-            EnemyController tempEnemy = createEnemy(new Vector3Int(i+1, i+1, 0));
+
+            Vector3Int startTile = new Vector3Int(0, 0, 0);
+            do{
+                
+                // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
+                startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
+
+            }while (getPieceAtTile(startTile) != null);
+
+            EnemyController tempEnemy = (EnemyController) createPiece(startTile, enemyPrefab);
 
             tempEnemy.orc = orcs[i];
 
@@ -48,17 +63,54 @@ public class GameManager : MonoBehaviour
 
         }
 
+        // Create obstacles
+        for (int i = 0; i < Random.Range(MIN_OBSTACLES, MAX_OBSTACLES + 1); i++){
+
+            Vector3Int startTile = new Vector3Int(0, 0, 0);
+            do{
+
+                // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
+                startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
+
+            }while (getPieceAtTile(startTile) != null);
+
+            ObstacleController tempObstacle = (ObstacleController) createPiece(startTile, obstaclePrefab);
+
+            obstacles.Add(tempObstacle);
+
+        }
+
         
     }
 
-    EnemyController createEnemy(Vector3Int newStartingTile){
+    GamePiece createPiece(Vector3Int newStartingTile, GameObject newPrefab){
 
-        EnemyController tempEnemy = Instantiate(enemyPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<EnemyController>();
-        tempEnemy.startingTile = newStartingTile;
-        return tempEnemy;
+        GamePiece tempPiece = Instantiate(newPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<GamePiece>();
+        tempPiece.initialise(newStartingTile);
+        return tempPiece;
 
     }
 
+    public GamePiece getPieceAtTile(Vector3Int newTile){
 
+        if (player.currentTile == newTile){
+            return player;
+        }
+
+        foreach (EnemyController enemy in enemies){
+            if (enemy.currentTile == newTile){
+                return enemy;
+            }
+        }
+
+        foreach (ObstacleController obstacle in obstacles){
+            if (obstacle.currentTile == newTile){
+                return obstacle;
+            }
+        }
+
+        return null;
+
+    }
 
 }

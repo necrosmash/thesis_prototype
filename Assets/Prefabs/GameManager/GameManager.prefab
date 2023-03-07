@@ -49,3 +49,4 @@ MonoBehaviour:
   openaiapi: {fileID: 0}
   playerPrefab: {fileID: 4951637564383443459, guid: 91437385f2d1ae54e8b5ea357395a0b1, type: 3}
   enemyPrefab: {fileID: 6870049370922060201, guid: 77c65cf9831d0ba4eab55b1ba97dda0a, type: 3}
+  obstaclePrefab: {fileID: 1723632258167354956, guid: b9848ed1a0bb4ca4585e2ef57083009b, type: 3}
