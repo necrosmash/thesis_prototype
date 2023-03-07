@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     PlayerController player;
     List<EnemyController> enemies = new List<EnemyController>();
     List<ObstacleController> obstacles = new List<ObstacleController>();
+    List<GamePiece> turnTakers = new List<GamePiece>();
+
+    private int turn;
 
     const int MIN_OBSTACLES = 6;
     const int MAX_OBSTACLES = 12;
@@ -27,10 +30,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerController>();
         player.initialise(new Vector3Int(0, 0, 0));
-        
+
+        turnTakers.Add(player);
+        turn = 0;
     }
 
     // Update is called once per frame
@@ -70,6 +74,8 @@ public class GameManager : MonoBehaviour
 
         }
 
+        turnTakers.AddRange(enemies);
+
         // Create obstacles
         for (int i = 0; i < Random.Range(MIN_OBSTACLES, MAX_OBSTACLES + 1); i++){
 
@@ -87,7 +93,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        
+        FinishTurn();
     }
 
     GamePiece createPiece(Vector3Int newStartingTile, GameObject newPrefab){
@@ -118,6 +124,12 @@ public class GameManager : MonoBehaviour
 
         return null;
 
+    }
+
+    public void FinishTurn()
+    {
+        if (turn <= 100)
+            turnTakers[turn++ % turnTakers.Count].TakeTurn();
     }
 
 }

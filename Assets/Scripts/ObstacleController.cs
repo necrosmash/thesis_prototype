@@ -20,4 +20,6 @@ public class ObstacleController : GamePiece
     {
 
     }
+
+    public override void TakeTurn() {}
 }

@@ -21,4 +21,10 @@ public class EnemyController : GamePiece
     {
 
     }
+
+    public override void TakeTurn()
+    {
+        Debug.Log("enemy taking turn");
+        base.TakeTurn();
+    }
 }

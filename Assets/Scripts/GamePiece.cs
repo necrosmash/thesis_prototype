@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -38,6 +39,12 @@ public class GamePiece : MonoBehaviour
     protected virtual void Update()
     {
 
+    }
+
+    public virtual void TakeTurn()
+    {
+        Debug.Log("game piece taking its turn");
+        gameManager.FinishTurn();
     }
 
     protected virtual void movePiece(Vector3Int newTile){

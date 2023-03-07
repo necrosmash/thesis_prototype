@@ -7,6 +7,11 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : GamePiece
 {
+    private bool isPlayerTurn;
+    private int moveCount;
+
+    [SerializeField]
+    private int movesPerTurn;
 
     override protected void Awake(){
         base.Awake();
@@ -16,12 +21,14 @@ public class PlayerController : GamePiece
     override protected void Start()
     {
         base.Start();
+        moveCount = 0;
+        isPlayerTurn = false;
     }
 
     // Update is called once per frame
     override protected void Update()
     {
-        if (MenuCanvas.IsRendered) return;
+        if (MenuCanvas.IsRendered || !isPlayerTurn) return;
 
         Vector3Int tempNextTile = currentTile;
 
@@ -41,23 +48,38 @@ public class PlayerController : GamePiece
         {
             tempNextTile.x += 1;
         }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            isPlayerTurn = false;
+            base.TakeTurn();
+        }
 
         if (tempNextTile != currentTile){
             if (checkMoveLegal(tempNextTile)){
+                moveCount--;
                 movePiece(tempNextTile);
             }
         }
 
     }
 
-    bool checkMoveLegal(Vector3Int newTile){
+    bool checkMoveLegal(Vector3Int newTile) {
 
-        if (tilemap.HasTile(newTile)){
+        if (tilemap.HasTile(newTile) && moveCount > 0 && gameManager.getPieceAtTile(newTile) == null)
+        {
             return true;
         }
 
         return false;
 
+    }
+
+    public override void TakeTurn()
+    {
+        Debug.Log("player taking turn");
+        isPlayerTurn = true;
+        moveCount = movesPerTurn;
+        //base.TakeTurn();
     }
 
 }
