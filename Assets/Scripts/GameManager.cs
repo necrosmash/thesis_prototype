@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
@@ -34,7 +35,13 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   /* -------------------------------------------------------------------------------------------
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !MenuCanvas.IsRendered)
+        {
+            SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
+        }
+
+        /* -------------------------------------------------------------------------------------------
             The first IF statement needs to be replaced with a proper method to wait for API response
            ------------------------------------------------------------------------------------------- */
 
