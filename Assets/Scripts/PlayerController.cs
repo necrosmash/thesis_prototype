@@ -41,10 +41,6 @@ public class PlayerController : GamePiece
         {
             tempNextTile.x += 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
-        }
 
         if (tempNextTile != currentTile){
             if (checkMoveLegal(tempNextTile)){
