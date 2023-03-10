@@ -55,22 +55,11 @@ public class PlayerController : GamePiece
         }
 
         if (tempNextTile != currentTile){
-            if (checkMoveLegal(tempNextTile)){
+            if (checkMoveLegal(tempNextTile) && moveCount > 0) {
                 moveCount--;
                 movePiece(tempNextTile);
             }
         }
-
-    }
-
-    bool checkMoveLegal(Vector3Int newTile) {
-
-        if (tilemap.HasTile(newTile) && moveCount > 0 && gameManager.getPieceAtTile(newTile) == null)
-        {
-            return true;
-        }
-
-        return false;
 
     }
 

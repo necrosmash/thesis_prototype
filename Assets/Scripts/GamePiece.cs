@@ -66,6 +66,16 @@ public class GamePiece : MonoBehaviour
         movePiece(startingTile);
     }
 
+    protected bool checkMoveLegal(Vector3Int newTile)
+    {
+        if (tilemap.HasTile(newTile) && gameManager.getPieceAtTile(newTile) == null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 }
 
 public class BadInitialisationException : System.Exception

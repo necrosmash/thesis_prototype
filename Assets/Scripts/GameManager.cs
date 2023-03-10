@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject obstaclePrefab;
 
-    PlayerController player;
+    public PlayerController player;
     List<EnemyController> enemies = new List<EnemyController>();
     List<ObstacleController> obstacles = new List<ObstacleController>();
     List<GamePiece> turnTakers = new List<GamePiece>();
@@ -128,8 +128,7 @@ public class GameManager : MonoBehaviour
 
     public void FinishTurn()
     {
-        if (turn <= 100)
-            turnTakers[turn++ % turnTakers.Count].TakeTurn();
+        turnTakers[turn++ % turnTakers.Count].TakeTurn();
     }
 
 }
