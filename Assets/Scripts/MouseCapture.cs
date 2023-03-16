@@ -5,13 +5,26 @@ using UnityEngine.Tilemaps;
 
 public class mouseCapture : MonoBehaviour
 {
-    public Grid grid;
-    public Tilemap tilemap;
+    [SerializeField]
+    Grid grid;
+    [SerializeField]
+    Tilemap tilemap;
+    [SerializeField]
+    GameManager gameManager;
+
+    Vector3Int currentTile;
+
+    [SerializeField]
+    TileBase defaultTile;
+    [SerializeField]
+    TileBase selectedTile;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        gameManager.selectedTile = new Vector3Int(-1, -1, -1);
+
     }
 
     // Update is called once per frame
@@ -31,7 +44,28 @@ public class mouseCapture : MonoBehaviour
             //Shows the cell reference for the grid
             Debug.Log(posInt);
 
-            Debug.Log(tilemap.HasTile(posInt));
+            if (tilemap.HasTile(posInt))
+            {
+
+                if (currentTile != null)
+                {
+                    Vector3Int oldTile = currentTile;
+                    //tilemap.SetTileFlags(oldTile, TileFlags.None);
+                    tilemap.SetTile(currentTile, defaultTile);
+
+                }
+
+                currentTile = posInt;
+                //tilemap.SetTileFlags(currentTile, TileFlags.None);
+                tilemap.SetTile(currentTile, selectedTile);
+                Debug.Log(tilemap.GetTile(currentTile));
+
+                gameManager.selectedTile = posInt;
+
+
+            }
+
+
        }
     }
 }

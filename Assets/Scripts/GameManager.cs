@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject obstaclePrefab;
 
-    PlayerController player;
+    public PlayerController player { get; private set; }
     List<EnemyController> enemies = new List<EnemyController>();
     List<ObstacleController> obstacles = new List<ObstacleController>();
     List<GamePiece> turnTakers = new List<GamePiece>();
@@ -27,11 +27,13 @@ public class GameManager : MonoBehaviour
     const int MAX_OBSTACLES = 12;
 
 
+    public Vector3Int selectedTile;
+
     // Start is called before the first frame update
     void Start()
     {
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerController>();
-        player.initialise(new Vector3Int(0, 0, 0));
+        player.Initialise(new Vector3Int(0, 0, 0));
 
         turnTakers.Add(player);
         turn = 0;
@@ -66,9 +68,10 @@ public class GameManager : MonoBehaviour
 
             }while (getPieceAtTile(startTile) != null);
 
-            EnemyController tempEnemy = (EnemyController) createPiece(startTile, enemyPrefab);
+            EnemyController tempEnemy = (EnemyController) createPiece(enemyPrefab);
 
             tempEnemy.orc = orcs[i];
+            tempEnemy.Initialise(startTile);
 
             enemies.Add(tempEnemy);
 
@@ -87,8 +90,8 @@ public class GameManager : MonoBehaviour
 
             }while (getPieceAtTile(startTile) != null);
 
-            ObstacleController tempObstacle = (ObstacleController) createPiece(startTile, obstaclePrefab);
-
+            ObstacleController tempObstacle = (ObstacleController) createPiece(obstaclePrefab);
+            tempObstacle.Initialise(startTile);
             obstacles.Add(tempObstacle);
 
         }
@@ -96,10 +99,9 @@ public class GameManager : MonoBehaviour
         FinishTurn();
     }
 
-    GamePiece createPiece(Vector3Int newStartingTile, GameObject newPrefab){
+    GamePiece createPiece(GameObject newPrefab){
 
         GamePiece tempPiece = Instantiate(newPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<GamePiece>();
-        tempPiece.initialise(newStartingTile);
         return tempPiece;
 
     }
@@ -128,8 +130,19 @@ public class GameManager : MonoBehaviour
 
     public void FinishTurn()
     {
-        if (turn <= 100)
-            turnTakers[turn++ % turnTakers.Count].TakeTurn();
+        turnTakers[turn++ % turnTakers.Count].TakeTurn();
+    }
+
+    public void Kill(GamePiece newGamePiece)
+    {
+
+        if (newGamePiece is EnemyController)
+        {
+            enemies.Remove((EnemyController) newGamePiece);
+            turnTakers.Remove((EnemyController) newGamePiece);
+            Destroy(newGamePiece.gameObject);
+        }
+
     }
 
 }

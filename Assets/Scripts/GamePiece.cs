@@ -43,7 +43,6 @@ public class GamePiece : MonoBehaviour
 
     public virtual void TakeTurn()
     {
-        Debug.Log("game piece taking its turn");
         gameManager.FinishTurn();
     }
 
@@ -54,7 +53,7 @@ public class GamePiece : MonoBehaviour
 
     }
 
-    public void initialise(Vector3Int newStartingTile)
+    public virtual void Initialise(Vector3Int newStartingTile)
     {
 
         if (currentTile != DEFAULT_STARTING_VALUE)
@@ -64,6 +63,11 @@ public class GamePiece : MonoBehaviour
 
         startingTile = newStartingTile;
         movePiece(startingTile);
+    }
+
+    public virtual void TakeDamage()
+    {
+
     }
 
 }

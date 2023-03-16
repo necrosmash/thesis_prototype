@@ -7,11 +7,20 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : GamePiece
 {
-    private bool isPlayerTurn;
-    private int moveCount;
+    bool isPlayerTurn;
+    bool hasAttacked;
+    int moveCount;
+
+    HealthDisplay healthDisplay;
 
     [SerializeField]
-    private int movesPerTurn;
+    int movesPerTurn;
+
+
+    [SerializeField]
+    int attackRadius = 1;
+
+
 
     override protected void Awake(){
         base.Awake();
@@ -23,6 +32,11 @@ public class PlayerController : GamePiece
         base.Start();
         moveCount = 0;
         isPlayerTurn = false;
+        hasAttacked = false;
+
+        // Connecting the health display
+        healthDisplay = GameObject.Find("HealthDisplay").GetComponent<HealthDisplay>();
+
     }
 
     // Update is called once per frame
@@ -50,12 +64,23 @@ public class PlayerController : GamePiece
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
+            if (!hasAttacked)
+            {
+                if (Attack(gameManager.selectedTile))
+                {
+                    moveCount--;
+                    hasAttacked = true;
+                }
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
             isPlayerTurn = false;
             base.TakeTurn();
         }
 
         if (tempNextTile != currentTile){
-            if (checkMoveLegal(tempNextTile)){
+            if (IsMoveLegal(tempNextTile)){
                 moveCount--;
                 movePiece(tempNextTile);
             }
@@ -63,7 +88,7 @@ public class PlayerController : GamePiece
 
     }
 
-    bool checkMoveLegal(Vector3Int newTile) {
+    bool IsMoveLegal(Vector3Int newTile) {
 
         if (tilemap.HasTile(newTile) && moveCount > 0 && gameManager.getPieceAtTile(newTile) == null)
         {
@@ -74,12 +99,35 @@ public class PlayerController : GamePiece
 
     }
 
+    bool Attack(Vector3Int newTile)
+    {
+        Debug.Log("Attacking");
+        GamePiece tempGamePiece = gameManager.getPieceAtTile(newTile);
+
+        if (gameManager.getPieceAtTile(newTile) is EnemyController && ((newTile - currentTile).magnitude <= attackRadius))
+        {
+            EnemyController newEnemy = (EnemyController) tempGamePiece;
+            newEnemy.TakeDamage();
+            Debug.Log("Gotcha!");
+            return true;
+
+        }
+        return false;
+
+    }
+
     public override void TakeTurn()
     {
         Debug.Log("player taking turn");
         isPlayerTurn = true;
         moveCount = movesPerTurn;
+        hasAttacked = false;
         //base.TakeTurn();
+    }
+
+    public override void TakeDamage()
+    {
+        healthDisplay.TakeDamage();
     }
 
 }
