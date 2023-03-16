@@ -67,9 +67,27 @@ public class EnemyController : GamePiece
 
         Vector3Int distanceToPlayer = gameManager.player.currentTile - currentTile;
 
-        Debug.Log("My attack radius: " + attackRadius.ToString() + " " + (distanceToPlayer.magnitude <= attackRadius).ToString());
+        // Checking if the player is in radius and on the same row/column
+        if (distanceToPlayer.magnitude <= attackRadius && (gameManager.player.currentTile.x == currentTile.x || gameManager.player.currentTile.y == currentTile.y))
+        {
 
-        return (distanceToPlayer.magnitude <= attackRadius);
+            for (int i = 0; i < (int) distanceToPlayer.magnitude; i++)
+            {
+                // Checking if any objects on the way are obstacles
+                // It takes the unit vector of distance to the player, and checks whether
+                //  the piece at (currentTile + (unit vector of distance to the player * steps) is an obstacle
+
+                if (gameManager.GetPieceAtTile(currentTile + ((distanceToPlayer / (int)distanceToPlayer.magnitude) * (i+1))) is ObstacleController)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
+        }
+
+        return false;
     }
 
     public override void TakeDamage()

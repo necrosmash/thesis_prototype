@@ -90,7 +90,7 @@ public class PlayerController : GamePiece
 
     bool IsMoveLegal(Vector3Int newTile) {
 
-        if (tilemap.HasTile(newTile) && moveCount > 0 && gameManager.getPieceAtTile(newTile) == null)
+        if (tilemap.HasTile(newTile) && moveCount > 0 && gameManager.GetPieceAtTile(newTile) == null)
         {
             return true;
         }
@@ -102,9 +102,9 @@ public class PlayerController : GamePiece
     bool Attack(Vector3Int newTile)
     {
         Debug.Log("Attacking");
-        GamePiece tempGamePiece = gameManager.getPieceAtTile(newTile);
+        GamePiece tempGamePiece = gameManager.GetPieceAtTile(newTile);
 
-        if (gameManager.getPieceAtTile(newTile) is EnemyController && ((newTile - currentTile).magnitude <= attackRadius))
+        if (gameManager.GetPieceAtTile(newTile) is EnemyController && ((newTile - currentTile).magnitude <= attackRadius))
         {
             EnemyController newEnemy = (EnemyController) tempGamePiece;
             newEnemy.TakeDamage();

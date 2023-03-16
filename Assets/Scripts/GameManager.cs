@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
                 // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
                 startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
 
-            }while (getPieceAtTile(startTile) != null);
+            }while (GetPieceAtTile(startTile) != null);
 
             EnemyController tempEnemy = (EnemyController) createPiece(enemyPrefab);
 
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
                 // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
                 startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
 
-            }while (getPieceAtTile(startTile) != null);
+            }while (GetPieceAtTile(startTile) != null);
 
             ObstacleController tempObstacle = (ObstacleController) createPiece(obstaclePrefab);
             tempObstacle.Initialise(startTile);
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public GamePiece getPieceAtTile(Vector3Int newTile){
+    public GamePiece GetPieceAtTile(Vector3Int newTile){
 
         if (player.currentTile == newTile){
             return player;
