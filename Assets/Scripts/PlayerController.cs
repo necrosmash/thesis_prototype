@@ -64,7 +64,7 @@ public class PlayerController : GamePiece
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!hasAttacked)
+            if (!hasAttacked && moveCount > 0)
             {
                 if (Attack(gameManager.selectedTile))
                 {
@@ -90,14 +90,12 @@ public class PlayerController : GamePiece
 
     bool Attack(Vector3Int newTile)
     {
-        Debug.Log("Attacking");
         GamePiece tempGamePiece = gameManager.GetPieceAtTile(newTile);
 
         if (gameManager.GetPieceAtTile(newTile) is EnemyController && ((newTile - currentTile).magnitude <= attackRadius))
         {
             EnemyController newEnemy = (EnemyController) tempGamePiece;
             newEnemy.TakeDamage();
-            Debug.Log("Gotcha!");
             return true;
 
         }
@@ -107,7 +105,6 @@ public class PlayerController : GamePiece
 
     public override void TakeTurn()
     {
-        Debug.Log("player taking turn");
         isPlayerTurn = true;
         moveCount = movesPerTurn;
         hasAttacked = false;
