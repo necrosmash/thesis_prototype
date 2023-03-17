@@ -1581,6 +1581,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
+--- !u!114 &890999705 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7752052137033031354, guid: 5412bf83773a5c94f84540ca89e3f1ee, type: 3}
+  m_PrefabInstance: {fileID: 1841634663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df90f0641fa3aa548a86fff2eb75ecf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1607384835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1652,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1607384836}
   tilemap: {fileID: 355113833}
+  gameManager: {fileID: 890999705}
+  defaultTile: {fileID: 11400000, guid: 1360f947d0cd50e4fba2b3b45bce1a8a, type: 2}
+  selectedTile: {fileID: 11400000, guid: 8d12c7d3497263741a951ca79d907c5d, type: 2}
 --- !u!1001 &1744777500
 PrefabInstance:
   m_ObjectHideFlags: 0

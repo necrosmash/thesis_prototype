@@ -80,22 +80,11 @@ public class PlayerController : GamePiece
         }
 
         if (tempNextTile != currentTile){
-            if (IsMoveLegal(tempNextTile)){
+            if (checkMoveLegal(tempNextTile) && moveCount > 0) {
                 moveCount--;
                 movePiece(tempNextTile);
             }
         }
-
-    }
-
-    bool IsMoveLegal(Vector3Int newTile) {
-
-        if (tilemap.HasTile(newTile) && moveCount > 0 && gameManager.GetPieceAtTile(newTile) == null)
-        {
-            return true;
-        }
-
-        return false;
 
     }
 

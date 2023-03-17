@@ -70,6 +70,16 @@ public class GamePiece : MonoBehaviour
 
     }
 
+    protected bool checkMoveLegal(Vector3Int newTile)
+    {
+        if (tilemap.HasTile(newTile) && gameManager.GetPieceAtTile(newTile) == null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 }
 
 public class BadInitialisationException : System.Exception
