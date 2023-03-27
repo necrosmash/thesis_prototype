@@ -8,7 +8,7 @@ using UnityEngine.Tilemaps;
 public class GamePiece : MonoBehaviour
 {
 
-    Vector3Int startingTile;
+    protected Vector3Int startingTile;
     public Vector3Int currentTile {get; protected set;}
 
     // This is a gibberish value required to check if the piece was initialised
@@ -70,12 +70,13 @@ public class GamePiece : MonoBehaviour
 
     }
 
-    protected bool checkMoveLegal(Vector3Int newTile)
+    protected bool checkMoveLegal(Vector3Int newTile, GamePiece acceptableGamePiece = null)
     {
-        if (tilemap.HasTile(newTile) && gameManager.GetPieceAtTile(newTile) == null)
-        {
+        if (!tilemap.HasTile(newTile)) return false;
+
+        if (gameManager.GetPieceAtTile(newTile) == null ||
+            gameManager.GetPieceAtTile(newTile).Equals(acceptableGamePiece))
             return true;
-        }
 
         return false;
     }
