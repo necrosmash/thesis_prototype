@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -51,7 +50,7 @@ public class GameManager : MonoBehaviour
             The first IF statement needs to be replaced with a proper method to wait for API response
            ------------------------------------------------------------------------------------------- */
 
-        if ((openaiapi.response == null) || (enemies.Count > 0)){
+        if ((openaiapi.response == null) || (openaiapi.response.battleInfo.openingScene == null) || (enemies.Count > 0)){
             return;
         }
 
@@ -140,9 +139,8 @@ public class GameManager : MonoBehaviour
         {
             enemies.Remove((EnemyController) newGamePiece);
             turnTakers.Remove((EnemyController) newGamePiece);
-            Destroy(newGamePiece.gameObject);
+            openaiapi.Post("The main character kills " + ((EnemyController) newGamePiece).orc.name + ". Creatively describe how this is done.");
         }
-
     }
 
 }

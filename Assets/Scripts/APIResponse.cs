@@ -11,8 +11,10 @@ public abstract class APIResponse
     public string model;
     public Usage usage;
     public BattleInfo battleInfo;
+    public string logString;
 
     public abstract void ParseBattleInfo();
+    public abstract void ParseLogString();
 }
 
 [System.Serializable]

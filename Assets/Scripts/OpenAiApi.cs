@@ -7,8 +7,8 @@ using UnityEngine.Networking;
 public class OpenAiApi : MonoBehaviour
 {
     public APIResponse response { get; private set; }
-    
-    private string prompt;
+
+    private List<Message> previousMessages;
 
     [SerializeField]
     private Model model;
@@ -18,6 +18,8 @@ public class OpenAiApi : MonoBehaviour
 
     private string daVinciUrl = "https://api.openai.com/v1/completions";
     private string chatGptUrl = "https://api.openai.com/v1/chat/completions";
+
+    private bool isFirstPost;
 
     public enum Model
     {
@@ -29,26 +31,43 @@ public class OpenAiApi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prompt = Regex.Replace("I want you to return me a JSON object. All of your output should be a part of the JSON object. Do not output any text except for the JSON object. Here is the example of the JSON object: " + JsonUtility.ToJson(new BattleInfo()) + " \"weapon\" must be one of the following values: \"sword\", \"hammer\", \"bow\". It cannot be anything else. \"size\" must be one of the following values: \"small\", \"medium\", \"large\". It cannot be anything else. Orc names must also include a descriptor starting with \"the\", such as \"Uzguk the Undefeated\". Be creative about these descriptors. Describe the opening scene in the \"openingScene\" string. The opening scene must be a story about an elf about to engage in a battle with a group of orcs. Be creative when you come up with descriptions of the orcs. Populate the \"orcs\" array based on the opening scene. ", "\"", "\\\"");
-        Post(model);
+        previousMessages = new List<Message>();
+        string prompt = Regex.Replace("I want you to return me a JSON object. All of your output should be a part of the JSON object. Do not output any text except for the JSON object. Here is the example of the JSON object: " + JsonUtility.ToJson(new BattleInfo()) + " \"weapon\" must be one of the following values: \"sword\", \"hammer\", \"bow\". It cannot be anything else. \"size\" must be one of the following values: \"small\", \"medium\", \"large\". It cannot be anything else. Orc names must also include a descriptor starting with \"the\", such as \"Uzguk the Undefeated\". Be creative about these descriptors. Describe the opening scene in the \"openingScene\" string. The opening scene must be a story about an elf about to engage in a battle with a group of orcs. Be creative when you come up with descriptions of the orcs. Populate the \"orcs\" array based on the opening scene. ", "\"", "\\\"");
+        isFirstPost = true;
+        Post(prompt);
     }
 
-    private void Post(Model m)
+    public void Post(string prompt)
     {
-        string davinciPostData = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + prompt + "\", \"temperature\": 0.7, \"max_tokens\": 3000}";
-        string chatgptPostData = "{\"model\": \"gpt-3.5-turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"" + prompt + "\"}]}";
-
-        switch (m)
+        switch (model)
         {
             case Model.chatgpt:
-                StartCoroutine(Post(GenerateRequest(chatGptUrl, chatgptPostData)));
+                ChatGPTPost chatGPTPost = new ChatGPTPost();
+                chatGPTPost.model = "gpt-3.5-turbo";
+                chatGPTPost.messages = new Message[previousMessages.Count + 1];
+                
+                for (int i = 0; i < previousMessages.Count; i++)
+                {
+                    chatGPTPost.messages[i] = new Message(previousMessages[i].role, previousMessages[i].content);
+                }
+                Message nextMessage = new Message("user", prompt);
+                chatGPTPost.messages[chatGPTPost.messages.Length - 1] = nextMessage;
+                previousMessages.Add(nextMessage);
+
+                string newChatGPTPostData = JsonUtility.ToJson(chatGPTPost);
+                StartCoroutine(Post(GenerateRequest(chatGptUrl, newChatGPTPostData)));
+                
                 break;
             case Model.davinci:
+                string davinciPostData = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + prompt + "\", \"temperature\": 0.7, \"max_tokens\": 3000}";
+                
                 StartCoroutine(Post(GenerateRequest(daVinciUrl, davinciPostData)));
+
                 break;
             default:
             case Model.test:
                 response = DaVinciResponse.GenerateTestResponse();
+
                 break;
         }
     }
@@ -71,13 +90,34 @@ public class OpenAiApi : MonoBehaviour
         else
         {
             if (model.Equals(Model.davinci))
+            {
                 response = JsonUtility.FromJson<DaVinciResponse>(request.downloadHandler.text);
+                /*foreach (DaVinciResponse.Choice choice in ((DaVinciResponse) response).choices)
+                {
+                    Debug.Log("dvr: " + choice.text);
+                }*/ // for debugging
+            }
             else
+            {
                 response = JsonUtility.FromJson<ChatGPTResponse>(request.downloadHandler.text);
+                foreach (ChatGPTResponse.Choice choice in ((ChatGPTResponse) response).choices)
+                {
+                    /*Debug.Log("cgr role: " + choice.message.role);
+                    Debug.Log("cgr content: " + choice.message.content);*/ // for debugging
+                    previousMessages.Add(new Message(choice.message.role, choice.message.content));
+                }
+            }
 
-            response.ParseBattleInfo();
+            Debug.Log("{ prompt_tokens: " + response.usage.prompt_tokens + " }, { completion_tokens: " + response.usage.completion_tokens + " }, { total_tokens: " + response.usage.total_tokens + " }");
+
+            if (isFirstPost)
+            {
+                response.ParseBattleInfo();
+                isFirstPost = false;
+            }
+            else response.ParseLogString();
+            
             Debug.Log("API call complete");
-            Debug.Log(response.battleInfo.openingScene);
         }
     }
 

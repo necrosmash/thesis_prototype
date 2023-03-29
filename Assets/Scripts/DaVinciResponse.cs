@@ -17,6 +17,12 @@ public class DaVinciResponse : APIResponse
         }
 
         battleInfo = JsonUtility.FromJson<BattleInfo>(choices[0].text);
+        logString = battleInfo.openingScene;
+    }
+
+    public override void ParseLogString()
+    {
+        logString = choices[0].text;
     }
 
     [System.Serializable]

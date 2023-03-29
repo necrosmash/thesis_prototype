@@ -16,6 +16,12 @@ public class ChatGPTResponse : APIResponse
         }
 
         battleInfo = JsonUtility.FromJson<BattleInfo>(choices[0].message.content);
+        logString = battleInfo.openingScene;
+    }
+
+    public override void ParseLogString()
+    {
+        logString = choices[0].message.content;
     }
 
     [System.Serializable]
@@ -24,12 +30,5 @@ public class ChatGPTResponse : APIResponse
         public Message message;
         public int index;
         public string finish_reason;
-    }
-
-    [System.Serializable]
-    public class Message
-    {
-        public string role;
-        public string content;
     }
 }
