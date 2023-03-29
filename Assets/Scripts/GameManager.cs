@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour
         {
             enemies.Remove((EnemyController) newGamePiece);
             turnTakers.Remove((EnemyController) newGamePiece);
+            Destroy(newGamePiece.gameObject);
             openaiapi.Post("The main character kills " + ((EnemyController) newGamePiece).orc.name + ". Creatively describe how this is done.");
         }
     }
