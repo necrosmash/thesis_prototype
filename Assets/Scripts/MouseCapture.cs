@@ -11,6 +11,8 @@ public class mouseCapture : MonoBehaviour
     Tilemap tilemap;
     [SerializeField]
     GameManager gameManager;
+    [SerializeField]
+    MobDisplayController mobDisplayController;
 
     Vector3Int currentTile;
 
@@ -23,7 +25,7 @@ public class mouseCapture : MonoBehaviour
     void Start()
     {
 
-        gameManager.selectedTile = new Vector3Int(-1, -1, -1);
+        gameManager.SelectedTile = new Vector3Int(-1, -1, -1);
 
     }
 
@@ -60,7 +62,7 @@ public class mouseCapture : MonoBehaviour
                 tilemap.SetTile(currentTile, selectedTile);
                 Debug.Log(tilemap.GetTile(currentTile));
 
-                gameManager.selectedTile = posInt;
+                gameManager.SelectedTile = posInt;
 
 
             }

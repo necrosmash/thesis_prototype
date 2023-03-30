@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject obstaclePrefab;
 
+    [SerializeField]
+    MobDisplayController mobDisplayController;
+
     public PlayerController player { get; private set; }
     List<EnemyController> enemies = new List<EnemyController>();
     List<ObstacleController> obstacles = new List<ObstacleController>();
@@ -26,8 +29,16 @@ public class GameManager : MonoBehaviour
     const int MIN_OBSTACLES = 6;
     const int MAX_OBSTACLES = 12;
 
+    public Vector3Int _selectedTile;
+    public Vector3Int SelectedTile{
 
-    public Vector3Int selectedTile;
+        get {return _selectedTile;}
+        set{
+            _selectedTile = value;
+            mobDisplayController.UpdateMob(value);
+        }
+
+    }
 
     // Start is called before the first frame update
     void Start()
