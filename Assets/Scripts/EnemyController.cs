@@ -8,6 +8,21 @@ public class EnemyController : GamePiece
 {
     public BattleInfo.Orc orc;
     float attackRadius;
+    
+    // this should possibly belong to `BattleInfo.Orc`.
+    // it should also not be hardcoded.
+    // Value currently set in Initialize()
+    private int sightRange;
+
+    private Status status;
+    private enum Status
+    {
+        PatrollingToDest,
+        PatrollingFromDest,
+        ChasingPlayer
+    }
+
+    private Vector3Int patrolTile; // patrol destination
 
     [SerializeField]
     private int movesPerTurn;
@@ -25,18 +40,41 @@ public class EnemyController : GamePiece
     // Update is called once per frame
     override protected void Update()
     {
+        if (status == Status.ChasingPlayer) return;
 
+        if (CheckPlayerVisibility() == true)
+            status = Status.ChasingPlayer;
     }
 
     public override void TakeTurn()
-    {   
-        List<Vector3Int> route = AStar(currentTile, gameManager.player.currentTile);
+    {
+        List<Vector3Int> route = GetRoute(currentTile, out Vector3Int destination);
 
         int j = 0;
         for (int i = movesPerTurn; i > 0; i--)
         {
+            if (route == null || j >= route.Count)
+                break; // There may always be a chance of this happening despite best efforts.
+
             if (checkMoveLegal(route[++j])) // only move if the next move is legal
                 movePiece(route[j]);
+            else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
+
+            if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)
+            {
+                // we have spotted the player but are not currently chasing them
+                route = GetRoute(currentTile, out destination);
+                j = 0;
+            }
+            else if (currentTile == destination)
+            {
+                // switch patrol direction
+                if (status == Status.PatrollingFromDest) status = Status.PatrollingToDest;
+                else if (status == Status.PatrollingToDest) status = Status.PatrollingFromDest;
+
+                route = GetRoute(currentTile, out destination);
+                j = 0;
+            }
         }
 
         if (IsPlayerInAttackDistance())
@@ -73,6 +111,13 @@ public class EnemyController : GamePiece
                 break;
         }
 
+        sightRange = 2; // hard-coded for now
+        startingTile = newStartingTile;
+
+        do
+        {
+            patrolTile = new Vector3Int(UnityEngine.Random.Range(0, 10), UnityEngine.Random.Range(0, 10), 0);
+        } while (!checkMoveLegal(patrolTile));
     }
 
     bool IsPlayerInAttackDistance()
@@ -132,6 +177,58 @@ public class EnemyController : GamePiece
         return totalPath;
     }
 
+    private bool CheckPlayerVisibility()
+    {
+        Vector3Int playerTile = gameManager.player.currentTile;
+
+        if (Manhattan(currentTile, playerTile) > sightRange)
+            return false; // too far away
+
+        if (playerTile.x != currentTile.x && playerTile.y != currentTile.y)
+            return false; // can't differ on two axes
+
+        if (playerTile.x == currentTile.x - 1 || playerTile.x == currentTile.x + 1)
+            return true; // right next to player, no need to check for obstacles
+
+        if (playerTile.y == currentTile.y - 1 || playerTile.y == currentTile.y + 1)
+            return true; // right next to player, no need to check for obstacles
+
+        Vector3Int dirToPlayer = gameManager.player.currentTile - currentTile;
+        dirToPlayer.Clamp(new Vector3Int(-1, -1, -1), new Vector3Int(1, 1, 1)); // no `normalize` :/
+
+        Vector3Int tmpCurrentTile = currentTile;
+        while (tmpCurrentTile != gameManager.player.currentTile)
+        {
+            tmpCurrentTile += dirToPlayer;
+            if (TileHasObstacle(tmpCurrentTile))
+                return false; // obstacle in the way, can't see the player
+        }
+
+        return true;
+    }
+
+    private List<Vector3Int> GetRoute(Vector3Int start, out Vector3Int destination)
+    {
+        switch (status)
+        {
+            case Status.PatrollingToDest:
+                destination = patrolTile;
+                Debug.Log(this.name + "'s goal is patrol tile: " + destination);
+                break;
+            case Status.PatrollingFromDest:
+                destination = startingTile;
+                Debug.Log(this.name + "'s goal is starting tile: " + destination);
+                break;
+            default:
+            case Status.ChasingPlayer:
+                destination = gameManager.player.currentTile;
+                Debug.Log(this.name + "'s goal is player: " + destination);
+                break;
+        }
+
+        return AStar(start, destination);
+    }
+
     private List<Vector3Int> AStar(Vector3Int start, Vector3Int goal)
     {
         PriorityQueue<Vector3Int, int> openSet = new PriorityQueue<Vector3Int, int>();
@@ -153,7 +250,7 @@ public class EnemyController : GamePiece
             foreach (Vector3Int neighbour in GetNeighbours(current))
             {
                 // Check if we can move through this before doing anything else
-                if (TileHasObstacle(neighbour))
+                if (!checkMoveLegal(neighbour, gameManager.player))
                 {
                     continue;
                 }

@@ -54,6 +54,25 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // Create obstacles
+        for (int i = 0; i < Random.Range(MIN_OBSTACLES, MAX_OBSTACLES + 1); i++)
+        {
+
+            Vector3Int startTile = new Vector3Int(0, 0, 0);
+            do
+            {
+
+                // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
+                startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
+
+            } while (GetPieceAtTile(startTile) != null);
+
+            ObstacleController tempObstacle = (ObstacleController)createPiece(obstaclePrefab);
+            tempObstacle.Initialise(startTile);
+            obstacles.Add(tempObstacle);
+
+        }
+
         // Create enemies
         BattleInfo.Orc[] orcs = openaiapi.response.battleInfo.orcs;
         for (int i = 0; i < orcs.Length; i++){
@@ -77,23 +96,6 @@ public class GameManager : MonoBehaviour
         }
 
         turnTakers.AddRange(enemies);
-
-        // Create obstacles
-        for (int i = 0; i < Random.Range(MIN_OBSTACLES, MAX_OBSTACLES + 1); i++){
-
-            Vector3Int startTile = new Vector3Int(0, 0, 0);
-            do{
-
-                // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
-                startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
-
-            }while (GetPieceAtTile(startTile) != null);
-
-            ObstacleController tempObstacle = (ObstacleController) createPiece(obstaclePrefab);
-            tempObstacle.Initialise(startTile);
-            obstacles.Add(tempObstacle);
-
-        }
 
         FinishTurn();
     }
