@@ -66,7 +66,7 @@ public class PlayerController : GamePiece
         {
             if (!hasAttacked && moveCount > 0)
             {
-                if (Attack(gameManager.selectedTile))
+                if (Attack(gameManager.SelectedTile))
                 {
                     moveCount--;
                     hasAttacked = true;
