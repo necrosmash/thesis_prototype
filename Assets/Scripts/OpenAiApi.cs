@@ -67,7 +67,7 @@ public class OpenAiApi : MonoBehaviour
             default:
             case Model.test:
                 response = DaVinciResponse.GenerateTestResponse();
-
+                response.ParseBattleInfo();
                 break;
         }
     }

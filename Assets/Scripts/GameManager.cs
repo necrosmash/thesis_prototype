@@ -42,11 +42,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        TraitManager.Initialise();
+
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerController>();
         player.Initialise(new Vector3Int(0, 0, 0));
 
         turnTakers.Add(player);
         turn = 0;
+
     }
 
     // Update is called once per frame
@@ -102,6 +106,8 @@ public class GameManager : MonoBehaviour
             tempEnemy.orc = orcs[i];
             tempEnemy.Initialise(startTile);
 
+            AddTrait(tempEnemy, "drunk");
+
             enemies.Add(tempEnemy);
 
         }
@@ -115,6 +121,23 @@ public class GameManager : MonoBehaviour
 
         GamePiece tempPiece = Instantiate(newPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<GamePiece>();
         return tempPiece;
+
+    }
+
+    public void AddTrait(GamePiece newGamePiece, string newTraitName)
+    {
+
+        GameObject tempTrait = TraitManager.GetTrait(newTraitName);
+
+        if (tempTrait == null)
+        {
+
+            throw new System.Exception("Trait does not exist: " + newTraitName);
+
+        }
+
+        Trait trait = Instantiate(tempTrait, newGamePiece.gameObject.transform).GetComponent<Trait>();
+        newGamePiece.traits.Add(trait);
 
     }
 

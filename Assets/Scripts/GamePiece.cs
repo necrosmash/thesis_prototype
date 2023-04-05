@@ -18,6 +18,8 @@ public class GamePiece : MonoBehaviour
     protected Grid grid;
     protected Tilemap tilemap;
 
+    public List<Trait> traits;
+
 
     protected virtual void Awake(){
 
@@ -43,13 +45,67 @@ public class GamePiece : MonoBehaviour
 
     public virtual void TakeTurn()
     {
+
+
+
+        Trait traitToRemove = null;
+
+        do
+        {
+            for (int i = 0; i < traits.Count; i++)
+            {
+                if (traits[i].RemainingDuration <= 0)
+                {
+                    traitToRemove = traits[i];
+                    break;
+                }
+            }
+
+            if (traitToRemove != null)
+            {
+                traits.Remove(traitToRemove);
+                Destroy(traitToRemove.gameObject);
+                traitToRemove = null;
+            }
+
+        } while (traitToRemove != null);
+
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnTakeTurn();
+
+        }
+
         gameManager.FinishTurn();
+    }
+
+    public virtual void StartTurn()
+    {
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnStartTurn();
+
+        }
     }
 
     protected virtual void movePiece(Vector3Int newTile){
 
         transform.position = grid.GetCellCenterWorld(newTile);
         currentTile = newTile;
+
+    }
+
+    protected virtual void Attack()
+    {
+
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnAttack();
+
+        }
 
     }
 
@@ -67,7 +123,12 @@ public class GamePiece : MonoBehaviour
 
     public virtual void TakeDamage()
     {
+        foreach (Trait trait in traits)
+        {
 
+            trait.OnTakeDamage();
+
+        }
     }
 
     protected bool checkMoveLegal(Vector3Int newTile, GamePiece acceptableGamePiece = null)

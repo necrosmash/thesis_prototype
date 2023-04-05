@@ -48,6 +48,9 @@ public class EnemyController : GamePiece
 
     public override void TakeTurn()
     {
+
+        base.StartTurn();
+
         List<Vector3Int> route = GetRoute(currentTile, out Vector3Int destination);
 
         int j = 0;
@@ -79,6 +82,7 @@ public class EnemyController : GamePiece
 
         if (IsPlayerInAttackDistance())
         {
+            base.Attack();
             gameManager.player.TakeDamage();
         }
 
