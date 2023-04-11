@@ -7,7 +7,7 @@ using UnityEngine;
 public class EnemyController : GamePiece
 {
     public BattleInfo.Orc orc;
-    float attackRadius;
+    public float attackRadius;
     
     // this should possibly belong to `BattleInfo.Orc`.
     // it should also not be hardcoded.
@@ -26,6 +26,7 @@ public class EnemyController : GamePiece
 
     [SerializeField]
     private int movesPerTurn;
+    public bool skipTurn = false;
 
     override protected void Awake()
     {
@@ -48,39 +49,48 @@ public class EnemyController : GamePiece
 
     public override void TakeTurn()
     {
-        List<Vector3Int> route = GetRoute(currentTile, out Vector3Int destination);
 
-        int j = 0;
-        for (int i = movesPerTurn; i > 0; i--)
+        base.StartTurn();
+
+        if (!skipTurn)
         {
-            if (route == null || j >= route.Count)
-                break; // There may always be a chance of this happening despite best efforts.
+            List<Vector3Int> route = GetRoute(currentTile, out Vector3Int destination);
 
-            if (checkMoveLegal(route[++j])) // only move if the next move is legal
-                movePiece(route[j]);
-            else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
-
-            if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)
+            int j = 0;
+            for (int i = movesPerTurn; i > 0; i--)
             {
-                // we have spotted the player but are not currently chasing them
-                route = GetRoute(currentTile, out destination);
-                j = 0;
+                if (route == null || j >= route.Count)
+                    break; // There may always be a chance of this happening despite best efforts.
+
+                if (checkMoveLegal(route[++j])) // only move if the next move is legal
+                    movePiece(route[j]);
+                else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
+
+                if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)
+                {
+                    // we have spotted the player but are not currently chasing them
+                    route = GetRoute(currentTile, out destination);
+                    j = 0;
+                }
+                else if (currentTile == destination)
+                {
+                    // switch patrol direction
+                    if (status == Status.PatrollingFromDest) status = Status.PatrollingToDest;
+                    else if (status == Status.PatrollingToDest) status = Status.PatrollingFromDest;
+
+                    route = GetRoute(currentTile, out destination);
+                    j = 0;
+                }
             }
-            else if (currentTile == destination)
-            {
-                // switch patrol direction
-                if (status == Status.PatrollingFromDest) status = Status.PatrollingToDest;
-                else if (status == Status.PatrollingToDest) status = Status.PatrollingFromDest;
 
-                route = GetRoute(currentTile, out destination);
-                j = 0;
+            if (IsPlayerInAttackDistance())
+            {
+                base.Attack();
+                gameManager.player.TakeDamage();
             }
         }
 
-        if (IsPlayerInAttackDistance())
-        {
-            gameManager.player.TakeDamage();
-        }
+        skipTurn = false;
 
         //Debug.Log("enemy taking turn");
         base.TakeTurn();
@@ -206,16 +216,16 @@ public class EnemyController : GamePiece
         {
             case Status.PatrollingToDest:
                 destination = patrolTile;
-                Debug.Log(this.name + "'s goal is patrol tile: " + destination);
+                //Debug.Log(this.name + "'s goal is patrol tile: " + destination);
                 break;
             case Status.PatrollingFromDest:
                 destination = startingTile;
-                Debug.Log(this.name + "'s goal is starting tile: " + destination);
+                //Debug.Log(this.name + "'s goal is starting tile: " + destination);
                 break;
             default:
             case Status.ChasingPlayer:
                 destination = gameManager.player.currentTile;
-                Debug.Log(this.name + "'s goal is player: " + destination);
+                //Debug.Log(this.name + "'s goal is player: " + destination);
                 break;
         }
 

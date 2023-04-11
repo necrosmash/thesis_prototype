@@ -19,6 +19,7 @@ public class GamePiece : MonoBehaviour
     protected Tilemap tilemap;
 
     public int health;
+    public List<Trait> traits;
 
     protected virtual void Awake(){
 
@@ -44,13 +45,59 @@ public class GamePiece : MonoBehaviour
 
     public virtual void TakeTurn()
     {
+
+
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnTakeTurn(this.gameObject);
+
+        }
+
+        List<Trait> traitsToRemove = new List<Trait>();
+        for (int i = 0; i < traits.Count; i++)
+        {
+            if (traits[i].RemainingDuration <= 0)
+            {
+                traitsToRemove.Add(traits[i]);
+            }
+        }
+
+        foreach (Trait t in traitsToRemove)
+        {
+            traits.Remove(t);
+            Destroy(t.gameObject);
+        }
+
+
         gameManager.FinishTurn();
+    }
+
+    public virtual void StartTurn()
+    {
+        foreach (Trait trait in traits)
+        {
+            trait.OnStartTurn(this.gameObject);
+
+        }
     }
 
     protected virtual void movePiece(Vector3Int newTile){
 
         transform.position = grid.GetCellCenterWorld(newTile);
         currentTile = newTile;
+
+    }
+
+    protected virtual void Attack()
+    {
+
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnAttack();
+
+        }
 
     }
 
@@ -68,6 +115,13 @@ public class GamePiece : MonoBehaviour
 
     public virtual void TakeDamage(int damage = 10)
     {
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnTakeDamage();
+
+        }
+        
         health -= damage;
 
         Debug.Log(this.name + " taking " + damage + " damage");

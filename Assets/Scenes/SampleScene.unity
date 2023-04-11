@@ -1504,6 +1504,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4339219796361401924, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
+      propertyPath: m_VerticalScrollbarVisibility
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4461416036049307853, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
       propertyPath: m_Name
       value: Canvas
