@@ -30,6 +30,7 @@ public class HealthDisplay : MonoBehaviour
         enemyYOffsetAbove = (healthBarHeight * 0.5f) * -1;
 
         this.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        this.transform.SetAsFirstSibling();
 
         if (gp is PlayerController)
         {

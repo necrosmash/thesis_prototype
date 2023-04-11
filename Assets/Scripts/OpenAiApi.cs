@@ -21,6 +21,8 @@ public class OpenAiApi : MonoBehaviour
 
     private bool isFirstPost;
 
+    public static bool isPostInProgress { get; private set; }
+
     public enum Model
     {
         davinci,
@@ -34,6 +36,7 @@ public class OpenAiApi : MonoBehaviour
         previousMessages = new List<Message>();
         string prompt = Regex.Replace("I want you to return me a JSON object. All of your output should be a part of the JSON object. Do not output any text except for the JSON object. Here is the example of the JSON object: " + JsonUtility.ToJson(new BattleInfo()) + " \"weapon\" must be one of the following values: \"sword\", \"hammer\", \"bow\". It cannot be anything else. \"size\" must be one of the following values: \"small\", \"medium\", \"large\". It cannot be anything else. Orc names must also include a descriptor starting with \"the\", such as \"Uzguk the Undefeated\". Be creative about these descriptors. Describe the opening scene in the \"openingScene\" string. The opening scene must be a story about an elf about to engage in a battle with a group of orcs. Be creative when you come up with descriptions of the orcs. Populate the \"orcs\" array based on the opening scene. ", "\"", "\\\"");
         isFirstPost = true;
+        isPostInProgress = true;
         Post(prompt);
     }
 
@@ -68,6 +71,7 @@ public class OpenAiApi : MonoBehaviour
             case Model.test:
                 response = DaVinciResponse.GenerateTestResponse();
                 response.ParseBattleInfo();
+                isPostInProgress = false;
                 break;
         }
     }
@@ -82,6 +86,8 @@ public class OpenAiApi : MonoBehaviour
 
     private IEnumerator Post(UnityWebRequest request)
     {
+        isPostInProgress = true;
+
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -119,6 +125,8 @@ public class OpenAiApi : MonoBehaviour
             
             Debug.Log("API call complete");
         }
+        
+        isPostInProgress = false;
     }
 
     // Update is called once per frame
