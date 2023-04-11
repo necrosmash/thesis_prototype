@@ -10,12 +10,12 @@ public class LogViewer : MonoBehaviour
 
     private string mostRecentResponse;
 
-    private TMP_InputField inputField;
+    [SerializeField]
+    private ThesisChatController cc;
 
     // Start is called before the first frame update
     void Start()
     {
-        inputField = this.GetComponent<TMP_InputField>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class LogViewer : MonoBehaviour
         if (apiClient.response == null || apiClient.response.logString.Equals(mostRecentResponse)) return;
 
         mostRecentResponse = apiClient.response.logString;
-        inputField.text = mostRecentResponse + "\n\n" + inputField.text;
+        cc.AddToChatOutput(mostRecentResponse);
     }
 }
