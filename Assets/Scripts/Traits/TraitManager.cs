@@ -11,6 +11,8 @@ public static class TraitManager
     {
         traitList = new Dictionary<string, GameObject>();
         traitList.Add("drunk", Resources.Load<GameObject>("Traits/DrunkTrait"));
+        traitList.Add("knockdown", Resources.Load<GameObject>("Traits/KnockdownTrait"));
+
 
     }
 

@@ -9,7 +9,7 @@ public class DrunkTrait : Trait
     {
         Name = "Drunk";
         Description = "This orc came to the battle prepared";
-        Duration = 3;
+        Duration = 10;
         base.Start();
 
     }
@@ -20,27 +20,44 @@ public class DrunkTrait : Trait
         base.Update();
     }
 
-    public override void OnStartTurn()
+    public override void OnStartTurn(GameObject newGameObject)
     {
-        base.OnStartTurn();
-        Debug.Log("Burning start turn");
+        base.OnStartTurn(newGameObject);
+
+        EnemyController ec = newGameObject.GetComponent<EnemyController>();
+
+        if (ec.orc.weaponEnum == BattleInfo.Orc.Weapon.Bow)
+        {
+            ec.attackRadius = 1f;
+        }
+
+        Debug.Log("Drunk start turn");
         Debug.Log("My duration: " + RemainingDuration);
     }
 
-    public override void OnTakeTurn()
+    public override void OnTakeTurn(GameObject newGameObject)
     {
-        base.OnTakeTurn();
-        Debug.Log("Burning take turn");
+        base.OnTakeTurn(newGameObject);
+
+        EnemyController ec = newGameObject.GetComponent<EnemyController>();
+
+
+        if (ec.orc.weaponEnum == BattleInfo.Orc.Weapon.Bow)
+        {
+            ec.attackRadius = 3f;
+        }
+
+        Debug.Log("Drunk take turn");
     }
     public override void OnAttack()
     {
         base.OnAttack();
-        Debug.Log("Burning attack");
+        Debug.Log("Drunk attack");
     }
 
     public override void OnTakeDamage()
     {
         base.OnTakeDamage();
-        Debug.Log("Burning take damage");
+        Debug.Log("Drunk take damage");
     }
 }

@@ -47,6 +47,12 @@ public class GamePiece : MonoBehaviour
     {
 
 
+        foreach (Trait trait in traits)
+        {
+
+            trait.OnTakeTurn(this.gameObject);
+
+        }
 
         Trait traitToRemove = null;
 
@@ -70,12 +76,6 @@ public class GamePiece : MonoBehaviour
 
         } while (traitToRemove != null);
 
-        foreach (Trait trait in traits)
-        {
-
-            trait.OnTakeTurn();
-
-        }
 
         gameManager.FinishTurn();
     }
@@ -84,8 +84,7 @@ public class GamePiece : MonoBehaviour
     {
         foreach (Trait trait in traits)
         {
-
-            trait.OnStartTurn();
+            trait.OnStartTurn(this.gameObject);
 
         }
     }

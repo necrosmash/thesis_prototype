@@ -33,7 +33,7 @@ public class Trait : MonoBehaviour
 
     }
 
-    public virtual void OnStartTurn()
+    public virtual void OnStartTurn(GameObject newGameObject)
     {
 
         Debug.Log("Base start turn");
@@ -49,7 +49,7 @@ public class Trait : MonoBehaviour
 
     }
 
-    public virtual void OnTakeTurn()
+    public virtual void OnTakeTurn(GameObject newGameObject)
     {
 
         Debug.Log("Base take turn");
