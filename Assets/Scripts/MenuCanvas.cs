@@ -19,7 +19,7 @@ public class MenuCanvas : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !HealthDisplay.GameOverCalled)
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameManager.GameOverCalled)
         {
             SceneManager.UnloadSceneAsync("Scenes/MenuScene");
         }

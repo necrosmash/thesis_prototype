@@ -18,6 +18,7 @@ public class GamePiece : MonoBehaviour
     protected Grid grid;
     protected Tilemap tilemap;
 
+    public int health;
 
     protected virtual void Awake(){
 
@@ -65,9 +66,15 @@ public class GamePiece : MonoBehaviour
         movePiece(startingTile);
     }
 
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int damage = 10)
     {
+        health -= damage;
 
+        Debug.Log(this.name + " taking " + damage + " damage");
+        Debug.Log(this.name + " health: " + health);
+
+        if (health <= 0)
+            gameManager.Kill(this);
     }
 
     protected bool checkMoveLegal(Vector3Int newTile, GamePiece acceptableGamePiece = null)

@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb68244c5368b6d44a71fdfd4cc09d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 20
   orc:
     name: 
     description: 
