@@ -9,7 +9,7 @@ public class DrunkTrait : Trait
     {
         Name = "Drunk";
         Description = "This orc came to the battle prepared";
-        Duration = 10;
+        Duration = 3;
         base.Start();
 
     }

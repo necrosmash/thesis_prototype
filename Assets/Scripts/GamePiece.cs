@@ -54,27 +54,20 @@ public class GamePiece : MonoBehaviour
 
         }
 
-        Trait traitToRemove = null;
-
-        do
+        List<Trait> traitsToRemove = new List<Trait>();
+        for (int i = 0; i < traits.Count; i++)
         {
-            for (int i = 0; i < traits.Count; i++)
+            if (traits[i].RemainingDuration <= 0)
             {
-                if (traits[i].RemainingDuration <= 0)
-                {
-                    traitToRemove = traits[i];
-                    break;
-                }
+                traitsToRemove.Add(traits[i]);
             }
+        }
 
-            if (traitToRemove != null)
-            {
-                traits.Remove(traitToRemove);
-                Destroy(traitToRemove.gameObject);
-                traitToRemove = null;
-            }
-
-        } while (traitToRemove != null);
+        foreach (Trait t in traitsToRemove)
+        {
+            traits.Remove(t);
+            Destroy(t.gameObject);
+        }
 
 
         gameManager.FinishTurn();
