@@ -158,13 +158,6 @@ public class EnemyController : GamePiece
         return false;
     }
 
-    public override void TakeDamage()
-    {
-        base.TakeDamage();
-
-        gameManager.Kill(this);
-    }
-
     private List<Vector3Int> ReconstructPath(Dictionary<Vector3Int, Vector3Int> cameFrom, Vector3Int current)
     {
         List<Vector3Int> totalPath = new List<Vector3Int>{ current };

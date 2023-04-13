@@ -11,16 +11,11 @@ public class PlayerController : GamePiece
     bool hasAttacked;
     int moveCount;
 
-    HealthDisplay healthDisplay;
-
     [SerializeField]
     int movesPerTurn;
 
-
     [SerializeField]
     int attackRadius = 1;
-
-
 
     override protected void Awake(){
         base.Awake();
@@ -33,10 +28,6 @@ public class PlayerController : GamePiece
         moveCount = 0;
         isPlayerTurn = false;
         hasAttacked = false;
-
-        // Connecting the health display
-        healthDisplay = GameObject.Find("HealthDisplay").GetComponent<HealthDisplay>();
-
     }
 
     // Update is called once per frame
@@ -110,10 +101,4 @@ public class PlayerController : GamePiece
         hasAttacked = false;
         //base.TakeTurn();
     }
-
-    public override void TakeDamage()
-    {
-        healthDisplay.TakeDamage();
-    }
-
 }
