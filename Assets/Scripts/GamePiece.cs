@@ -18,7 +18,7 @@ public class GamePiece : MonoBehaviour
     protected Grid grid;
     protected Tilemap tilemap;
 
-    public int health;
+    public int health, maxHealth;
     public List<Trait> traits;
 
     protected virtual void Awake(){

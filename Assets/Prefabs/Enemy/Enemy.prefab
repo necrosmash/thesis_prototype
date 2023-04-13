@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  maxHealth: 20
+  traits: []
   orc:
     name: 
     description: 
@@ -128,4 +130,6 @@ MonoBehaviour:
     size: 
     weaponEnum: 0
     sizeEnum: 0
+  attackRadius: 0
   movesPerTurn: 1
+  skipTurn: 0
