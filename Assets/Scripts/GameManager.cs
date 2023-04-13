@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     const int MIN_OBSTACLES = 6;
     const int MAX_OBSTACLES = 12;
 
+    public static bool GameOverCalled { get; private set; }
+
     public Vector3Int _selectedTile;
     public Vector3Int SelectedTile{
 
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         turnTakers.Add(player);
         turn = 0;
 
+        GameOverCalled = false;
     }
 
     // Update is called once per frame
@@ -60,6 +63,9 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
         }
+
+        // for testing
+        DamageKeystroke();
 
         /* -------------------------------------------------------------------------------------------
             The first IF statement needs to be replaced with a proper method to wait for API response
@@ -178,6 +184,18 @@ public class GameManager : MonoBehaviour
             Destroy(newGamePiece.gameObject);
             openaiapi.Post("The main character kills " + ((EnemyController) newGamePiece).orc.name + ". Creatively describe how this is done.");
         }
+
+        else if (newGamePiece is PlayerController)
+        {
+            GameOverCalled = true;
+            SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
+        }
     }
 
+    // for testing
+    private void DamageKeystroke()
+    {
+        if (MenuCanvas.IsRendered) return;
+        if (Input.GetKeyDown(KeyCode.H)) player.TakeDamage(10);
+    }
 }
