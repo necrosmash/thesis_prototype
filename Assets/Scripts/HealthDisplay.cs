@@ -27,6 +27,6 @@ public class HealthDisplay : MonoBehaviour
         healthBar.fillAmount = Mathf.Clamp((float) pc.health / (float) pc.maxHealth, 0, 1);
     }
 
-    private PlayerController GetPlayerController() => GameObject.Find("Player(Clone)")?.GetComponent<PlayerController>();
+    private PlayerController GetPlayerController() => GameObject.FindGameObjectWithTag("Player")?.GetComponent<PlayerController>();
 
 }
