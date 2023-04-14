@@ -14,6 +14,8 @@ public class EnemyController : GamePiece
     // Value currently set in Initialize()
     private int sightRange;
 
+    public HealthDisplay healthDisplay { get; private set; }
+
     private Status status;
     private enum Status
     {
@@ -36,6 +38,7 @@ public class EnemyController : GamePiece
     override protected void Start()
     {
         base.Start();
+        healthDisplay = transform.Find("HealthDisplay").GetComponent<HealthDisplay>();
     }
 
     // Update is called once per frame
