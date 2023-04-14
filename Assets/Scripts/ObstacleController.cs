@@ -21,5 +21,23 @@ public class ObstacleController : GamePiece
 
     }
 
-    public override void TakeTurn() {}
+    public override void StartTurn()
+    {
+        base.StartTurn();
+    }
+
+    public override void TakeTurn() {
+
+        base.TakeTurn();
+        
+    }
+
+    public override void TakeDamage(int damage = 10)
+    {
+
+        base.TakeDamage(damage);
+        Debug.Log("Attacking barrel");
+    }
+
+
 }

@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     MobDisplayController mobDisplayController;
 
     public PlayerController player { get; private set; }
-    List<EnemyController> enemies = new List<EnemyController>();
-    List<ObstacleController> obstacles = new List<ObstacleController>();
+    public List<EnemyController> enemies { get; private set; }
+    public List<ObstacleController> obstacles { get; private set; }
     List<GamePiece> turnTakers = new List<GamePiece>();
 
     private int turn;
@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
     {
 
         TraitManager.Initialise();
+
+        enemies = new List<EnemyController>();
+        obstacles = new List<ObstacleController>();
 
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerController>();
         player.Initialise(new Vector3Int(0, 0, 0));
@@ -90,6 +93,9 @@ public class GameManager : MonoBehaviour
 
             ObstacleController tempObstacle = (ObstacleController)createPiece(obstaclePrefab);
             tempObstacle.Initialise(startTile);
+
+            AddTrait(tempObstacle, "barrel");
+
             obstacles.Add(tempObstacle);
 
         }
@@ -112,13 +118,14 @@ public class GameManager : MonoBehaviour
             tempEnemy.orc = orcs[i];
             tempEnemy.Initialise(startTile);
 
-            AddTrait(tempEnemy, "drunk");
 
+            AddTrait(tempEnemy, "distracted");
             enemies.Add(tempEnemy);
 
         }
 
         turnTakers.AddRange(enemies);
+        turnTakers.AddRange(obstacles);
 
         FinishTurn();
     }
@@ -190,6 +197,14 @@ public class GameManager : MonoBehaviour
         {
             GameOverCalled = true;
             SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
+        }
+
+        else if (newGamePiece is ObstacleController)
+        {
+            obstacles.Remove((ObstacleController)newGamePiece);
+            turnTakers.Remove((ObstacleController)newGamePiece);
+            Destroy(newGamePiece.gameObject);
+
         }
     }
 
