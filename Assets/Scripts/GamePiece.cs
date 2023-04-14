@@ -16,7 +16,7 @@ public class GamePiece : MonoBehaviour
     protected Grid grid;
     protected Tilemap tilemap;
 
-    public int health, maxHealth;
+    public int health, maxHealth = -1;
     public List<Trait> traits;
 
     protected virtual void Awake(){
@@ -101,7 +101,6 @@ public class GamePiece : MonoBehaviour
 
     public virtual void Initialise(Vector3Int newStartingTile)
     {
-
         if (currentTile != DEFAULT_STARTING_VALUE)
         {
             throw new BadInitialisationException("Already initialised");
