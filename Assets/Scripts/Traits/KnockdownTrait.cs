@@ -5,11 +5,15 @@ using UnityEngine;
 public class KnockdownTrait : Trait
 {
     // Start is called before the first frame update
-    protected override void Start()
+    protected override void Awake()
     {
         Name = "Knocked Down";
         Description = "This orc has fallen and can't get up";
         Duration = 3;
+        base.Awake();
+    }
+    protected override void Start()
+    {
         base.Start();
 
     }

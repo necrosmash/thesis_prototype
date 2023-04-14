@@ -34,9 +34,7 @@ public class ObstacleController : GamePiece
 
     public override void TakeDamage(int damage = 10)
     {
-
         base.TakeDamage(damage);
-        Debug.Log("Attacking barrel");
     }
 
 

@@ -11,15 +11,18 @@ public class ExplosiveBarrelTrait : Trait
     int explosionRadius;
 
     bool isLit = false;
-
     int leftUntilExplosion;
 
-    // Start is called before the first frame update
-    protected override void Start()
+    protected override void Awake()
     {
         Name = "Explosive barrel";
         Description = "This is not up to workplace safety regulations";
         Duration = 10000;
+        base.Awake();
+    }
+    // Start is called before the first frame update
+    protected override void Start()
+    {
         base.Start();
 
         leftUntilExplosion = fuseTime;
@@ -42,13 +45,18 @@ public class ExplosiveBarrelTrait : Trait
 
         base.OnTakeTurn(newGameObject);
 
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         if (isLit)
         {
+
             leftUntilExplosion -= 1;
 
             if (leftUntilExplosion <= 0)
             {
                 Explode(newGameObject.GetComponent<GamePiece>().currentTile);
+                gameManager.Kill(newGameObject.GetComponent<GamePiece>());
+
             }
         }
 
@@ -62,6 +70,10 @@ public class ExplosiveBarrelTrait : Trait
     public override void OnTakeDamage()
     {
         base.OnTakeDamage();
+        //if (!isLit)
+        //{
+        //    GameObject.Find("GameManager").GetComponent<GameManager>().AddTrait(this.gameObject.transform.parent.GetComponent<GamePiece>(), "burning");
+        //}
         isLit = true;
     }
 
@@ -83,13 +95,10 @@ public class ExplosiveBarrelTrait : Trait
         foreach (ObstacleController obstacle in gameManager.obstacles)
         {
 
-            if ((obstacle.currentTile - newTile).magnitude <= explosionRadius)
+            if ((obstacle.currentTile - newTile).magnitude <= explosionRadius && (obstacle.currentTile - newTile).magnitude > 0.1)
             {
                 // checks to avoid adding traits to itself
-                if (obstacle.currentTile != newTile)
-                {
-                    gameManager.AddTrait(obstacle, "burning");
-                }
+                gameManager.AddTrait(obstacle, "burning");
             }
 
         }
@@ -101,7 +110,7 @@ public class ExplosiveBarrelTrait : Trait
 
         }
 
-        gameManager.Kill(gameManager.GetPieceAtTile(newTile));
+        //gameManager.Kill(gameManager.GetPieceAtTile(newTile));
         RemainingDuration = 0;
 
     }

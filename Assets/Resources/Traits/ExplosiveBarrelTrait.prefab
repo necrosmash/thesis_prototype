@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuseTime: 2
-  explosionRadius: 3
+  explosionRadius: 2

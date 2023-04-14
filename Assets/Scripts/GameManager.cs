@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
 
     private int turn;
 
-    const int MIN_OBSTACLES = 6;
-    const int MAX_OBSTACLES = 12;
+    const int MIN_OBSTACLES = 12;
+    const int MAX_OBSTACLES = 20;
 
     public static bool GameOverCalled { get; private set; }
 

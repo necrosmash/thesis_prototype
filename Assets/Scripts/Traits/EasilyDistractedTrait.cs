@@ -6,13 +6,16 @@ public class EasilyDistractedTrait : Trait
 {
 
     float skipChance = 20f;
-
-    // Start is called before the first frame update
-    protected override void Start()
+    protected override void Awake()
     {
         Name = "Easily Distracted";
         Description = "This orc is easily distracted, so they... Is that a squirrel on that tree? So cute!";
         Duration = 10000;
+        base.Awake();
+    }
+    // Start is called before the first frame update
+    protected override void Start()
+    {
         base.Start();
 
     }

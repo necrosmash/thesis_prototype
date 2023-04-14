@@ -8,11 +8,17 @@ public class BurningTrait : Trait
     [SerializeField]
     int damagePerTurn;
     // Start is called before the first frame update
-    protected override void Start()
+    protected override void Awake()
     {
         Name = "Burning";
         Description = "This orc is really hot";
         Duration = 3;
+        base.Awake();
+
+    }
+    protected override void Start()
+    {
+
         base.Start();
 
     }

@@ -5,13 +5,16 @@ using UnityEngine;
 public class DrunkTrait : Trait
 {
     // Start is called before the first frame update
-    protected override void Start()
+    protected override void Awake()
     {
         Name = "Drunk";
         Description = "This orc came to the battle prepared";
         Duration = 3;
+        base.Awake();
+    }
+    protected override void Start()
+    {
         base.Start();
-
     }
 
     // Update is called once per frame
