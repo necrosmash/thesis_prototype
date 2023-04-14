@@ -10,7 +10,9 @@ public class MobDisplayController : MonoBehaviour
     [SerializeField]
     GameManager gameManager;
     [SerializeField]
-    TMP_InputField inputField;
+    TextMeshProUGUI inputField;
+    [SerializeField]
+    GameObject mobDisplayWindow;
 
     GamePiece currentPiece = null;
 
@@ -32,12 +34,25 @@ public class MobDisplayController : MonoBehaviour
 
         if (currentPiece is EnemyController)
         {
-            this.gameObject.SetActive(true);
+            mobDisplayWindow.gameObject.SetActive(true);
             EnemyController tempEnemy = (EnemyController) currentPiece;
-            inputField.text = "<b>Name</b>: " + tempEnemy.orc.name + "\n\n<b>Description</b>: " + tempEnemy.orc.description + "\n\n<b>Weapon</b>: " + tempEnemy.orc.weapon + "\n\n<b>Size</b>: " + tempEnemy.orc.size;
+            inputField.text = "<b>Name</b>: " + tempEnemy.orc.name + "\n\n<b>Description</b>: " + tempEnemy.orc.description + "\n\n<b>Weapon</b>: " + tempEnemy.orc.weapon + "\n\n<b>Size</b>: " + tempEnemy.orc.size + "\n\n\t\t<b><color=#0000a0ff>Traits</color></b>:\n\n";
+
+            string traitsString = "";
+
+            foreach (Trait trait in tempEnemy.traits)
+            {
+
+                traitsString += "<b>Name</b>: " + trait.Name + "\n\n<b>Description</b>:\n\n" + trait.Description + "\n\n<b>Remaining duration</b>: " + trait.RemainingDuration + "\n\n";
+
+            }
+
+            inputField.text += traitsString;
+
+
 
         } else {
-            this.gameObject.SetActive(false);
+            mobDisplayWindow.gameObject.SetActive(false);
         }
 
     }
