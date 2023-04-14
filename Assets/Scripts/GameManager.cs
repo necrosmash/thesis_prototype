@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
             tempEnemy.orc = orcs[i];
             tempEnemy.Initialise(startTile);
 
-            AddTrait(tempEnemy, "drunk");
+            AddTrait(tempEnemy, "distracted");
 
             enemies.Add(tempEnemy);
 
