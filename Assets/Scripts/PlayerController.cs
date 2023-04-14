@@ -83,9 +83,8 @@ public class PlayerController : GamePiece
     {
         GamePiece tempGamePiece = gameManager.GetPieceAtTile(newTile);
 
-        if (/*gameManager.GetPieceAtTile(newTile) is EnemyController && */((newTile - currentTile).magnitude <= attackRadius))
+        if ((newTile - currentTile).magnitude <= attackRadius)
         {
-            //EnemyController newEnemy = (EnemyController) tempGamePiece;
             tempGamePiece.TakeDamage();
             return true;
 
