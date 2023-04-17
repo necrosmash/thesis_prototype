@@ -37,7 +37,7 @@ public class MobDisplayController : MonoBehaviour
 
         if (currentPiece is EnemyController)
         {
-
+            Debug.Log(currentPiece.traits);
             scrollRect.verticalNormalizedPosition = 1;
 
             mobDisplayWindow.gameObject.SetActive(true);

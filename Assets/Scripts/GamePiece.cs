@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Text;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -17,7 +19,7 @@ public class GamePiece : MonoBehaviour
     protected Tilemap tilemap;
 
     public int health, maxHealth = -1;
-    public List<Trait> traits;
+    public Traits traits = new Traits();
 
     [SerializeField]
     public int baseDamage;
@@ -55,7 +57,7 @@ public class GamePiece : MonoBehaviour
 
     public virtual void TakeTurn()
     {
-
+        Debug.Log("traits: " + traits);
 
         foreach (Trait trait in traits)
         {
@@ -64,7 +66,7 @@ public class GamePiece : MonoBehaviour
 
         }
 
-        List<Trait> traitsToRemove = new List<Trait>();
+        Traits traitsToRemove = new Traits();
         for (int i = 0; i < traits.Count; i++)
         {
             if (traits[i].RemainingDuration <= 0)
@@ -175,5 +177,23 @@ public class BadInitialisationException : System.Exception
     public BadInitialisationException(string message) : base(message)
     {
 
+    }
+}
+
+public class Traits : List<Trait>
+{
+    public override string ToString()
+    {
+        StringBuilder s = new StringBuilder();
+        //s.Append("(");
+        foreach (var element in this)
+        {
+            s.Append(element.ToString() + ", ");
+        }
+
+        if (s.Length <= 0) return "";
+
+        s.Replace(", ", ". ", s.Length - 2, 2);
+        return s.ToString();
     }
 }

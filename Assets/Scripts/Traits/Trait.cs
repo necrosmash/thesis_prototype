@@ -61,4 +61,9 @@ public class Trait : MonoBehaviour
         return;
     }
 
+    public override string ToString()
+    {
+        //return Name + ": " + Description;
+        return Name;
+    }
 }
