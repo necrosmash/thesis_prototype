@@ -88,8 +88,7 @@ public class EnemyController : GamePiece
 
             if (IsPlayerInAttackDistance())
             {
-                base.Attack();
-                gameManager.player.TakeDamage();
+                Attack(gameManager.player);
             }
         }
 
@@ -97,6 +96,13 @@ public class EnemyController : GamePiece
 
         //Debug.Log("enemy taking turn");
         base.TakeTurn();
+    }
+
+    protected override void Attack(GamePiece newGamePiece)
+    {
+
+        base.Attack(newGamePiece);
+
     }
 
     public override void Initialise(Vector3Int newStartingTile)

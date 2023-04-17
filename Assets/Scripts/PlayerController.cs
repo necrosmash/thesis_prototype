@@ -57,8 +57,11 @@ public class PlayerController : GamePiece
         {
             if (!hasAttacked && moveCount > 0)
             {
-                if (Attack(gameManager.SelectedTile))
+                GamePiece tempGamePiece = gameManager.GetPieceAtTile(gameManager.SelectedTile);
+
+                if (((tempGamePiece.currentTile - currentTile).magnitude <= attackRadius) && (tempGamePiece != null))
                 {
+                    Attack(tempGamePiece);
                     moveCount--;
                     hasAttacked = true;
                 }
@@ -79,17 +82,10 @@ public class PlayerController : GamePiece
 
     }
 
-    bool Attack(Vector3Int newTile)
+    protected override void Attack(GamePiece newGamePiece)
     {
-        GamePiece tempGamePiece = gameManager.GetPieceAtTile(newTile);
 
-        if ((newTile - currentTile).magnitude <= attackRadius)
-        {
-            tempGamePiece.TakeDamage();
-            return true;
-
-        }
-        return false;
+        base.Attack(newGamePiece);
 
     }
 
@@ -98,6 +94,5 @@ public class PlayerController : GamePiece
         isPlayerTurn = true;
         moveCount = movesPerTurn;
         hasAttacked = false;
-        //base.TakeTurn();
     }
 }

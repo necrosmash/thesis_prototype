@@ -124,6 +124,9 @@ MonoBehaviour:
   health: 20
   maxHealth: 20
   traits: []
+  baseDamage: 10
+  minDamageRoll: -10
+  maxDamageRoll: 10
   orc:
     name: 
     description: 
