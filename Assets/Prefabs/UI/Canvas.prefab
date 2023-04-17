@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1386126161399391432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1066,6 +1066,7 @@ MonoBehaviour:
   ChatInputField: {fileID: 896460514063714949}
   ChatDisplayOutput: {fileID: 9110553486810302274}
   ChatScrollbar: {fileID: 2361725302557512804}
+  DELAY_PER_CHAR: 0.02
 --- !u!1 &2106722003010283937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &5236728610264426124
@@ -1826,7 +1827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &779614197562464228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1932,6 +1933,7 @@ MonoBehaviour:
   ChatInputField: {fileID: 475847212506038012}
   ChatDisplayOutput: {fileID: 1597525364884732193}
   ChatScrollbar: {fileID: 7025378203736806916}
+  DELAY_PER_CHAR: 0
 --- !u!1 &4842187532391905596
 GameObject:
   m_ObjectHideFlags: 0
