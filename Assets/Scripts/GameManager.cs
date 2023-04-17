@@ -180,6 +180,15 @@ public class GameManager : MonoBehaviour
 
     public void FinishTurn()
     {
+        StartCoroutine(PollToFinishTurn());
+    }
+
+    private IEnumerator PollToFinishTurn()
+    {
+        while (OpenAiApi.isPostInProgress)
+        {
+            yield return new WaitForSeconds(1);
+        }
         turnTakers[turn++ % turnTakers.Count].TakeTurn();
     }
 

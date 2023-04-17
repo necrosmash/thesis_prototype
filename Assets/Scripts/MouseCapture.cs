@@ -32,6 +32,7 @@ public class mouseCapture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (OpenAiApi.isPostInProgress) return;
         
        if (Input.GetMouseButtonDown(0)) {
 
