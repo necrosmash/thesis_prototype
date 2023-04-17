@@ -135,7 +135,7 @@ public class EnemyController : GamePiece
 
         do
         {
-            patrolTile = new Vector3Int(UnityEngine.Random.Range(0, 10), UnityEngine.Random.Range(0, 10), 0);
+            patrolTile = new Vector3Int(UnityEngine.Random.Range(0, GameManager.MAP_SIZE_X), UnityEngine.Random.Range(0, GameManager.MAP_SIZE_Y), 0);
         } while (!checkMoveLegal(patrolTile));
     }
 
@@ -303,9 +303,9 @@ public class EnemyController : GamePiece
         List<Vector3Int> neighbours = new List<Vector3Int>();
 
         if (!(node.x == 0)) neighbours.Add(new Vector3Int(node.x - 1, node.y, node.z));
-        if (!(node.x == 9)) neighbours.Add(new Vector3Int(node.x + 1, node.y, node.z));
+        if (!(node.x == (GameManager.MAP_SIZE_X - 1))) neighbours.Add(new Vector3Int(node.x + 1, node.y, node.z));
         if (!(node.y == 0)) neighbours.Add(new Vector3Int(node.x, node.y - 1, node.z));
-        if (!(node.y == 9)) neighbours.Add(new Vector3Int(node.x, node.y + 1, node.z));
+        if (!(node.y == (GameManager.MAP_SIZE_Y - 1))) neighbours.Add(new Vector3Int(node.x, node.y + 1, node.z));
 
         return neighbours;
     }
