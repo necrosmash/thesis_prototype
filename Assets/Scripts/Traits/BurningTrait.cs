@@ -2,18 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnockdownTrait : Trait
+public class BurningTrait : Trait
 {
+
+    [SerializeField]
+    int damagePerTurn;
     // Start is called before the first frame update
     protected override void Awake()
     {
-        Name = "Knocked Down";
-        Description = "This orc has fallen and can't get up";
+        Name = "Burning";
+        Description = "This orc is really hot";
         Duration = 3;
         base.Awake();
+
     }
     protected override void Start()
     {
+
         base.Start();
 
     }
@@ -27,13 +32,14 @@ public class KnockdownTrait : Trait
     public override void OnStartTurn(GameObject newGameObject)
     {
         base.OnStartTurn(newGameObject);
-
-        newGameObject.GetComponent<EnemyController>().skipTurn = true;
     }
 
     public override void OnTakeTurn(GameObject newGameObject)
     {
         base.OnTakeTurn(newGameObject);
+
+        newGameObject.GetComponent<GamePiece>().TakeDamage(damagePerTurn);
+
     }
     public override void OnAttack()
     {

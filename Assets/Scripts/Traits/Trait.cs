@@ -10,10 +10,15 @@ public class Trait : MonoBehaviour
     public int Duration { get; protected set; }
     public int RemainingDuration { get; protected set; }
 
+    protected virtual void Awake()
+    {
+        RemainingDuration = Duration;
+    }
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        RemainingDuration = Duration;
+
     }
 
     // Update is called once per frame
@@ -36,7 +41,6 @@ public class Trait : MonoBehaviour
     public virtual void OnStartTurn(GameObject newGameObject)
     {
 
-        Debug.Log("Base start turn");
         return;
 
     }
@@ -44,7 +48,6 @@ public class Trait : MonoBehaviour
     public virtual void OnAttack()
     {
 
-        Debug.Log("Base attack");
         return;
 
     }
@@ -52,7 +55,6 @@ public class Trait : MonoBehaviour
     public virtual void OnTakeTurn(GameObject newGameObject)
     {
 
-        Debug.Log("Base take turn");
         Tick();
         return;
 
@@ -60,7 +62,6 @@ public class Trait : MonoBehaviour
 
     public virtual void OnTakeDamage()
     {
-        Debug.Log("Base take damage");
         return;
     }
 

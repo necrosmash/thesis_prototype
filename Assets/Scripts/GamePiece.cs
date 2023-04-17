@@ -121,8 +121,6 @@ public class GamePiece : MonoBehaviour
         
         health -= damage;
 
-        Debug.Log(this.name + " taking " + damage + " damage");
-        Debug.Log(this.name + " health: " + health);
 
         if (health <= 0)
             gameManager.Kill(this);
