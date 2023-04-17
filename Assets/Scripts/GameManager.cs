@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour
             turnTakers.Remove((EnemyController) newGamePiece);
             Destroy(((EnemyController) newGamePiece).healthDisplay.gameObject);
             Destroy(newGamePiece.gameObject);
-            openaiapi.Post("The main character kills " + ((EnemyController) newGamePiece).orc.name + ". Creatively describe how this is done.");
+            openaiapi.Post("The main character kills " + ((EnemyController) newGamePiece).orc.name + ". Creatively describe how this is done in a maximum of three sentences.");
         }
 
         else if (newGamePiece is PlayerController)
