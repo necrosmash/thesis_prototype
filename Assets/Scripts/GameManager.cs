@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             The first IF statement needs to be replaced with a proper method to wait for API response
            ------------------------------------------------------------------------------------------- */
 
-        if ((openaiapi.response == null) || (openaiapi.response.battleInfo.openingScene == null) || (enemies.Count > 0)){
+        if (OpenAiApi.isPostInProgress || (enemies.Count > 0)) {
             return;
         }
 
