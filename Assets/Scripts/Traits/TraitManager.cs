@@ -18,11 +18,13 @@ public static class TraitManager
         traitList.Add("barrel", Resources.Load<GameObject>("Traits/ExplosiveBarrelTrait"));
         traitList.Add("burning", Resources.Load<GameObject>("Traits/BurningTrait"));
         traitList.Add("distracted", Resources.Load<GameObject>("Traits/EasilyDistractedTrait"));
+        traitList.Add("hungover", Resources.Load<GameObject>("Traits/HungoverTrait"));
 
         spawnTraits = new List<string>();
-        spawnTraits.Add("drunk");
-        spawnTraits.Add("sober");
-        spawnTraits.Add("distracted");
+        //spawnTraits.Add("drunk");
+        //spawnTraits.Add("sober");
+        //spawnTraits.Add("distracted");
+        spawnTraits.Add("hungover");
 
     }
 

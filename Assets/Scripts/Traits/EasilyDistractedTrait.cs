@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EasilyDistractedTrait : Trait
 {
-
-    float skipChance = 20f;
+    [SerializeField]
+    float skipChance;
     protected override void Awake()
     {
         Name = "Easily Distracted";

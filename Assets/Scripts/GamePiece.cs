@@ -29,6 +29,8 @@ public class GamePiece : MonoBehaviour
     public int minDamageResistRoll = 0;
     public int maxDamageResistRoll = 0;
 
+    public bool skipAttack = false;
+
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -107,11 +109,15 @@ public class GamePiece : MonoBehaviour
 
         }
 
-        int newDamage = baseDamage + Random.Range(minDamageRoll, maxDamageRoll + 1);
+        if (!skipAttack)
+        {
+            int newDamage = baseDamage + Random.Range(minDamageRoll, maxDamageRoll + 1);
 
-        Debug.Log("Attacking! My base damage is: " + baseDamage + ". My min roll is: " + minDamageRoll + ". My max roll is: " + maxDamageRoll + ". Total damage output: " + newDamage);
+            Debug.Log("Attacking! My base damage is: " + baseDamage + ". My min roll is: " + minDamageRoll + ". My max roll is: " + maxDamageRoll + ". Total damage output: " + newDamage);
 
-        newGamePiece.TakeDamage(newDamage);
+            newGamePiece.TakeDamage(newDamage);
+        }
+        skipAttack = false;
 
     }
 
@@ -135,7 +141,7 @@ public class GamePiece : MonoBehaviour
 
         }
 
-        damage += Random.Range(minDamageResistRoll, maxDamageResistRoll + 1);
+        damage -= Random.Range(minDamageResistRoll, maxDamageResistRoll + 1);
         Debug.Log("Taking damage! My min damage resist roll: " + minDamageResistRoll + ". My max damage resist roll: " + maxDamageResistRoll + " Total damage received: " + damage);
         
         if (damage < 0)
