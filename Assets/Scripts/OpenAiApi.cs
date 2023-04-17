@@ -62,7 +62,7 @@ public class OpenAiApi : MonoBehaviour
                 
                 break;
             case Model.davinci:
-                string davinciPostData = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + prompt + "\", \"temperature\": 0.7, \"max_tokens\": 3000}";
+                string davinciPostData = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + prompt + "\", \"temperature\": 0.7}";
                 
                 StartCoroutine(Post(GenerateRequest(daVinciUrl, davinciPostData)));
 
