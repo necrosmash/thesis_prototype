@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     const int MIN_OBSTACLES = 12;
     const int MAX_OBSTACLES = 20;
 
+    public const int MAP_SIZE_X = 15;
+    public const int MAP_SIZE_Y = 15;
+
     public static bool GameOverCalled { get; private set; }
 
     public Vector3Int _selectedTile;
@@ -87,7 +90,7 @@ public class GameManager : MonoBehaviour
             {
 
                 // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
-                startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
+                startTile = new Vector3Int(Random.Range(0, MAP_SIZE_X), Random.Range(0, MAP_SIZE_Y), 0);
 
             } while (GetPieceAtTile(startTile) != null);
 
@@ -109,7 +112,7 @@ public class GameManager : MonoBehaviour
             do{
                 
                 // The numbers are what they are because: The map is 10*10 and in UnityEngine.Random() the max parameter is exclusive
-                startTile = new Vector3Int(Random.Range(0, 10), Random.Range(0, 10), 0);
+                startTile = new Vector3Int(Random.Range(0, MAP_SIZE_X), Random.Range(0, MAP_SIZE_Y), 0);
 
             }while (GetPieceAtTile(startTile) != null);
 
