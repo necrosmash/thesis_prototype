@@ -19,6 +19,13 @@ public class GamePiece : MonoBehaviour
     public int health, maxHealth = -1;
     public List<Trait> traits;
 
+    [SerializeField]
+    public int baseDamage;
+    [SerializeField]
+    public int minDamageRoll;
+    [SerializeField]
+    public int maxDamageRoll;
+
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -87,7 +94,7 @@ public class GamePiece : MonoBehaviour
 
     }
 
-    protected virtual void Attack()
+    protected virtual void Attack(GamePiece newGamePiece)
     {
 
         foreach (Trait trait in traits)
@@ -96,6 +103,10 @@ public class GamePiece : MonoBehaviour
             trait.OnAttack();
 
         }
+
+        int newDamage = baseDamage + Random.Range(minDamageRoll, maxDamageRoll + 1);
+
+        newGamePiece.TakeDamage(newDamage);
 
     }
 

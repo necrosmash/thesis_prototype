@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class MobDisplayController : MonoBehaviour
@@ -15,11 +16,13 @@ public class MobDisplayController : MonoBehaviour
     GameObject mobDisplayWindow;
 
     GamePiece currentPiece = null;
+    [SerializeField]
+    ScrollRect scrollRect;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scrollRect.verticalNormalizedPosition = 1;
     }
 
     // Update is called once per frame
@@ -34,7 +37,12 @@ public class MobDisplayController : MonoBehaviour
 
         if (currentPiece is EnemyController)
         {
+
+            scrollRect.verticalNormalizedPosition = 1;
+
             mobDisplayWindow.gameObject.SetActive(true);
+
+
             EnemyController tempEnemy = (EnemyController) currentPiece;
             inputField.text = "<b>Name</b>: " + tempEnemy.orc.name + "\n\n<b>Description</b>: " + tempEnemy.orc.description + "\n\n<b>Weapon</b>: " + tempEnemy.orc.weapon + "\n\n<b>Size</b>: " + tempEnemy.orc.size + "\n\n\t\t<b><color=#0000a0ff>Traits</color></b>:\n\n";
 

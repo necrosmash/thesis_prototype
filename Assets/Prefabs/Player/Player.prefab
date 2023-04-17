@@ -124,6 +124,9 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   traits: []
+  baseDamage: 10
+  minDamageRoll: -5
+  maxDamageRoll: 5
   movesPerTurn: 2
   attackRadius: 1
 --- !u!1001 &3223465883857863532
