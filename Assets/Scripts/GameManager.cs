@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
             tempEnemy.orc = orcs[i];
             tempEnemy.Initialise(startTile);
 
-            AddTrait(tempEnemy, "distracted");
+            AddTrait(tempEnemy, TraitManager.GetRandomSpawnTrait());
             enemies.Add(tempEnemy);
 
         }

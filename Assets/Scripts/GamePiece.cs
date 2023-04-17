@@ -26,6 +26,9 @@ public class GamePiece : MonoBehaviour
     [SerializeField]
     public int maxDamageRoll;
 
+    public int minDamageResistRoll = 0;
+    public int maxDamageResistRoll = 0;
+
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -100,11 +103,13 @@ public class GamePiece : MonoBehaviour
         foreach (Trait trait in traits)
         {
 
-            trait.OnAttack();
+            trait.OnAttack(this.gameObject);
 
         }
 
         int newDamage = baseDamage + Random.Range(minDamageRoll, maxDamageRoll + 1);
+
+        Debug.Log("Attacking! My base damage is: " + baseDamage + ". My min roll is: " + minDamageRoll + ". My max roll is: " + maxDamageRoll + ". Total damage output: " + newDamage);
 
         newGamePiece.TakeDamage(newDamage);
 
@@ -126,12 +131,19 @@ public class GamePiece : MonoBehaviour
         foreach (Trait trait in traits)
         {
 
-            trait.OnTakeDamage();
+            trait.OnTakeDamage(this.gameObject);
 
         }
-        
-        health -= damage;
 
+        damage += Random.Range(minDamageResistRoll, maxDamageResistRoll + 1);
+        Debug.Log("Taking damage! My min damage resist roll: " + minDamageResistRoll + ". My max damage resist roll: " + maxDamageResistRoll + " Total damage received: " + damage);
+        
+        if (damage < 0)
+        {
+            damage = 0;
+        }
+
+        health -= damage;
 
         if (health <= 0)
             gameManager.Kill(this);

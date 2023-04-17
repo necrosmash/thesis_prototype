@@ -41,13 +41,4 @@ public class EasilyDistractedTrait : Trait
     {
         base.OnTakeTurn(newGameObject);
     }
-    public override void OnAttack()
-    {
-        base.OnAttack();
-    }
-
-    public override void OnTakeDamage()
-    {
-        base.OnTakeDamage();
-    }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrunkTrait : Trait
+public class SoberTrait : Trait
 {
     [SerializeField]
     int minDamageRollModifier;
@@ -23,8 +23,8 @@ public class DrunkTrait : Trait
     // Start is called before the first frame update
     protected override void Awake()
     {
-        Name = "Drunk";
-        Description = "This orc came to the battle prepared";
+        Name = "Sober";
+        Description = "This orc is full of anxiety and existential dread";
         Duration = 10000;
         base.Awake();
 

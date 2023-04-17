@@ -41,13 +41,4 @@ public class BurningTrait : Trait
         newGameObject.GetComponent<GamePiece>().TakeDamage(damagePerTurn);
 
     }
-    public override void OnAttack()
-    {
-        base.OnAttack();
-    }
-
-    public override void OnTakeDamage()
-    {
-        base.OnTakeDamage();
-    }
 }

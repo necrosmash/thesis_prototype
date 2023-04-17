@@ -45,7 +45,7 @@ public class Trait : MonoBehaviour
 
     }
 
-    public virtual void OnAttack()
+    public virtual void OnAttack(GameObject newGameObject)
     {
 
         return;
@@ -60,7 +60,7 @@ public class Trait : MonoBehaviour
 
     }
 
-    public virtual void OnTakeDamage()
+    public virtual void OnTakeDamage(GameObject newGameObject)
     {
         return;
     }
