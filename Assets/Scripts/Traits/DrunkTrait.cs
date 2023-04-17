@@ -9,7 +9,7 @@ public class DrunkTrait : Trait
     {
         Name = "Drunk";
         Description = "This orc came to the battle prepared";
-        Duration = 3;
+        Duration = 9999;
         base.Awake();
     }
     protected override void Start()

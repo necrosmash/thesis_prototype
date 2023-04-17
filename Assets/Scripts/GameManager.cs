@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
             tempEnemy.Initialise(startTile);
 
             AddTrait(tempEnemy, "distracted");
+            AddTrait(tempEnemy, "drunk");
             enemies.Add(tempEnemy);
 
         }
@@ -192,7 +193,8 @@ public class GameManager : MonoBehaviour
             turnTakers.Remove((EnemyController) newGamePiece);
             Destroy(((EnemyController) newGamePiece).healthDisplay.gameObject);
             Destroy(newGamePiece.gameObject);
-            openaiapi.Post("The main character kills " + ((EnemyController) newGamePiece).orc.name + ". Creatively describe how this is done in a maximum of three sentences.");
+            //Debug.Log("The main character kills " + ((EnemyController)newGamePiece).orc.name + ", who has the following traits: " + newGamePiece.traits + ". Creatively describe how this is done in a maximum of three sentences.");
+            openaiapi.Post("The main character kills " + ((EnemyController)newGamePiece).orc.name + ", who has the following traits: " + newGamePiece.traits + ". Creatively describe how this is done in a maximum of three sentences.");
         }
 
         else if (newGamePiece is PlayerController)
