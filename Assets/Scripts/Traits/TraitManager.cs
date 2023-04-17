@@ -21,9 +21,9 @@ public static class TraitManager
         traitList.Add("hungover", Resources.Load<GameObject>("Traits/HungoverTrait"));
 
         spawnTraits = new List<string>();
-        //spawnTraits.Add("drunk");
-        //spawnTraits.Add("sober");
-        //spawnTraits.Add("distracted");
+        spawnTraits.Add("drunk");
+        spawnTraits.Add("sober");
+        spawnTraits.Add("distracted");
         spawnTraits.Add("hungover");
 
     }
