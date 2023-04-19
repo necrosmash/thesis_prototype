@@ -31,10 +31,6 @@ public class Trait : MonoBehaviour
     {
 
         RemainingDuration -= 1;
-        //if (RemainingDuration <= 0)
-        //{
-        //    Destroy(this.gameObject);
-        //}
 
     }
 
@@ -45,7 +41,7 @@ public class Trait : MonoBehaviour
 
     }
 
-    public virtual void OnAttack()
+    public virtual void OnAttack(GameObject newGameObject)
     {
 
         return;
@@ -60,7 +56,7 @@ public class Trait : MonoBehaviour
 
     }
 
-    public virtual void OnTakeDamage()
+    public virtual void OnTakeDamage(GameObject newGameObject)
     {
         return;
     }

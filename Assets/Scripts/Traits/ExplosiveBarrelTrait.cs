@@ -62,14 +62,10 @@ public class ExplosiveBarrelTrait : Trait
 
 
     }
-    public override void OnAttack()
-    {
-        base.OnAttack();
-    }
 
-    public override void OnTakeDamage()
+    public override void OnTakeDamage(GameObject newGameObject)
     {
-        base.OnTakeDamage();
+        base.OnTakeDamage(newGameObject);
         isLit = true;
     }
 

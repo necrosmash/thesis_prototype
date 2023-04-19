@@ -12,7 +12,7 @@ public class EnemyController : GamePiece
     // this should possibly belong to `BattleInfo.Orc`.
     // it should also not be hardcoded.
     // Value currently set in Initialize()
-    private int sightRange;
+    public int sightRange;
 
     public HealthDisplay healthDisplay { get; private set; }
 

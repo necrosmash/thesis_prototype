@@ -2,25 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurningTrait : Trait
+public class SoberTrait : AlcoholTrait
 {
-
-    [SerializeField]
-    int damagePerTurn;
     // Start is called before the first frame update
     protected override void Awake()
     {
-        Name = "Burning";
-        Description = "This orc is really hot";
-        Duration = 3;
+        Name = "Sober";
+        Description = "This orc is full of anxiety and existential dread";
+        Duration = 10000;
         base.Awake();
 
     }
     protected override void Start()
     {
-
         base.Start();
-
     }
 
     // Update is called once per frame
@@ -37,8 +32,14 @@ public class BurningTrait : Trait
     public override void OnTakeTurn(GameObject newGameObject)
     {
         base.OnTakeTurn(newGameObject);
+    }
+    public override void OnAttack(GameObject newGameObject)
+    {
+        base.OnAttack(newGameObject);
+    }
 
-        newGameObject.GetComponent<GamePiece>().TakeDamage(damagePerTurn);
-
+    public override void OnTakeDamage(GameObject newGameObject)
+    {
+        base.OnTakeDamage(newGameObject);
     }
 }
