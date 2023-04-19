@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EasilyDistractedTrait : Trait
 {
-
-    float skipChance = 20f;
+    [SerializeField]
+    float skipChance;
     protected override void Awake()
     {
         Name = "Easily Distracted";
@@ -40,14 +40,5 @@ public class EasilyDistractedTrait : Trait
     public override void OnTakeTurn(GameObject newGameObject)
     {
         base.OnTakeTurn(newGameObject);
-    }
-    public override void OnAttack()
-    {
-        base.OnAttack();
-    }
-
-    public override void OnTakeDamage()
-    {
-        base.OnTakeDamage();
     }
 }

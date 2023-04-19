@@ -51,7 +51,7 @@ public class MobDisplayController : MonoBehaviour
             foreach (Trait trait in tempEnemy.traits)
             {
 
-                traitsString += "<b>Name</b>: " + trait.Name + "\n\n<b>Description</b>:\n\n" + trait.Description + "\n\n<b>Remaining duration</b>: " + trait.RemainingDuration + "\n\n";
+                traitsString += "<b>Name</b>: <color=#008000ff>" + trait.Name + "</color>\n\n<b>Description</b>:\n\n" + trait.Description + "\n\n<b>Remaining duration</b>: " + trait.RemainingDuration + "\n\n";
 
             }
 

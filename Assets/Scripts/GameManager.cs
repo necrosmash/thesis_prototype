@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
             ObstacleController tempObstacle = (ObstacleController)createPiece(obstaclePrefab);
             tempObstacle.Initialise(startTile);
 
-            AddTrait(tempObstacle, "barrel");
+            AddTrait(tempObstacle, "explosivebarrel");
 
             obstacles.Add(tempObstacle);
 
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
             tempEnemy.orc = orcs[i];
             tempEnemy.Initialise(startTile);
 
-            AddTrait(tempEnemy, "distracted");
+            AddTrait(tempEnemy, TraitManager.GetRandomSpawnTrait());
             enemies.Add(tempEnemy);
 
         }
@@ -181,6 +181,7 @@ public class GameManager : MonoBehaviour
     public void FinishTurn()
     {
         turnTakers[turn++ % turnTakers.Count].TakeTurn();
+        mobDisplayController.UpdateMob(SelectedTile);
     }
 
     public void Kill(GamePiece newGamePiece)
