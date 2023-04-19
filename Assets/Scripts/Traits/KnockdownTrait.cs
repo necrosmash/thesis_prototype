@@ -9,6 +9,7 @@ public class KnockdownTrait : Trait
     {
         Name = "Knocked Down";
         Description = "This orc has fallen and can't get up";
+        LLMDescription = "This orc was knocked to the ground earlier and momentarily cannot get back up";
         Duration = 3;
         base.Awake();
     }

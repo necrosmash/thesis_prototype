@@ -13,6 +13,7 @@ public class OneArmedTrait : Trait
     {
         Name = "One-armed";
         Description = "This orc a one-armed bandit";
+        LLMDescription = "This orc has only one arm";
         Duration = 10000;
         base.Awake();
 
