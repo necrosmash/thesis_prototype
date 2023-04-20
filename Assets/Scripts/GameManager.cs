@@ -187,7 +187,7 @@ public class GameManager : MonoBehaviour
     {
         while (OpenAiApi.isPostInProgress)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
         }
         turnTakers[turn++ % turnTakers.Count].TakeTurn();
         mobDisplayController.UpdateMob(SelectedTile);
