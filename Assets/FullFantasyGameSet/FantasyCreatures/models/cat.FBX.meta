@@ -1,0 +1,647 @@
+fileFormatVersion: 2
+guid: 95fa534418925174ea3ae847c66bac80
+timeCreated: 1500895609
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cat
+    100002: //RootNode
+    100004: CatHead
+    100006: CatLLeg1
+    100008: CatLLeg1 1
+    100010: CatLLeg2
+    100012: CatLLeg2 1
+    100014: CatLLegCollarbone
+    100016: CatLLegDigit00
+    100018: CatLLegDigit11
+    100020: CatLLegPalm
+    100022: CatLLegPalm 1
+    100024: CatNeck
+    100026: CatPelvis
+    100028: CatRibcage
+    100030: CatRLeg1
+    100032: CatRLeg1 1
+    100034: CatRLeg2
+    100036: CatRLeg2 1
+    100038: CatRLegDigit00
+    100040: CatRLegDigit11
+    100042: CatRLegPalm
+    100044: CatRLegPalm 1
+    100046: CatRLegShoulderblade
+    100048: CatSpine1
+    100050: CatSpine2
+    100052: CatSpine3
+    100054: CatSpine4
+    100056: CatTail1
+    100058: CatTail2
+    100060: CatTail3
+    100062: CatTail4
+    400000: Cat
+    400002: //RootNode
+    400004: CatHead
+    400006: CatLLeg1
+    400008: CatLLeg1 1
+    400010: CatLLeg2
+    400012: CatLLeg2 1
+    400014: CatLLegCollarbone
+    400016: CatLLegDigit00
+    400018: CatLLegDigit11
+    400020: CatLLegPalm
+    400022: CatLLegPalm 1
+    400024: CatNeck
+    400026: CatPelvis
+    400028: CatRibcage
+    400030: CatRLeg1
+    400032: CatRLeg1 1
+    400034: CatRLeg2
+    400036: CatRLeg2 1
+    400038: CatRLegDigit00
+    400040: CatRLegDigit11
+    400042: CatRLegPalm
+    400044: CatRLegPalm 1
+    400046: CatRLegShoulderblade
+    400048: CatSpine1
+    400050: CatSpine2
+    400052: CatSpine3
+    400054: CatSpine4
+    400056: CatTail1
+    400058: CatTail2
+    400060: CatTail3
+    400062: CatTail4
+    4300000: Cat
+    7400000: walk
+    7400002: idle_01
+    7400004: idle_02
+    7400006: idle_03
+    7400008: run
+    9500000: //RootNode
+    13700000: Cat
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: CatPelvis
+        weight: 1
+      - path: CatPelvis/CatLLeg1
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm/CatLLegDigit00
+        weight: 1
+      - path: CatPelvis/CatRLeg1
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm/CatRLegDigit00
+        weight: 1
+      - path: CatPelvis/CatSpine1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1/CatLLegDigit11
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck/CatHead
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1/CatRLegDigit11
+        weight: 1
+      - path: CatPelvis/CatTail1
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3/CatTail4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_01
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: CatPelvis
+        weight: 1
+      - path: CatPelvis/CatLLeg1
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm/CatLLegDigit00
+        weight: 1
+      - path: CatPelvis/CatRLeg1
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm/CatRLegDigit00
+        weight: 1
+      - path: CatPelvis/CatSpine1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1/CatLLegDigit11
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck/CatHead
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1/CatRLegDigit11
+        weight: 1
+      - path: CatPelvis/CatTail1
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3/CatTail4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_02
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: CatPelvis
+        weight: 1
+      - path: CatPelvis/CatLLeg1
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm/CatLLegDigit00
+        weight: 1
+      - path: CatPelvis/CatRLeg1
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm/CatRLegDigit00
+        weight: 1
+      - path: CatPelvis/CatSpine1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1/CatLLegDigit11
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck/CatHead
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1/CatRLegDigit11
+        weight: 1
+      - path: CatPelvis/CatTail1
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3/CatTail4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_03
+      takeName: Take 001
+      firstFrame: 105
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: CatPelvis
+        weight: 1
+      - path: CatPelvis/CatLLeg1
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm/CatLLegDigit00
+        weight: 1
+      - path: CatPelvis/CatRLeg1
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm/CatRLegDigit00
+        weight: 1
+      - path: CatPelvis/CatSpine1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1/CatLLegDigit11
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck/CatHead
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1/CatRLegDigit11
+        weight: 1
+      - path: CatPelvis/CatTail1
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3/CatTail4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 190
+      lastFrame: 215
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: CatPelvis
+        weight: 1
+      - path: CatPelvis/CatLLeg1
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm
+        weight: 1
+      - path: CatPelvis/CatLLeg1/CatLLeg2/CatLLegPalm/CatLLegDigit00
+        weight: 1
+      - path: CatPelvis/CatRLeg1
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm
+        weight: 1
+      - path: CatPelvis/CatRLeg1/CatRLeg2/CatRLegPalm/CatRLegDigit00
+        weight: 1
+      - path: CatPelvis/CatSpine1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatLLegCollarbone/CatLLeg1
+          1/CatLLeg2 1/CatLLegPalm 1/CatLLegDigit11
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatNeck/CatHead
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1
+        weight: 1
+      - path: CatPelvis/CatSpine1/CatSpine2/CatSpine3/CatSpine4/CatRibcage/CatRLegShoulderblade/CatRLeg1
+          1/CatRLeg2 1/CatRLegPalm 1/CatRLegDigit11
+        weight: 1
+      - path: CatPelvis/CatTail1
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3
+        weight: 1
+      - path: CatPelvis/CatTail1/CatTail2/CatTail3/CatTail4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

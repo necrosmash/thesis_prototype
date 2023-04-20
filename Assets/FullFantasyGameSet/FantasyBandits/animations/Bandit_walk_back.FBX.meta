@@ -1,0 +1,907 @@
+fileFormatVersion: 2
+guid: aad93448a04058d4e8ae728363a92e49
+timeCreated: 1478610632
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CATPelvis
+    100004: CATHead
+    100006: CATLArm
+    100008: CATLCalf
+    100010: CATLClavicle
+    100012: CATLFingers1
+    100014: CATLFingers2
+    100016: CATLFoot
+    100018: CATLForearm
+    100020: CATLHand
+    100022: CATLLegPlatform
+    100024: CATLThigh
+    100026: CATLThumb1
+    100028: CATLThumb2
+    100030: CATNeck
+    100032: CATRArm
+    100034: CATRCalf
+    100036: CATRClavicle
+    100038: CATRFingers1
+    100040: CATRFingers2
+    100042: CATRFoot
+    100044: CATRForearm
+    100046: CATRHand
+    100048: CATRigLLegDigit11
+    100050: CATRigLLegDigit12
+    100052: CATRigRLegDigit11
+    100054: CATRigRLegDigit12
+    100056: CATRLegPlatform
+    100058: CATRThigh
+    100060: CATRThumb1
+    100062: CATRThumb2
+    100064: CATSpine1
+    100066: CATSpine2
+    100068: CATSpine3
+    100070: Particle View 001
+    400000: //RootNode
+    400002: CATPelvis
+    400004: CATHead
+    400006: CATLArm
+    400008: CATLCalf
+    400010: CATLClavicle
+    400012: CATLFingers1
+    400014: CATLFingers2
+    400016: CATLFoot
+    400018: CATLForearm
+    400020: CATLHand
+    400022: CATLLegPlatform
+    400024: CATLThigh
+    400026: CATLThumb1
+    400028: CATLThumb2
+    400030: CATNeck
+    400032: CATRArm
+    400034: CATRCalf
+    400036: CATRClavicle
+    400038: CATRFingers1
+    400040: CATRFingers2
+    400042: CATRFoot
+    400044: CATRForearm
+    400046: CATRHand
+    400048: CATRigLLegDigit11
+    400050: CATRigLLegDigit12
+    400052: CATRigRLegDigit11
+    400054: CATRigRLegDigit12
+    400056: CATRLegPlatform
+    400058: CATRThigh
+    400060: CATRThumb1
+    400062: CATRThumb2
+    400064: CATSpine1
+    400066: CATSpine2
+    400068: CATSpine3
+    400070: Particle View 001
+    7400000: Walk_Back
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'CATSpine3' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'CATLFingers2' has scale
+      animation that will be discarded.\n\t'CATLThumb2' has scale animation that will
+      be discarded.\n\t'CATRFingers2' has scale animation that will be discarded.\n\t'CATRThumb2'
+      has scale animation that will be discarded.\n\t'CATRigLLegDigit11' has scale
+      animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk_Back
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATLLegPlatform
+        weight: 1
+      - path: CATPelvis
+        weight: 1
+      - path: CATPelvis/CATLThigh
+        weight: 1
+      - path: CATPelvis/CATLThigh/CATLCalf
+        weight: 1
+      - path: CATPelvis/CATLThigh/CATLCalf/CATLFoot
+        weight: 1
+      - path: CATPelvis/CATLThigh/CATLCalf/CATLFoot/CATRigLLegDigit11
+        weight: 1
+      - path: CATPelvis/CATLThigh/CATLCalf/CATLFoot/CATRigLLegDigit11/CATRigLLegDigit12
+        weight: 1
+      - path: CATPelvis/CATRThigh
+        weight: 1
+      - path: CATPelvis/CATRThigh/CATRCalf
+        weight: 1
+      - path: CATPelvis/CATRThigh/CATRCalf/CATRFoot
+        weight: 1
+      - path: CATPelvis/CATRThigh/CATRCalf/CATRFoot/CATRigRLegDigit11
+        weight: 1
+      - path: CATPelvis/CATRThigh/CATRCalf/CATRFoot/CATRigRLegDigit11/CATRigRLegDigit12
+        weight: 1
+      - path: CATPelvis/CATSpine1
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm/CATLForearm
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm/CATLForearm/CATLHand
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm/CATLForearm/CATLHand/CATLFingers1
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm/CATLForearm/CATLHand/CATLFingers1/CATLFingers2
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm/CATLForearm/CATLHand/CATLThumb1
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATLClavicle/CATLArm/CATLForearm/CATLHand/CATLThumb1/CATLThumb2
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATNeck
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATNeck/CATHead
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm/CATRForearm
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm/CATRForearm/CATRHand
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm/CATRForearm/CATRHand/CATRFingers1
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm/CATRForearm/CATRHand/CATRFingers1/CATRFingers2
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm/CATRForearm/CATRHand/CATRThumb1
+        weight: 1
+      - path: CATPelvis/CATSpine1/CATSpine2/CATSpine3/CATRClavicle/CATRArm/CATRForearm/CATRHand/CATRThumb1/CATRThumb2
+        weight: 1
+      - path: CATRLegPlatform
+        weight: 1
+      - path: Particle View 001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 60
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: CATPelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATSpine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATSpine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATNeck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLClavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRClavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRigLLegDigit11
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRigRLegDigit11
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLFingers1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATLFingers2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shield_lvl2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shield_lvl3
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRFingers1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CATRFingers2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sword_Lvl2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sword_Lvl3
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Club_lvl3
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: BanditBodyFull(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bandit_Body_Standard
+      parentName: 
+      position: {x: -0.0006994247, y: 0.49951002, z: 0.0037241888}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Boot_L_lvl1
+      parentName: 
+      position: {x: -0.14412335, y: 0.03771568, z: 0.021672415}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Boot_L_lvl2
+      parentName: 
+      position: {x: -0.13540158, y: 0.065962926, z: 0.021484213}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Boot_L_lvl3
+      parentName: 
+      position: {x: -0.12432117, y: 0.111970596, z: 0.034432955}
+      rotation: {x: -0.7483287, y: 0, z: -0, w: 0.6633281}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Boot_R_lvl1
+      parentName: 
+      position: {x: 0.14272457, y: 0.03771568, z: 0.021672415}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Boot_R_lvl2
+      parentName: 
+      position: {x: 0.1340027, y: 0.065962926, z: 0.021484213}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Boot_R_lvl3
+      parentName: 
+      position: {x: 0.12355762, y: 0.10718857, z: 0.04589917}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATLLegPlatform
+      parentName: 
+      position: {x: -0.14133586, y: 9.86884e-15, z: -0.000000007023077}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATRLegPlatform
+      parentName: 
+      position: {x: 0.14133586, y: -8.614065e-15, z: -0.00000003173503}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Glove_L_Lvl1
+      parentName: 
+      position: {x: -0.5455048, y: 0.5632557, z: 0.031745434}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Glove_L_lvl2
+      parentName: 
+      position: {x: -0.59555626, y: 0.58751476, z: 0.030375475}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Glove_R_lvl1
+      parentName: 
+      position: {x: 0.54320097, y: 0.5632557, z: 0.031745434}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Glove_R_lvl2
+      parentName: 
+      position: {x: 0.595602, y: 0.58751476, z: 0.030375475}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Particle View 001
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATPelvis
+      parentName: 
+      position: {x: 1.4253037e-14, y: 0.27647597, z: -0.00000005748322}
+      rotation: {x: 0.49999994, y: -0.5, z: -0.5, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATSpine1
+      parentName: 
+      position: {x: -0.037385575, y: 0.0000000077250615, z: 7.455798e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_Guard_L_lvl1
+      parentName: 
+      position: {x: 0.037385557, y: -0.000000012516975, z: 0.000000019073484}
+      rotation: {x: 0.7071068, y: 0.00000014259636, z: -0.7071068, w: 0.00000014259636}
+      scale: {x: 0.99999976, y: 1, z: 1.0000001}
+    - name: Leg_Guard_R_lvl1
+      parentName: 
+      position: {x: 0.037385575, y: -0.000000014901161, z: 5.32482e-16}
+      rotation: {x: 0.7071068, y: 0.000000701042, z: -0.7071068, w: 0.000000701042}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: Masive Belt_lvl3
+      parentName: 
+      position: {x: -0, y: 0.0000000023841857, z: 1.6096571e-10}
+      rotation: {x: 0.7071068, y: 0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pouch_lvl1
+      parentName: 
+      position: {x: -0, y: 0.000000019073486, z: 0.0000000047683715}
+      rotation: {x: 0.7071068, y: 0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATSpine2
+      parentName: 
+      position: {x: -0.14499623, y: 0, z: -2.0651796e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Quiver
+      parentName: 
+      position: {x: -0, y: -0.000000019073495, z: -0.000000014305115}
+      rotation: {x: 0.7071068, y: 0.00000007305548, z: -0.7071068, w: 0.00000007305548}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATSpine3
+      parentName: 
+      position: {x: -0.11852554, y: -4.5474734e-15, z: -1.688157e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATNeck
+      parentName: 
+      position: {x: -0.036628302, y: 0.0000000075685875, z: 7.3047687e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATHead
+      parentName: 
+      position: {x: -0.19393471, y: 0, z: -2.7622087e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Iron_Helmet_lvl3
+      parentName: 
+      position: {x: -0, y: 0.0000000095678026, z: 0}
+      rotation: {x: 0.7071068, y: 0.000000030908627, z: -0.7071068, w: 0.000000030908627}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leather_Helmet_lvl2
+      parentName: 
+      position: {x: 0.000000076293944, y: 0.000000014336164, z: 2.1684043e-21}
+      rotation: {x: 0.7071068, y: 0.000000030908627, z: -0.7071068, w: 0.000000030908627}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_Cloth_lvl1
+      parentName: 
+      position: {x: -0, y: 0.0000000047683715, z: -0.000000005364418}
+      rotation: {x: 0.7071068, y: 0.000000030908627, z: -0.7071068, w: 0.000000030908627}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CATLClavicle
+      parentName: 
+      position: {x: -0, y: 0, z: 0.052176174}
+      rotation: {x: 0.052169397, y: 0.70517963, z: 0.0521695, w: 0.7051797}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: CATLArm
+      parentName: 
+      position: {x: -0.08832425, y: -0.0000000017881393, z: 0}
+      rotation: {x: -0.0011057784, y: -0.003902488, z: -0.07458794, w: 0.9972062}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Shoulder_Pad_L_Lvl1
+      parentName: 
+      position: {x: -0, y: 0.0000000166893, z: 0.000000038146972}
+      rotation: {x: 0.98817396, y: -0.002054362, z: 0.11270991, w: 0.10394452}
+      scale: {x: 1.0000014, y: 0.99999887, z: 0.99999845}
+    - name: Shoulder_Pad_L_lvl2
+      parentName: 
+      position: {x: 0.000000009536743, y: -0.000000010728836, z: -0.000000038146972}
+      rotation: {x: 0.79902196, y: -0.16031896, z: 0.579516, w: 0.004791254}
+      scale: {x: 0.9999999, y: 0.9999997, z: 0.9999995}
+    - name: Shoulder_Pad_L_lvl3
+      parentName: 
+      position: {x: 0.000000009536743, y: -0.0000000023841857, z: 0}
+      rotation: {x: 0.8719641, y: 0.006340618, z: 0.4894376, w: 0.009446427}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CATLForearm
+      parentName: 
+      position: {x: -0.18255998, y: 0.0000000011920929, z: 0}
+      rotation: {x: 0.0015235767, y: 0.009528542, z: 0.009854055, w: 0.99990493}
+      scale: {x: 0.99999934, y: 0.9999994, z: 1.0000004}
+    - name: Glove_L_Lvl3
+      parentName: 
+      position: {x: -0.15899338, y: 0.009448068, z: -0.017424012}
+      rotation: {x: 0.9836673, y: -0.08577775, z: 0.12469407, w: 0.09742821}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: CATLHand
+      parentName: 
+      position: {x: -0.1599723, y: -0.0000000011920929, z: 0}
+      rotation: {x: 0.7071971, y: 0.0033391411, z: -0.018259764, w: 0.7067728}
+      scale: {x: 0.9999998, y: 1.0000005, z: 1.0000008}
+    - name: Bow_lvl1
+      parentName: 
+      position: {x: -0, y: 0.000000038146972, z: 0}
+      rotation: {x: 0.59607595, y: 0.79980826, z: -0.021607101, w: -0.06733027}
+      scale: {x: 1.0000029, y: 1.0000075, z: 0.99998766}
+    - name: Bow_lvl2
+      parentName: 
+      position: {x: -0, y: 0.000000038146972, z: -0.000000021457671}
+      rotation: {x: 0.74163973, y: 0.66741055, z: -0.066422105, w: -0.011041465}
+      scale: {x: 0.9999988, y: 1.0000025, z: 0.9999965}
+    - name: Bow_lvl3
+      parentName: 
+      position: {x: 0.000000038146972, y: 0.000000038146972, z: -0.0000000166893}
+      rotation: {x: 0.5998154, y: 0.7991416, z: -0.028412722, w: -0.028054014}
+      scale: {x: 104.999886, y: 105.00043, z: 104.99963}
+    - name: Shield_lvl1
+      parentName: 
+      position: {x: 0.000000076293944, y: 0.000000076293944, z: -0.000000042915342}
+      rotation: {x: 0.53856033, y: 0.8407364, z: -0.052368432, w: -0.019303953}
+      scale: {x: 104.999664, y: 105.000305, z: 104.99965}
+    - name: Shield_lvl2
+      parentName: 
+      position: {x: -0, y: 0, z: -0.000000007152557}
+      rotation: {x: 0.54069144, y: 0.8381997, z: -0.021028819, w: -0.06805744}
+      scale: {x: 104.99966, y: 105.000305, z: 104.999664}
+    - name: Shield_lvl3
+      parentName: 
+      position: {x: -0.000000038146972, y: 0, z: 0.000000019073486}
+      rotation: {x: 0.7452067, y: 0.6152189, z: 0.2460102, w: 0.075177714}
+      scale: {x: 105.000015, y: 105.00074, z: 104.999306}
+    - name: CATLThumb1
+      parentName: 
+      position: {x: -0.047959633, y: 0.007909317, z: -0.065875545}
+      rotation: {x: 0.054736096, y: -0.44376972, z: -0.006676473, w: 0.8944428}
+      scale: {x: 0.9999998, y: 0.99999845, z: 0.9999999}
+    - name: CATLThumb2
+      parentName: 
+      position: {x: -0.03703455, y: -0.000000038146972, z: -0.000000038146972}
+      rotation: {x: -0.015659856, y: 0.1293918, z: -0.00704364, w: 0.99144495}
+      scale: {x: 1.0000005, y: 1.0000004, z: 0.99999976}
+    - name: CATLFingers1
+      parentName: 
+      position: {x: -0.07036396, y: -0.0029349518, z: 0.00019634484}
+      rotation: {x: 0.00000008892673, y: 0.000000028870993, z: 0.00000005587934, w: 1}
+      scale: {x: 0.99999976, y: 0.9999996, z: 1.0000001}
+    - name: CATLFingers2
+      parentName: 
+      position: {x: -0.061029546, y: 0, z: -0.0000000035762786}
+      rotation: {x: -3.637979e-12, y: 0, z: -0.0000000018626451, w: 1}
+      scale: {x: 0.99999976, y: 0.9999997, z: 1.0000001}
+    - name: CATRClavicle
+      parentName: 
+      position: {x: -0, y: 0, z: -0.052176174}
+      rotation: {x: 0.052169383, y: 0.7051797, z: -0.052169498, w: -0.7051797}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: CATRArm
+      parentName: 
+      position: {x: -0.08832425, y: 0, z: 0}
+      rotation: {x: 0.0011058152, y: 0.003902439, z: -0.074587926, w: 0.9972062}
+      scale: {x: 0.9999995, y: 0.9999999, z: 0.9999998}
+    - name: Shoulder_Pad_R_lvl1
+      parentName: 
+      position: {x: -0, y: 0.0000000011920929, z: 0}
+      rotation: {x: 0.22263229, y: -0.017046364, z: 0.97412163, w: 0.035090223}
+      scale: {x: 1.0000006, y: 0.9999999, z: 0.9999988}
+    - name: Shoulder_Pad_R_lvl2
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0.5773787, y: -0.06145212, z: 0.79256237, w: 0.18628585}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999964}
+    - name: Shoulder_Pad_R_lvl3
+      parentName: 
+      position: {x: -0, y: -0.000000015497207, z: 0.000000038146972}
+      rotation: {x: 0.47647583, y: 0.0011047235, z: 0.87918687, w: -0.00032129945}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+    - name: CATRForearm
+      parentName: 
+      position: {x: -0.18256, y: 0.0000000011920929, z: 0}
+      rotation: {x: -0.0015235839, y: -0.009528578, z: 0.009854064, w: 0.99990493}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000004}
+    - name: Glove_R_lvl3
+      parentName: 
+      position: {x: -0.13363504, y: 0.00520532, z: 0.015485802}
+      rotation: {x: 0.092986465, y: -0.11174348, z: 0.98896706, w: -0.028479792}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: CATRHand
+      parentName: 
+      position: {x: -0.15997232, y: -5.9604643e-10, z: 0}
+      rotation: {x: -0.70719725, y: -0.0033391095, z: -0.01825973, w: 0.70677274}
+      scale: {x: 0.9999997, y: 1.0000001, z: 1}
+    - name: Club_lvl1
+      parentName: 
+      position: {x: -0, y: 0, z: -0.000000019073486}
+      rotation: {x: -0.038019717, y: -0.09677285, z: 0.9031958, w: -0.41644552}
+      scale: {x: 104.99989, y: 105.0009, z: 104.99931}
+    - name: Club_lvl2
+      parentName: 
+      position: {x: -0.000000038146972, y: 0, z: -0.000000038146972}
+      rotation: {x: -0.058008105, y: -0.20720841, z: 0.80664057, w: 0.5504823}
+      scale: {x: 104.99981, y: 105.00081, z: 104.99929}
+    - name: Club_lvl3
+      parentName: 
+      position: {x: -0, y: 0.000000038146972, z: -0.000000038146972}
+      rotation: {x: -0.20275983, y: -0.021705462, z: 0.93464017, w: -0.29131612}
+      scale: {x: 105.00084, y: 104.99982, z: 104.99929}
+    - name: Sword_Lvl1
+      parentName: 
+      position: {x: -0.0015070343, y: 0.036126822, z: 0.000054177046}
+      rotation: {x: 0.062563606, y: -0.14076704, z: -0.50558263, w: 0.848915}
+      scale: {x: 1.0000001, y: 1.0000011, z: 0.99999845}
+    - name: Sword_Lvl2
+      parentName: 
+      position: {x: -0, y: 0.000000038146972, z: -0.0000000047683715}
+      rotation: {x: 0.18164158, y: -0.097469896, z: -0.28108174, w: 0.9372828}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Sword_Lvl3
+      parentName: 
+      position: {x: -0, y: 0, z: 0.000000015497207}
+      rotation: {x: -0.16156922, y: -0.050722223, z: 0.98388505, w: 0.057383183}
+      scale: {x: 1.0000013, y: 0.9999979, z: 1.0000002}
+    - name: CATRFingers1
+      parentName: 
+      position: {x: -0.07036396, y: -0.0029349518, z: -0.00019634604}
+      rotation: {x: 0.0000000017462292, y: 0.0000000044237805, z: 0.00000010617722,
+        w: 1}
+      scale: {x: 0.9999994, y: 0.9999998, z: 1.0000004}
+    - name: CATRFingers2
+      parentName: 
+      position: {x: -0.061029587, y: 0, z: 0.0000000035762786}
+      rotation: {x: 0, y: 2.3283062e-10, z: 2.2737365e-13, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: CATRThumb1
+      parentName: 
+      position: {x: -0.047959633, y: 0.007909278, z: 0.06587555}
+      rotation: {x: -0.054736163, y: 0.44377065, z: -0.0066763563, w: 0.8944424}
+      scale: {x: 1, y: 0.9999992, z: 1.0000001}
+    - name: CATRThumb2
+      parentName: 
+      position: {x: -0.03703453, y: -0.000000038146972, z: 0}
+      rotation: {x: 0.015659975, y: -0.12939174, z: -0.007043618, w: 0.99144495}
+      scale: {x: 1.0000007, y: 1.0000001, z: 0.99999964}
+    - name: CATLThigh
+      parentName: 
+      position: {x: 0.05381567, y: -0.000000017533422, z: 0.10501245}
+      rotation: {x: -0.018054575, y: 0.99363136, z: 0.045111716, w: 0.10166484}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000002}
+    - name: CATLCalf
+      parentName: 
+      position: {x: -0.08648802, y: -0.0000000011920929, z: 0}
+      rotation: {x: 0.08335535, y: 0.018802539, z: -0.007486999, w: 0.99631435}
+      scale: {x: 1.0000017, y: 0.99999964, z: 0.9999985}
+    - name: CATLFoot
+      parentName: 
+      position: {x: -0.12241308, y: -0.000000028610229, z: 0.0000041294097}
+      rotation: {x: -0.08869955, y: 0.02803593, z: -0.72395, w: 0.68355155}
+      scale: {x: 1.0000006, y: 1.0000072, z: 0.9999946}
+    - name: CATRigLLegDigit11
+      parentName: 
+      position: {x: -0.050501626, y: 0, z: 0}
+      rotation: {x: -0.000000230968, y: 0.000026336522, z: -0.013564041, w: 0.9999081}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: CATRigLLegDigit12
+      parentName: 
+      position: {x: -0.022499999, y: 0, z: -0.000000009536743}
+      rotation: {x: 0.000000048428767, y: -0.000000027124766, z: -0.000000014901159,
+        w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CATRThigh
+      parentName: 
+      position: {x: 0.05381567, y: -0.00000002987478, z: -0.1050124}
+      rotation: {x: -0.018013092, y: 0.9936487, z: -0.04472809, w: -0.10167176}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: CATRCalf
+      parentName: 
+      position: {x: -0.08648798, y: -0.0000000011920929, z: 0}
+      rotation: {x: -0.09396702, y: -0.018654168, z: 0.05169654, w: 0.9940572}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1}
+    - name: CATRFoot
+      parentName: 
+      position: {x: -0.12241279, y: 0, z: 0}
+      rotation: {x: 0.08869916, y: -0.027983347, z: -0.7239715, w: 0.68353105}
+      scale: {x: 0.9999995, y: 0.9999998, z: 1}
+    - name: CATRigRLegDigit11
+      parentName: 
+      position: {x: -0.05050164, y: 0, z: 0}
+      rotation: {x: 0.0000008023344, y: -0.00006699622, z: -0.013647758, w: 0.9999069}
+      scale: {x: 1.000001, y: 1.0000002, z: 1.0000006}
+    - name: CATRigRLegDigit12
+      parentName: 
+      position: {x: -0.022499999, y: 0, z: -0.000000009536743}
+      rotation: {x: 0.0000000015645796, y: -0.00000008940696, z: 0.00000010898275,
+        w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c66cfa0947479ae46b6eaf467c02fa4a,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

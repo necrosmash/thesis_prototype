@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: c9ea62105ba1ef54f82db8ec2d4a00d8
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base Human
+    100002: Base HumanHead
+    100004: Base HumanLArmCollarbone
+    100006: Base HumanLArmForearm
+    100008: Base HumanLArmPalm
+    100010: Base HumanLArmUpperarm
+    100012: Base HumanLCalf
+    100014: Base HumanLFoot
+    100016: Base HumanLPalmFinger001
+    100018: Base HumanLPalmFinger002
+    100020: Base HumanLPalmFinger003
+    100022: Base HumanLPalmFinger004
+    100024: Base HumanLPalmThumb001
+    100026: Base HumanLPalmThumb002
+    100028: Base HumanLPlatform
+    100030: Base HumanLThigh
+    100032: Base HumanNeck
+    100034: Base HumanPelvis
+    100036: Base HumanRArmCollarbone
+    100038: Base HumanRArmForearm
+    100040: Base HumanRArmIKTarget
+    100042: Base HumanRArmPalm
+    100044: Base HumanRArmUpperarm
+    100046: Base HumanRibcage
+    100048: Base HumanRLegCalf
+    100050: Base HumanRLegFoot
+    100052: Base HumanRLegPlatform
+    100054: Base HumanRLegThigh
+    100056: Base HumanRPalmFinger001
+    100058: Base HumanRPalmFinger002
+    100060: Base HumanRPalmFinger003
+    100062: Base HumanRPalmFinger004
+    100064: Base HumanRPalmThumb001
+    100066: Base HumanRPalmThumb002
+    100068: Base HumanSpine1
+    100070: Base HumanSpine2
+    100072: Mage_Bag
+    100074: Mage_Beard
+    100076: Mage_Body
+    100078: Mage_Boots_01
+    100080: Mage_Boots_02
+    100082: Mage_Cape_01
+    100084: Mage_Cape_02
+    100086: Mage_Dres
+    100088: Mage_Gem
+    100090: Mage_Hands_01
+    100092: Mage_Hands_02
+    100094: Mage_Hood
+    100096: //RootNode
+    100098: Mage_Scarf
+    100100: Mage_Schoulder_01
+    100102: Mage_Schoulder_02
+    100104: Mage_Weapon_01
+    100106: Mage_Weapon_02
+    100108: Mage_Weapon_03
+    100110: Mage_Weapon_04
+    100112: Mage_Weapon_05
+    100114: Mage_Gem_02
+    100116: Mage_Gem_Small_01
+    400000: Base Human
+    400002: Base HumanHead
+    400004: Base HumanLArmCollarbone
+    400006: Base HumanLArmForearm
+    400008: Base HumanLArmPalm
+    400010: Base HumanLArmUpperarm
+    400012: Base HumanLCalf
+    400014: Base HumanLFoot
+    400016: Base HumanLPalmFinger001
+    400018: Base HumanLPalmFinger002
+    400020: Base HumanLPalmFinger003
+    400022: Base HumanLPalmFinger004
+    400024: Base HumanLPalmThumb001
+    400026: Base HumanLPalmThumb002
+    400028: Base HumanLPlatform
+    400030: Base HumanLThigh
+    400032: Base HumanNeck
+    400034: Base HumanPelvis
+    400036: Base HumanRArmCollarbone
+    400038: Base HumanRArmForearm
+    400040: Base HumanRArmIKTarget
+    400042: Base HumanRArmPalm
+    400044: Base HumanRArmUpperarm
+    400046: Base HumanRibcage
+    400048: Base HumanRLegCalf
+    400050: Base HumanRLegFoot
+    400052: Base HumanRLegPlatform
+    400054: Base HumanRLegThigh
+    400056: Base HumanRPalmFinger001
+    400058: Base HumanRPalmFinger002
+    400060: Base HumanRPalmFinger003
+    400062: Base HumanRPalmFinger004
+    400064: Base HumanRPalmThumb001
+    400066: Base HumanRPalmThumb002
+    400068: Base HumanSpine1
+    400070: Base HumanSpine2
+    400072: Mage_Bag
+    400074: Mage_Beard
+    400076: Mage_Body
+    400078: Mage_Boots_01
+    400080: Mage_Boots_02
+    400082: Mage_Cape_01
+    400084: Mage_Cape_02
+    400086: Mage_Dres
+    400088: Mage_Gem
+    400090: Mage_Hands_01
+    400092: Mage_Hands_02
+    400094: Mage_Hood
+    400096: //RootNode
+    400098: Mage_Scarf
+    400100: Mage_Schoulder_01
+    400102: Mage_Schoulder_02
+    400104: Mage_Weapon_01
+    400106: Mage_Weapon_02
+    400108: Mage_Weapon_03
+    400110: Mage_Weapon_04
+    400112: Mage_Weapon_05
+    400114: Mage_Gem_02
+    400116: Mage_Gem_Small_01
+    2300000: Mage_Gem
+    2300002: Mage_Weapon_01
+    2300004: Mage_Weapon_02
+    2300006: Mage_Weapon_03
+    2300008: Mage_Weapon_04
+    2300010: Mage_Weapon_05
+    2300012: Mage_Gem_02
+    2300014: Mage_Gem_Small_01
+    3300000: Mage_Gem
+    3300002: Mage_Weapon_01
+    3300004: Mage_Weapon_02
+    3300006: Mage_Weapon_03
+    3300008: Mage_Weapon_04
+    3300010: Mage_Weapon_05
+    3300012: Mage_Gem_02
+    3300014: Mage_Gem_Small_01
+    4300000: Mage_Hood
+    4300002: Mage_Cape_02
+    4300004: Mage_Dres
+    4300006: Mage_Cape_01
+    4300008: Mage_Scarf
+    4300010: Mage_Hands_01
+    4300012: Mage_Boots_01
+    4300014: Mage_Schoulder_01
+    4300016: Mage_Schoulder_02
+    4300018: Mage_Boots_02
+    4300020: Mage_Hands_02
+    4300022: Mage_Beard
+    4300024: Mage_Bag
+    4300026: Mage_Weapon_04
+    4300028: Mage_Weapon_05
+    4300030: Mage_Weapon_01
+    4300032: Mage_Weapon_02
+    4300034: Mage_Weapon_03
+    4300036: Mage_Gem
+    4300038: Mage_Body
+    4300040: Mage_Gem_Small_01
+    4300042: Mage_Gem_02
+    9500000: //RootNode
+    13700000: Mage_Bag
+    13700002: Mage_Beard
+    13700004: Mage_Body
+    13700006: Mage_Boots_01
+    13700008: Mage_Boots_02
+    13700010: Mage_Cape_01
+    13700012: Mage_Cape_02
+    13700014: Mage_Dres
+    13700016: Mage_Hands_01
+    13700018: Mage_Hands_02
+    13700020: Mage_Hood
+    13700022: Mage_Scarf
+    13700024: Mage_Schoulder_01
+    13700026: Mage_Schoulder_02
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #14'
+    second: {fileID: 2100000, guid: f4930e92131aff54d9170ba871cf5a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #15'
+    second: {fileID: 2100000, guid: a77bad4a5ec6f094ba77d2bb4dce1214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #17'
+    second: {fileID: 2100000, guid: dc67f2df58b4e6b41ba5bedfc30a9d43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #18'
+    second: {fileID: 2100000, guid: 905bb1165f065d7408dc5df58f9dc767, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

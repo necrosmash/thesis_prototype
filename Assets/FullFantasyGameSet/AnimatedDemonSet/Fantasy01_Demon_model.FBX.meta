@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 3b66f6422c140a34dbf92a2a07976c73
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Demon
+    100002: Demon_Armor_01
+    100004: Demon_Armor_02
+    100006: Demon_Armor_03
+    100008: Demon_Armor_04
+    100010: Demon_Armor_05
+    100012: Demon_Base
+    100014: Demon_Bone_LShoulder
+    100016: Demon_Bone_LWeapon
+    100018: Demon_Bone_RShoulder
+    100020: Demon_Bone_RWeapon
+    100022: DemonHead
+    100024: DemonHeadBone001
+    100026: DemonL3
+    100028: DemonLCalf
+    100030: DemonLCollarbone
+    100032: DemonLFinger_00
+    100034: DemonLFinger_01
+    100036: DemonLFinger_02
+    100038: DemonLFinger_03
+    100040: DemonLFinger_04
+    100042: DemonLFinger_05
+    100044: DemonLFinger_06
+    100046: DemonLFinger_07
+    100048: DemonLFoot
+    100050: DemonLForearm
+    100052: DemonLIKTarget
+    100054: DemonLPalm
+    100056: DemonLPlatform
+    100058: DemonLThigh
+    100060: DemonLUpperarm
+    100062: DemonNeck
+    100064: DemonPelvis
+    100066: DemonPelvis_frontbone_00
+    100068: DemonPelvis_frontbone_01
+    100070: DemonPelvis_frontbone_02
+    100072: DemonPelvisBone001
+    100074: DemonPelvisBone001Bone001
+    100076: DemonRArmCollarbone
+    100078: DemonRArmForearm
+    100080: DemonRArmIKTarget
+    100082: DemonRArmPalm
+    100084: DemonRArmUpperarm
+    100086: DemonRFinger_00
+    100088: DemonRFinger_01
+    100090: DemonRFinger_02
+    100092: DemonRFinger_03
+    100094: DemonRFinger_04
+    100096: DemonRFinger_05
+    100098: DemonRFinger_06
+    100100: DemonRFinger_07
+    100102: DemonRibcage
+    100104: DemonRLeg3
+    100106: DemonRLegCalf
+    100108: DemonRLegFoot
+    100110: DemonRLegPlatform
+    100112: DemonRLegThigh
+    100114: DemonSpine1
+    100116: DemonSpine2
+    100118: //RootNode
+    400000: Demon
+    400002: Demon_Armor_01
+    400004: Demon_Armor_02
+    400006: Demon_Armor_03
+    400008: Demon_Armor_04
+    400010: Demon_Armor_05
+    400012: Demon_Base
+    400014: Demon_Bone_LShoulder
+    400016: Demon_Bone_LWeapon
+    400018: Demon_Bone_RShoulder
+    400020: Demon_Bone_RWeapon
+    400022: DemonHead
+    400024: DemonHeadBone001
+    400026: DemonL3
+    400028: DemonLCalf
+    400030: DemonLCollarbone
+    400032: DemonLFinger_00
+    400034: DemonLFinger_01
+    400036: DemonLFinger_02
+    400038: DemonLFinger_03
+    400040: DemonLFinger_04
+    400042: DemonLFinger_05
+    400044: DemonLFinger_06
+    400046: DemonLFinger_07
+    400048: DemonLFoot
+    400050: DemonLForearm
+    400052: DemonLIKTarget
+    400054: DemonLPalm
+    400056: DemonLPlatform
+    400058: DemonLThigh
+    400060: DemonLUpperarm
+    400062: DemonNeck
+    400064: DemonPelvis
+    400066: DemonPelvis_frontbone_00
+    400068: DemonPelvis_frontbone_01
+    400070: DemonPelvis_frontbone_02
+    400072: DemonPelvisBone001
+    400074: DemonPelvisBone001Bone001
+    400076: DemonRArmCollarbone
+    400078: DemonRArmForearm
+    400080: DemonRArmIKTarget
+    400082: DemonRArmPalm
+    400084: DemonRArmUpperarm
+    400086: DemonRFinger_00
+    400088: DemonRFinger_01
+    400090: DemonRFinger_02
+    400092: DemonRFinger_03
+    400094: DemonRFinger_04
+    400096: DemonRFinger_05
+    400098: DemonRFinger_06
+    400100: DemonRFinger_07
+    400102: DemonRibcage
+    400104: DemonRLeg3
+    400106: DemonRLegCalf
+    400108: DemonRLegFoot
+    400110: DemonRLegPlatform
+    400112: DemonRLegThigh
+    400114: DemonSpine1
+    400116: DemonSpine2
+    400118: //RootNode
+    4300000: Demon_Base
+    4300002: Demon_Armor_05
+    4300004: Demon_Armor_04
+    4300006: Demon_Armor_03
+    4300008: Demon_Armor_02
+    4300010: Demon_Armor_01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Demon_Armor_01
+    13700002: Demon_Armor_02
+    13700004: Demon_Armor_03
+    13700006: Demon_Armor_04
+    13700008: Demon_Armor_05
+    13700010: Demon_Base
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
