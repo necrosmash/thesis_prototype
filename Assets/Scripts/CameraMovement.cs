@@ -40,7 +40,9 @@ public class CameraMovement : MonoBehaviour
         {
             velocity.x += 1;
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        
+        // disabled for now because toggling camera angle breaks click raycast detection of grid cells
+        /*if (Input.GetKeyDown(KeyCode.C))
         {
             if (gameObject.transform.rotation.eulerAngles.x == 90)
             {
@@ -52,7 +54,7 @@ public class CameraMovement : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 8);
             }
-        }
+        }*/
 
         gameObject.transform.position += (velocity * speed);
     }
