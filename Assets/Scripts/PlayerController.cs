@@ -33,7 +33,7 @@ public class PlayerController : GamePiece
     // Update is called once per frame
     override protected void Update()
     {
-        if (MenuCanvas.IsRendered || !isPlayerTurn) return;
+        if (MenuCanvas.IsRendered || !isPlayerTurn || OpenAiApi.isPostInProgress) return;
 
         Vector3Int tempNextTile = currentTile;
 
