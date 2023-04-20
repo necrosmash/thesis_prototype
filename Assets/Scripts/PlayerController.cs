@@ -35,6 +35,10 @@ public class PlayerController : GamePiece
     {
         if (MenuCanvas.IsRendered || !isPlayerTurn || OpenAiApi.isPostInProgress) return;
 
+        base.Update();
+
+        if (isMoving) return;
+
         Vector3Int tempNextTile = currentTile;
 
         if (Input.GetKeyDown(KeyCode.UpArrow))

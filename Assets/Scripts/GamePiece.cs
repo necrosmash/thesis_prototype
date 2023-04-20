@@ -27,11 +27,17 @@ public class GamePiece : MonoBehaviour
     public int minDamageRoll;
     [SerializeField]
     public int maxDamageRoll;
+    [SerializeField]
+    private float movementSpeed;
 
     public int minDamageResistRoll = 0;
     public int maxDamageResistRoll = 0;
 
     public bool skipAttack = false;
+
+    public bool isMoving { get; private set; }
+    private Vector3Int newTile;
+    private Vector3 destination;
 
     protected virtual void Awake(){
 
@@ -52,7 +58,16 @@ public class GamePiece : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        if (!isMoving) return;
 
+        transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, destination) < 0.001f)
+        {
+            transform.position = destination;
+            currentTile = newTile;
+            isMoving = false;
+        }
     }
 
     public virtual void TakeTurn()
@@ -94,18 +109,23 @@ public class GamePiece : MonoBehaviour
         }
     }
 
-    protected virtual void movePiece(Vector3Int newTile, bool rotate = true){
-
-        if (rotate)
+    protected virtual void movePiece(Vector3Int newTile, bool animate = true)
+    {    
+        if (animate)
         {
+            isMoving = true;
+            this.newTile = newTile;
+
             Vector3Int gridDirection = newTile - currentTile;
             Vector3Int convertedDirection = new Vector3Int(gridDirection.x, gridDirection.z, gridDirection.y);
-            Quaternion rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
-            transform.rotation = rotation;
+            transform.rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
+            destination = grid.GetCellCenterWorld(newTile);
         }
-
-        transform.position = grid.GetCellCenterWorld(newTile);
-        currentTile = newTile;
+        else
+        {
+            transform.position = grid.GetCellCenterWorld(newTile);
+            currentTile = newTile;
+        }
     }
 
     protected virtual void Attack(GamePiece newGamePiece)

@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator PollToFinishTurn()
     {
-        while (OpenAiApi.isPostInProgress)
+        while (OpenAiApi.isPostInProgress || turnTakers[turn % turnTakers.Count].isMoving)
         {
             yield return new WaitForSeconds(0.1f);
         }

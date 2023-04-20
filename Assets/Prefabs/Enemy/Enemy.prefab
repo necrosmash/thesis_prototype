@@ -32,7 +32,7 @@ Transform:
   - {fileID: 2710883604199041533}
   - {fileID: 7946237667397125869}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3012758680376430469
 MonoBehaviour:
@@ -51,6 +51,7 @@ MonoBehaviour:
   baseDamage: 10
   minDamageRoll: -10
   maxDamageRoll: 10
+  movementSpeed: 5
   minDamageResistRoll: 0
   maxDamageResistRoll: 0
   skipAttack: 0

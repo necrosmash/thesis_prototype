@@ -60,6 +60,7 @@ MonoBehaviour:
   baseDamage: 10
   minDamageRoll: -5
   maxDamageRoll: 5
+  movementSpeed: 5
   minDamageResistRoll: 0
   maxDamageResistRoll: 0
   skipAttack: 0

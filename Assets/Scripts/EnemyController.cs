@@ -44,6 +44,8 @@ public class EnemyController : GamePiece
     // Update is called once per frame
     override protected void Update()
     {
+        base.Update();
+
         if (status == Status.ChasingPlayer) return;
 
         if (CheckPlayerVisibility() == true)
