@@ -12,6 +12,7 @@ public class BurningTrait : Trait
     {
         Name = "Burning";
         Description = "This orc is really hot";
+        LLMDescription = "This orc is on fire because, earlier, they were near an explosive barrel when it exploded";
         Duration = 3;
         base.Awake();
 

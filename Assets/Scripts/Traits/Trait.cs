@@ -7,6 +7,7 @@ public class Trait : MonoBehaviour
 
     public string Name { get; protected set; }
     public string Description { get; protected set; }
+    public string LLMDescription { get; protected set; } = "";
     public int Duration { get; protected set; }
     public int RemainingDuration { get; protected set; }
 
