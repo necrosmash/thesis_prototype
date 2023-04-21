@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: be3b094decf758b42a63babbc8a0f183
+timeCreated: 1500890901
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Pig
+    100002: //RootNode
+    100004: PIG_Chest
+    100006: PIG_Head
+    100008: PIG_LeftArm_Hand
+    100010: PIG_LeftArm_LowerArm
+    100012: PIG_LeftArm_UpperArm
+    100014: PIG_LeftLeg_Foot
+    100016: PIG_LeftLeg_LowerLeg
+    100018: PIG_LeftLeg_UpperLeg
+    100020: PIG_Neck
+    100022: PIG_Pelvis
+    100024: PIG_RightArm_Hand
+    100026: PIG_RightArm_LowerArm
+    100028: PIG_RightArm_UpperArm
+    100030: PIG_RightLeg_Foot
+    100032: PIG_RightLeg_LoweLeg
+    100034: PIG_RightLeg_UpperLeg
+    100036: PIG_Snout
+    100038: PIG_Spine_1
+    100040: PIG_Spine_2
+    100042: PIG_Tail1
+    100044: PIG_Tail2
+    100046: PIG_Tail3
+    400000: Pig
+    400002: //RootNode
+    400004: PIG_Chest
+    400006: PIG_Head
+    400008: PIG_LeftArm_Hand
+    400010: PIG_LeftArm_LowerArm
+    400012: PIG_LeftArm_UpperArm
+    400014: PIG_LeftLeg_Foot
+    400016: PIG_LeftLeg_LowerLeg
+    400018: PIG_LeftLeg_UpperLeg
+    400020: PIG_Neck
+    400022: PIG_Pelvis
+    400024: PIG_RightArm_Hand
+    400026: PIG_RightArm_LowerArm
+    400028: PIG_RightArm_UpperArm
+    400030: PIG_RightLeg_Foot
+    400032: PIG_RightLeg_LoweLeg
+    400034: PIG_RightLeg_UpperLeg
+    400036: PIG_Snout
+    400038: PIG_Spine_1
+    400040: PIG_Spine_2
+    400042: PIG_Tail1
+    400044: PIG_Tail2
+    400046: PIG_Tail3
+    4300000: Pig
+    7400000: walk
+    7400002: idle_01
+    7400004: idle_02
+    7400006: idle_03
+    7400008: run
+    9500000: //RootNode
+    13700000: Pig
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Pig
+        weight: 1
+      - path: PIG_Pelvis
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg/PIG_LeftLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg/PIG_RightLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm/PIG_LeftArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head/PIG_Snout
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm/PIG_RightArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2/PIG_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_01
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 128
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Pig
+        weight: 1
+      - path: PIG_Pelvis
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg/PIG_LeftLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg/PIG_RightLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm/PIG_LeftArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head/PIG_Snout
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm/PIG_RightArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2/PIG_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_02
+      takeName: Take 001
+      firstFrame: 128
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Pig
+        weight: 1
+      - path: PIG_Pelvis
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg/PIG_LeftLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg/PIG_RightLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm/PIG_LeftArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head/PIG_Snout
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm/PIG_RightArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2/PIG_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_03
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 265
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Pig
+        weight: 1
+      - path: PIG_Pelvis
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg/PIG_LeftLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg/PIG_RightLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm/PIG_LeftArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head/PIG_Snout
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm/PIG_RightArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2/PIG_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Pig
+        weight: 1
+      - path: PIG_Pelvis
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_LeftLeg_UpperLeg/PIG_LeftLeg_LowerLeg/PIG_LeftLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg
+        weight: 1
+      - path: PIG_Pelvis/PIG_RightLeg_UpperLeg/PIG_RightLeg_LoweLeg/PIG_RightLeg_Foot
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_LeftArm_UpperArm/PIG_LeftArm_LowerArm/PIG_LeftArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_Neck/PIG_Head/PIG_Snout
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm
+        weight: 1
+      - path: PIG_Pelvis/PIG_Spine_1/PIG_Spine_2/PIG_Chest/PIG_RightArm_UpperArm/PIG_RightArm_LowerArm/PIG_RightArm_Hand
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2
+        weight: 1
+      - path: PIG_Pelvis/PIG_Tail1/PIG_Tail2/PIG_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

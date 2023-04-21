@@ -1,0 +1,607 @@
+fileFormatVersion: 2
+guid: 555effdffa02c5343999b0c4d4e5afb9
+timeCreated: 1500900310
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Dog
+    100002: //RootNode
+    100004: DogHead
+    100006: DogHeadBone001
+    100008: DogHeadBone002
+    100010: DogHeadBone003
+    100012: DogHeadBone003Bone001
+    100014: DogLLeg1
+    100016: DogLLeg2
+    100018: DogLLegDigit01
+    100020: DogLLegFront1
+    100022: DogLLegFront2
+    100024: DogLLegFrontCollarbone
+    100026: DogLLegFrontPalm
+    100028: DogLLegPalm
+    100030: DogNeck
+    100032: DogPelvis
+    100034: DogRibcage
+    100036: DogRLeg1
+    100038: DogRLeg2
+    100040: DogRLegDigit01
+    100042: DogRLegFront1
+    100044: DogRLegFront2
+    100046: DogRLegFrontPalm
+    100048: DogRLegFrontShoulderblade
+    100050: DogRLegPalm
+    100052: DogSpine1
+    100054: DogSpine2
+    100056: DogSpine3
+    100058: DogTail1
+    100060: DogTail2
+    100062: DogTail3
+    400000: Dog
+    400002: //RootNode
+    400004: DogHead
+    400006: DogHeadBone001
+    400008: DogHeadBone002
+    400010: DogHeadBone003
+    400012: DogHeadBone003Bone001
+    400014: DogLLeg1
+    400016: DogLLeg2
+    400018: DogLLegDigit01
+    400020: DogLLegFront1
+    400022: DogLLegFront2
+    400024: DogLLegFrontCollarbone
+    400026: DogLLegFrontPalm
+    400028: DogLLegPalm
+    400030: DogNeck
+    400032: DogPelvis
+    400034: DogRibcage
+    400036: DogRLeg1
+    400038: DogRLeg2
+    400040: DogRLegDigit01
+    400042: DogRLegFront1
+    400044: DogRLegFront2
+    400046: DogRLegFrontPalm
+    400048: DogRLegFrontShoulderblade
+    400050: DogRLegPalm
+    400052: DogSpine1
+    400054: DogSpine2
+    400056: DogSpine3
+    400058: DogTail1
+    400060: DogTail2
+    400062: DogTail3
+    4300000: Dog
+    7400000: walk
+    7400002: run
+    7400004: idle_01
+    7400006: idle_02
+    7400008: idle_03
+    9500000: //RootNode
+    13700000: Dog
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: DogPelvis
+        weight: 1
+      - path: DogPelvis/DogLLeg1
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm/DogLLegDigit01
+        weight: 1
+      - path: DogPelvis/DogRLeg1
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm/DogRLegDigit01
+        weight: 1
+      - path: DogPelvis/DogSpine1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2/DogLLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone002
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003/DogHeadBone003Bone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2/DogRLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogTail1
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2/DogTail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 28
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: DogPelvis
+        weight: 1
+      - path: DogPelvis/DogLLeg1
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm/DogLLegDigit01
+        weight: 1
+      - path: DogPelvis/DogRLeg1
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm/DogRLegDigit01
+        weight: 1
+      - path: DogPelvis/DogSpine1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2/DogLLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone002
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003/DogHeadBone003Bone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2/DogRLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogTail1
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2/DogTail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_01
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: DogPelvis
+        weight: 1
+      - path: DogPelvis/DogLLeg1
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm/DogLLegDigit01
+        weight: 1
+      - path: DogPelvis/DogRLeg1
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm/DogRLegDigit01
+        weight: 1
+      - path: DogPelvis/DogSpine1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2/DogLLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone002
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003/DogHeadBone003Bone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2/DogRLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogTail1
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2/DogTail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_02
+      takeName: Take 001
+      firstFrame: 95
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: DogPelvis
+        weight: 1
+      - path: DogPelvis/DogLLeg1
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm/DogLLegDigit01
+        weight: 1
+      - path: DogPelvis/DogRLeg1
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm/DogRLegDigit01
+        weight: 1
+      - path: DogPelvis/DogSpine1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2/DogLLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone002
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003/DogHeadBone003Bone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2/DogRLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogTail1
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2/DogTail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_03
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 187
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dog
+        weight: 1
+      - path: DogPelvis
+        weight: 1
+      - path: DogPelvis/DogLLeg1
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm
+        weight: 1
+      - path: DogPelvis/DogLLeg1/DogLLeg2/DogLLegPalm/DogLLegDigit01
+        weight: 1
+      - path: DogPelvis/DogRLeg1
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm
+        weight: 1
+      - path: DogPelvis/DogRLeg1/DogRLeg2/DogRLegPalm/DogRLegDigit01
+        weight: 1
+      - path: DogPelvis/DogSpine1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogLLegFrontCollarbone/DogLLegFront1/DogLLegFront2/DogLLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone002
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogNeck/DogHead/DogHeadBone003/DogHeadBone003Bone001
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2
+        weight: 1
+      - path: DogPelvis/DogSpine1/DogSpine2/DogSpine3/DogRibcage/DogRLegFrontShoulderblade/DogRLegFront1/DogRLegFront2/DogRLegFrontPalm
+        weight: 1
+      - path: DogPelvis/DogTail1
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2
+        weight: 1
+      - path: DogPelvis/DogTail1/DogTail2/DogTail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

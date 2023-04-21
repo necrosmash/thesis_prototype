@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: c369403dce8420241bc07ad6df9a59d2
+timeCreated: 1500907324
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Sheep
+    100002: //RootNode
+    100004: Sheep_Chest
+    100006: Sheep_Head
+    100008: Sheep_HeadBone002
+    100010: Sheep_LeftArm_Hand
+    100012: Sheep_LeftArm_LowerArm
+    100014: Sheep_LeftArm_UpperArm
+    100016: Sheep_LeftLeg_Foot
+    100018: Sheep_LeftLeg_LowerLeg
+    100020: Sheep_LeftLeg_UpperLeg
+    100022: Sheep_Neck
+    100024: Sheep_Pelvis
+    100026: Sheep_RightArm_Hand
+    100028: Sheep_RightArm_LowerArm
+    100030: Sheep_RightArm_UpperArm
+    100032: Sheep_RightLeg_Foot
+    100034: Sheep_RightLeg_LoweLeg
+    100036: Sheep_RightLeg_UpperLeg
+    100038: Sheep_Snout
+    100040: Sheep_Spine_1
+    100042: Sheep_Spine_2
+    100044: Sheep_Tail1
+    100046: Sheep_Tail2
+    100048: Sheep_Tail3
+    400000: Sheep
+    400002: //RootNode
+    400004: Sheep_Chest
+    400006: Sheep_Head
+    400008: Sheep_HeadBone002
+    400010: Sheep_LeftArm_Hand
+    400012: Sheep_LeftArm_LowerArm
+    400014: Sheep_LeftArm_UpperArm
+    400016: Sheep_LeftLeg_Foot
+    400018: Sheep_LeftLeg_LowerLeg
+    400020: Sheep_LeftLeg_UpperLeg
+    400022: Sheep_Neck
+    400024: Sheep_Pelvis
+    400026: Sheep_RightArm_Hand
+    400028: Sheep_RightArm_LowerArm
+    400030: Sheep_RightArm_UpperArm
+    400032: Sheep_RightLeg_Foot
+    400034: Sheep_RightLeg_LoweLeg
+    400036: Sheep_RightLeg_UpperLeg
+    400038: Sheep_Snout
+    400040: Sheep_Spine_1
+    400042: Sheep_Spine_2
+    400044: Sheep_Tail1
+    400046: Sheep_Tail2
+    400048: Sheep_Tail3
+    4300000: Sheep
+    7400000: walk
+    7400002: idle_01
+    7400004: idle_02
+    7400006: idle_03
+    7400008: run
+    9500000: //RootNode
+    13700000: Sheep
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sheep
+        weight: 1
+      - path: Sheep_Pelvis
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg/Sheep_LeftLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg/Sheep_RightLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm/Sheep_LeftArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_HeadBone002
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_Snout
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm/Sheep_RightArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2/Sheep_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_01
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sheep
+        weight: 1
+      - path: Sheep_Pelvis
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg/Sheep_LeftLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg/Sheep_RightLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm/Sheep_LeftArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_HeadBone002
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_Snout
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm/Sheep_RightArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2/Sheep_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_02
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sheep
+        weight: 1
+      - path: Sheep_Pelvis
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg/Sheep_LeftLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg/Sheep_RightLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm/Sheep_LeftArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_HeadBone002
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_Snout
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm/Sheep_RightArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2/Sheep_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_03
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sheep
+        weight: 1
+      - path: Sheep_Pelvis
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg/Sheep_LeftLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg/Sheep_RightLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm/Sheep_LeftArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_HeadBone002
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_Snout
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm/Sheep_RightArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2/Sheep_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sheep
+        weight: 1
+      - path: Sheep_Pelvis
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_LeftLeg_UpperLeg/Sheep_LeftLeg_LowerLeg/Sheep_LeftLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_RightLeg_UpperLeg/Sheep_RightLeg_LoweLeg/Sheep_RightLeg_Foot
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_LeftArm_UpperArm/Sheep_LeftArm_LowerArm/Sheep_LeftArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_HeadBone002
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_Neck/Sheep_Head/Sheep_Snout
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Spine_1/Sheep_Spine_2/Sheep_Chest/Sheep_RightArm_UpperArm/Sheep_RightArm_LowerArm/Sheep_RightArm_Hand
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2
+        weight: 1
+      - path: Sheep_Pelvis/Sheep_Tail1/Sheep_Tail2/Sheep_Tail3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

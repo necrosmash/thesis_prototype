@@ -1,0 +1,774 @@
+fileFormatVersion: 2
+guid: e5bca68d1aabe78478e545991ff06c7f
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base HumanHead
+    100002: Base HumanLArmCollarbone
+    100004: Base HumanLArmForearm
+    100006: Base HumanLArmPalm
+    100008: Base HumanLArmUpperarm
+    100010: Base HumanLCalf
+    100012: Base HumanLFoot
+    100014: Base HumanLPalmFinger001
+    100016: Base HumanLPalmFinger002
+    100018: Base HumanLPalmFinger003
+    100020: Base HumanLPalmFinger004
+    100022: Base HumanLPalmThumb001
+    100024: Base HumanLPalmThumb002
+    100026: Base HumanLPlatform
+    100028: Base HumanLThigh
+    100030: Base HumanNeck
+    100032: Base HumanPelvis
+    100034: Base HumanRArmCollarbone
+    100036: Base HumanRArmForearm
+    100038: Base HumanRArmIKTarget
+    100040: Base HumanRArmPalm
+    100042: Base HumanRArmUpperarm
+    100044: Base HumanRibcage
+    100046: Base HumanRLegCalf
+    100048: Base HumanRLegFoot
+    100050: Base HumanRLegPlatform
+    100052: Base HumanRLegThigh
+    100054: Base HumanRPalmFinger001
+    100056: Base HumanRPalmFinger002
+    100058: Base HumanRPalmFinger003
+    100060: Base HumanRPalmFinger004
+    100062: Base HumanRPalmThumb001
+    100064: Base HumanRPalmThumb002
+    100066: Base HumanSpine1
+    100068: Base HumanSpine2
+    100070: //RootNode
+    100072: Base Human
+    400000: Base HumanHead
+    400002: Base HumanLArmCollarbone
+    400004: Base HumanLArmForearm
+    400006: Base HumanLArmPalm
+    400008: Base HumanLArmUpperarm
+    400010: Base HumanLCalf
+    400012: Base HumanLFoot
+    400014: Base HumanLPalmFinger001
+    400016: Base HumanLPalmFinger002
+    400018: Base HumanLPalmFinger003
+    400020: Base HumanLPalmFinger004
+    400022: Base HumanLPalmThumb001
+    400024: Base HumanLPalmThumb002
+    400026: Base HumanLPlatform
+    400028: Base HumanLThigh
+    400030: Base HumanNeck
+    400032: Base HumanPelvis
+    400034: Base HumanRArmCollarbone
+    400036: Base HumanRArmForearm
+    400038: Base HumanRArmIKTarget
+    400040: Base HumanRArmPalm
+    400042: Base HumanRArmUpperarm
+    400044: Base HumanRibcage
+    400046: Base HumanRLegCalf
+    400048: Base HumanRLegFoot
+    400050: Base HumanRLegPlatform
+    400052: Base HumanRLegThigh
+    400054: Base HumanRPalmFinger001
+    400056: Base HumanRPalmFinger002
+    400058: Base HumanRPalmFinger003
+    400060: Base HumanRPalmFinger004
+    400062: Base HumanRPalmThumb001
+    400064: Base HumanRPalmThumb002
+    400066: Base HumanSpine1
+    400068: Base HumanSpine2
+    400070: //RootNode
+    400072: Base Human
+    7400000: Mage_Anim_All
+    7400002: Walk_Forward
+    7400004: Run_Forward
+    7400006: Cast_01
+    7400008: Cast_02
+    7400010: Idle_02
+    7400012: Run_Right
+    7400014: Run_Left
+    7400016: Run_Back
+    7400018: Walk_Right
+    7400020: Walk_Left
+    7400022: Walk_Back
+    7400024: Attack_01
+    7400026: Attack_02
+    7400028: Cast_03
+    7400030: Damage
+    7400032: Death
+    7400034: Idle_01
+    7400036: Walk_Forward //// Base Human
+    7400038: Run_Forward //// Base Human
+    7400040: Cast_01 //// Base Human
+    7400042: Cast_02 //// Base Human
+    7400044: Idle_02 //// Base Human
+    7400046: Run_Right //// Base Human
+    7400048: Run_Left //// Base Human
+    7400050: Run_Back //// Base Human
+    7400052: Walk_Right //// Base Human
+    7400054: Walk_Left //// Base Human
+    7400056: Walk_Back //// Base Human
+    7400058: Attack_01 //// Base Human
+    7400060: Attack_02 //// Base Human
+    7400062: Cast_03 //// Base Human
+    7400064: Damage //// Base Human
+    7400066: Death //// Base Human
+    7400068: Idle_01 //// Base Human
+    7400070: Walk_Forward //// Base HumanPelvis
+    7400072: Run_Forward //// Base HumanPelvis
+    7400074: Cast_01 //// Base HumanPelvis
+    7400076: Cast_02 //// Base HumanPelvis
+    7400078: Idle_02 //// Base HumanPelvis
+    7400080: Run_Right //// Base HumanPelvis
+    7400082: Run_Left //// Base HumanPelvis
+    7400084: Run_Back //// Base HumanPelvis
+    7400086: Walk_Right //// Base HumanPelvis
+    7400088: Walk_Left //// Base HumanPelvis
+    7400090: Walk_Back //// Base HumanPelvis
+    7400092: Attack_01 //// Base HumanPelvis
+    7400094: Attack_02 //// Base HumanPelvis
+    7400096: Cast_03 //// Base HumanPelvis
+    7400098: Damage //// Base HumanPelvis
+    7400100: Death //// Base HumanPelvis
+    7400102: Idle_01 //// Base HumanPelvis
+    7400104: Walk_Forward //// Base HumanLPlatform
+    7400106: Run_Forward //// Base HumanLPlatform
+    7400108: Cast_01 //// Base HumanLPlatform
+    7400110: Cast_02 //// Base HumanLPlatform
+    7400112: Idle_02 //// Base HumanLPlatform
+    7400114: Run_Right //// Base HumanLPlatform
+    7400116: Run_Left //// Base HumanLPlatform
+    7400118: Run_Back //// Base HumanLPlatform
+    7400120: Walk_Right //// Base HumanLPlatform
+    7400122: Walk_Left //// Base HumanLPlatform
+    7400124: Walk_Back //// Base HumanLPlatform
+    7400126: Attack_01 //// Base HumanLPlatform
+    7400128: Attack_02 //// Base HumanLPlatform
+    7400130: Cast_03 //// Base HumanLPlatform
+    7400132: Damage //// Base HumanLPlatform
+    7400134: Death //// Base HumanLPlatform
+    7400136: Idle_01 //// Base HumanLPlatform
+    7400138: Walk_Forward //// Base HumanRLegPlatform
+    7400140: Run_Forward //// Base HumanRLegPlatform
+    7400142: Cast_01 //// Base HumanRLegPlatform
+    7400144: Cast_02 //// Base HumanRLegPlatform
+    7400146: Idle_02 //// Base HumanRLegPlatform
+    7400148: Run_Right //// Base HumanRLegPlatform
+    7400150: Run_Left //// Base HumanRLegPlatform
+    7400152: Run_Back //// Base HumanRLegPlatform
+    7400154: Walk_Right //// Base HumanRLegPlatform
+    7400156: Walk_Left //// Base HumanRLegPlatform
+    7400158: Walk_Back //// Base HumanRLegPlatform
+    7400160: Attack_01 //// Base HumanRLegPlatform
+    7400162: Attack_02 //// Base HumanRLegPlatform
+    7400164: Cast_03 //// Base HumanRLegPlatform
+    7400166: Damage //// Base HumanRLegPlatform
+    7400168: Death //// Base HumanRLegPlatform
+    7400170: Idle_01 //// Base HumanRLegPlatform
+    7400172: Walk_Forward //// Base HumanRArmIKTarget
+    7400174: Run_Forward //// Base HumanRArmIKTarget
+    7400176: Cast_01 //// Base HumanRArmIKTarget
+    7400178: Cast_02 //// Base HumanRArmIKTarget
+    7400180: Idle_02 //// Base HumanRArmIKTarget
+    7400182: Run_Right //// Base HumanRArmIKTarget
+    7400184: Run_Left //// Base HumanRArmIKTarget
+    7400186: Run_Back //// Base HumanRArmIKTarget
+    7400188: Walk_Right //// Base HumanRArmIKTarget
+    7400190: Walk_Left //// Base HumanRArmIKTarget
+    7400192: Walk_Back //// Base HumanRArmIKTarget
+    7400194: Attack_01 //// Base HumanRArmIKTarget
+    7400196: Attack_02 //// Base HumanRArmIKTarget
+    7400198: Cast_03 //// Base HumanRArmIKTarget
+    7400200: Damage //// Base HumanRArmIKTarget
+    7400202: Death //// Base HumanRArmIKTarget
+    7400204: Idle_01 //// Base HumanRArmIKTarget
+    9500000: //RootNode
+    11100000: //RootNode
+    11100002: Base Human
+    11100004: Base HumanHead
+    11100006: Base HumanLArmCollarbone
+    11100008: Base HumanLArmForearm
+    11100010: Base HumanLArmPalm
+    11100012: Base HumanLArmUpperarm
+    11100014: Base HumanLCalf
+    11100016: Base HumanLFoot
+    11100018: Base HumanLPalmFinger001
+    11100020: Base HumanLPalmFinger002
+    11100022: Base HumanLPalmFinger003
+    11100024: Base HumanLPalmFinger004
+    11100026: Base HumanLPalmThumb001
+    11100028: Base HumanLPalmThumb002
+    11100030: Base HumanLPlatform
+    11100032: Base HumanLThigh
+    11100034: Base HumanNeck
+    11100036: Base HumanPelvis
+    11100038: Base HumanRArmCollarbone
+    11100040: Base HumanRArmForearm
+    11100042: Base HumanRArmIKTarget
+    11100044: Base HumanRArmPalm
+    11100046: Base HumanRArmUpperarm
+    11100048: Base HumanRibcage
+    11100050: Base HumanRLegCalf
+    11100052: Base HumanRLegFoot
+    11100054: Base HumanRLegPlatform
+    11100056: Base HumanRLegThigh
+    11100058: Base HumanRPalmFinger001
+    11100060: Base HumanRPalmFinger002
+    11100062: Base HumanRPalmFinger003
+    11100064: Base HumanRPalmFinger004
+    11100066: Base HumanRPalmThumb001
+    11100068: Base HumanRPalmThumb002
+    11100070: Base HumanSpine1
+    11100072: Base HumanSpine2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk_Forward
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run_Forward
+      takeName: Take 001
+      firstFrame: 36
+      lastFrame: 66
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cast_01
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 165
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cast_02
+      takeName: Take 001
+      firstFrame: 170
+      lastFrame: 205
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_02
+      takeName: Take 001
+      firstFrame: 210
+      lastFrame: 245
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run_Right
+      takeName: Take 001
+      firstFrame: 260
+      lastFrame: 290
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run_Left
+      takeName: Take 001
+      firstFrame: 300
+      lastFrame: 330
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run_Back
+      takeName: Take 001
+      firstFrame: 340
+      lastFrame: 370
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_Right
+      takeName: Take 001
+      firstFrame: 380
+      lastFrame: 415
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_Left
+      takeName: Take 001
+      firstFrame: 420
+      lastFrame: 455
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_Back
+      takeName: Take 001
+      firstFrame: 460
+      lastFrame: 495
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_01
+      takeName: Take 001
+      firstFrame: 500
+      lastFrame: 540
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_02
+      takeName: Take 001
+      firstFrame: 550
+      lastFrame: 590
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cast_03
+      takeName: Take 001
+      firstFrame: 600
+      lastFrame: 695
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Damage
+      takeName: Take 001
+      firstFrame: 710
+      lastFrame: 728
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 740
+      lastFrame: 785
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_01
+      takeName: Take 001
+      firstFrame: 71
+      lastFrame: 110
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

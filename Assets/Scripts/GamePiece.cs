@@ -94,11 +94,18 @@ public class GamePiece : MonoBehaviour
         }
     }
 
-    protected virtual void movePiece(Vector3Int newTile){
+    protected virtual void movePiece(Vector3Int newTile, bool rotate = true){
+
+        if (rotate)
+        {
+            Vector3Int gridDirection = newTile - currentTile;
+            Vector3Int convertedDirection = new Vector3Int(gridDirection.x, gridDirection.z, gridDirection.y);
+            Quaternion rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
+            transform.rotation = rotation;
+        }
 
         transform.position = grid.GetCellCenterWorld(newTile);
         currentTile = newTile;
-
     }
 
     protected virtual void Attack(GamePiece newGamePiece)
@@ -131,7 +138,7 @@ public class GamePiece : MonoBehaviour
         }
 
         startingTile = newStartingTile;
-        movePiece(startingTile);
+        movePiece(startingTile, false);
     }
 
     public virtual void TakeDamage(int damage = 10)

@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: 3ddb0bd9e37e7a64da74f84c575f63e3
+timeCreated: 1500904532
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cow
+    100002: //RootNode
+    100004: CowFrontRLegFrontHoof
+    100006: CowFrontRLegHumerus
+    100008: CowFrontRLegPhalangesManus
+    100010: CowFrontRLegScapula
+    100012: CowLFrontHoof
+    100014: CowLHumerus
+    100016: CowLLeg1
+    100018: CowLLeg2
+    100020: CowLLegAnkle
+    100022: CowLPhalangesManus
+    100024: CowLScapula
+    100026: CowNeck1
+    100028: CowNeck2
+    100030: CowPelvis
+    100032: CowRibcage
+    100034: CowRLeg1
+    100036: CowRLeg2
+    100038: CowRLegAnkle
+    100040: CowScull001
+    100042: CowScull001Bone001
+    100044: CowScull001Bone002
+    100046: CowScull001Bone003
+    100048: CowScull001Bone003Bone001
+    100050: CowScull001Bone003Bone001Bone001
+    100052: CowSpine1
+    100054: CowSpine2
+    100056: CowSpine3
+    100058: CowTail1
+    100060: CowTail2
+    100062: CowTail3
+    100064: CowTail4
+    100066: CowTail5
+    400000: Cow
+    400002: //RootNode
+    400004: CowFrontRLegFrontHoof
+    400006: CowFrontRLegHumerus
+    400008: CowFrontRLegPhalangesManus
+    400010: CowFrontRLegScapula
+    400012: CowLFrontHoof
+    400014: CowLHumerus
+    400016: CowLLeg1
+    400018: CowLLeg2
+    400020: CowLLegAnkle
+    400022: CowLPhalangesManus
+    400024: CowLScapula
+    400026: CowNeck1
+    400028: CowNeck2
+    400030: CowPelvis
+    400032: CowRibcage
+    400034: CowRLeg1
+    400036: CowRLeg2
+    400038: CowRLegAnkle
+    400040: CowScull001
+    400042: CowScull001Bone001
+    400044: CowScull001Bone002
+    400046: CowScull001Bone003
+    400048: CowScull001Bone003Bone001
+    400050: CowScull001Bone003Bone001Bone001
+    400052: CowSpine1
+    400054: CowSpine2
+    400056: CowSpine3
+    400058: CowTail1
+    400060: CowTail2
+    400062: CowTail3
+    400064: CowTail4
+    400066: CowTail5
+    4300000: Cow
+    7400000: walk
+    7400002: idle_01
+    7400004: idle_02
+    7400006: idle_03
+    7400008: run
+    9500000: //RootNode
+    13700000: Cow
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cow
+        weight: 1
+      - path: CowPelvis
+        weight: 1
+      - path: CowPelvis/CowLLeg1
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2/CowLLegAnkle
+        weight: 1
+      - path: CowPelvis/CowRLeg1
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2/CowRLegAnkle
+        weight: 1
+      - path: CowPelvis/CowSpine1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus/CowFrontRLegFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus/CowLFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone002
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001/CowScull001Bone003Bone001Bone001
+        weight: 1
+      - path: CowPelvis/CowTail1
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4/CowTail5
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_01
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cow
+        weight: 1
+      - path: CowPelvis
+        weight: 1
+      - path: CowPelvis/CowLLeg1
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2/CowLLegAnkle
+        weight: 1
+      - path: CowPelvis/CowRLeg1
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2/CowRLegAnkle
+        weight: 1
+      - path: CowPelvis/CowSpine1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus/CowFrontRLegFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus/CowLFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone002
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001/CowScull001Bone003Bone001Bone001
+        weight: 1
+      - path: CowPelvis/CowTail1
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4/CowTail5
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_02
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 125
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cow
+        weight: 1
+      - path: CowPelvis
+        weight: 1
+      - path: CowPelvis/CowLLeg1
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2/CowLLegAnkle
+        weight: 1
+      - path: CowPelvis/CowRLeg1
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2/CowRLegAnkle
+        weight: 1
+      - path: CowPelvis/CowSpine1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus/CowFrontRLegFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus/CowLFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone002
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001/CowScull001Bone003Bone001Bone001
+        weight: 1
+      - path: CowPelvis/CowTail1
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4/CowTail5
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_03
+      takeName: Take 001
+      firstFrame: 125
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cow
+        weight: 1
+      - path: CowPelvis
+        weight: 1
+      - path: CowPelvis/CowLLeg1
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2/CowLLegAnkle
+        weight: 1
+      - path: CowPelvis/CowRLeg1
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2/CowRLegAnkle
+        weight: 1
+      - path: CowPelvis/CowSpine1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus/CowFrontRLegFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus/CowLFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone002
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001/CowScull001Bone003Bone001Bone001
+        weight: 1
+      - path: CowPelvis/CowTail1
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4/CowTail5
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cow
+        weight: 1
+      - path: CowPelvis
+        weight: 1
+      - path: CowPelvis/CowLLeg1
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2
+        weight: 1
+      - path: CowPelvis/CowLLeg1/CowLLeg2/CowLLegAnkle
+        weight: 1
+      - path: CowPelvis/CowRLeg1
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2
+        weight: 1
+      - path: CowPelvis/CowRLeg1/CowRLeg2/CowRLegAnkle
+        weight: 1
+      - path: CowPelvis/CowSpine1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowFrontRLegScapula/CowFrontRLegHumerus/CowFrontRLegPhalangesManus/CowFrontRLegFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowLScapula/CowLHumerus/CowLPhalangesManus/CowLFrontHoof
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone002
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001
+        weight: 1
+      - path: CowPelvis/CowSpine1/CowSpine2/CowSpine3/CowRibcage/CowNeck1/CowNeck2/CowScull001/CowScull001Bone003/CowScull001Bone003Bone001/CowScull001Bone003Bone001Bone001
+        weight: 1
+      - path: CowPelvis/CowTail1
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4
+        weight: 1
+      - path: CowPelvis/CowTail1/CowTail2/CowTail3/CowTail4/CowTail5
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
