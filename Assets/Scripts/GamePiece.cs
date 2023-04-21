@@ -39,6 +39,13 @@ public class GamePiece : MonoBehaviour
     private Vector3Int newTile;
     private Vector3 destination;
 
+    [SerializeField]
+    protected Animation anim;
+    protected bool isPlayingAttackAnim = false;
+
+    [SerializeField]
+    private AnimationClip acIdle, acWalk, acAttack;
+
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -58,6 +65,8 @@ public class GamePiece : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        Animate();
+
         if (!isMoving) return;
 
         transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
@@ -195,6 +204,25 @@ public class GamePiece : MonoBehaviour
         return false;
     }
 
+    private void Animate()
+    {
+        if (isPlayingAttackAnim && !anim.IsPlaying(acAttack.name))
+            StartCoroutine(AttackAnimate());
+
+        if (isPlayingAttackAnim) return;
+
+        if (anim.IsPlaying(acIdle.name) && isMoving)
+            anim.Play(acWalk.name);
+        else if (anim.IsPlaying(acWalk.name) && !isMoving)
+            anim.Play(acIdle.name);
+    }
+
+    private IEnumerator AttackAnimate()
+    {
+        anim.Play(acAttack.name);
+        yield return new WaitForSeconds(.5f);
+        isPlayingAttackAnim = false;
+    }
 }
 
 public class BadInitialisationException : System.Exception

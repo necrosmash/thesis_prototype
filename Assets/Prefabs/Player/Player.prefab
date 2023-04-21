@@ -64,6 +64,10 @@ MonoBehaviour:
   minDamageResistRoll: 0
   maxDamageResistRoll: 0
   skipAttack: 0
+  anim: {fileID: 8023873742418836682}
+  acIdle: {fileID: 7400002, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
+  acWalk: {fileID: 7400000, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
+  acAttack: {fileID: 7400006, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
   movesPerTurn: 2
   attackRadius: 1
 --- !u!1001 &3223465883857863532
@@ -249,6 +253,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd4e465a45b55342b616fdc2ae5c092, type: 3}
+--- !u!111 &8023873742418836682 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 11100000, guid: cdd4e465a45b55342b616fdc2ae5c092, type: 3}
+  m_PrefabInstance: {fileID: 8023873742425564074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8023873742425438506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cdd4e465a45b55342b616fdc2ae5c092, type: 3}
