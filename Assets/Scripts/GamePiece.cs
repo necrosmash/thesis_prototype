@@ -123,11 +123,9 @@ public class GamePiece : MonoBehaviour
         if (animate)
         {
             isMoving = true;
-            this.newTile = newTile;
+            LookAt(newTile);
 
-            Vector3Int gridDirection = newTile - currentTile;
-            Vector3Int convertedDirection = new Vector3Int(gridDirection.x, gridDirection.z, gridDirection.y);
-            transform.rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
+            this.newTile = newTile;
             destination = grid.GetCellCenterWorld(newTile);
         }
         else
@@ -137,8 +135,18 @@ public class GamePiece : MonoBehaviour
         }
     }
 
+    private void LookAt(GamePiece gp) => LookAt(gp.currentTile);
+    private void LookAt(Vector3Int tile)
+    {
+        Vector3Int gridDirection = tile - currentTile;
+        Vector3Int convertedDirection = new Vector3Int(gridDirection.x, gridDirection.z, gridDirection.y);
+        transform.rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
+    }
+
     protected virtual void Attack(GamePiece newGamePiece)
     {
+        isPlayingAttackAnim = true;
+        LookAt(newGamePiece);
 
         foreach (Trait trait in traits)
         {
@@ -208,16 +216,18 @@ public class GamePiece : MonoBehaviour
     {
         if (isPlayingDeathAnim && !anim.IsPlaying(acDeath.name))
             StartCoroutine(DeathAnimate());
-        if (isPlayingDeathAnim) return;
+        if (isPlayingDeathAnim)
+            return;
 
         if (isPlayingAttackAnim && !anim.IsPlaying(acAttack.name))
             StartCoroutine(AttackAnimate());
-        if (isPlayingAttackAnim) return;
+        if (isPlayingAttackAnim)
+            return;
 
         if (isMoving && !anim.IsPlaying(acWalk.name))
             anim.Play(acWalk.name);
-
-        else anim.Play(acIdle.name);
+        else if (!isMoving)
+            anim.Play(acIdle.name);
     }
 
     private IEnumerator DeathAnimate()

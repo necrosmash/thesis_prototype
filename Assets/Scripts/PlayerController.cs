@@ -61,7 +61,6 @@ public class PlayerController : GamePiece
         {
             if (!hasAttacked && moveCount > 0)
             {
-                isPlayingAttackAnim = true;
                 GamePiece tempGamePiece = gameManager.GetPieceAtTile(gameManager.SelectedTile);
 
                 if (((tempGamePiece.currentTile - currentTile).magnitude <= attackRadius) && (tempGamePiece != null))
@@ -89,9 +88,7 @@ public class PlayerController : GamePiece
 
     protected override void Attack(GamePiece newGamePiece)
     {
-
         base.Attack(newGamePiece);
-
     }
 
     public override void TakeTurn()

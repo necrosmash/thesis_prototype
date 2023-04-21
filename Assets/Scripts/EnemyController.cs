@@ -103,9 +103,7 @@ public class EnemyController : GamePiece
 
     protected override void Attack(GamePiece newGamePiece)
     {
-        isPlayingAttackAnim = true;
         base.Attack(newGamePiece);
-
     }
 
     public override void Initialise(Vector3Int newStartingTile)
