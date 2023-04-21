@@ -41,10 +41,10 @@ public class GamePiece : MonoBehaviour
 
     [SerializeField]
     protected Animation anim;
-    protected bool isPlayingAttackAnim = false;
+    protected bool isPlayingAttackAnim = false, isPlayingDeathAnim = false;
 
     [SerializeField]
-    private AnimationClip acIdle, acWalk, acAttack;
+    private AnimationClip acIdle, acWalk, acAttack, acDeath;
 
     protected virtual void Awake(){
 
@@ -190,7 +190,7 @@ public class GamePiece : MonoBehaviour
         health -= damage;
 
         if (health <= 0)
-            gameManager.Kill(this);
+            isPlayingDeathAnim = true;
     }
 
     protected bool checkMoveLegal(Vector3Int newTile, GamePiece acceptableGamePiece = null)
@@ -206,21 +206,32 @@ public class GamePiece : MonoBehaviour
 
     private void Animate()
     {
+        if (isPlayingDeathAnim && !anim.IsPlaying(acDeath.name))
+            StartCoroutine(DeathAnimate());
+        if (isPlayingDeathAnim) return;
+
         if (isPlayingAttackAnim && !anim.IsPlaying(acAttack.name))
             StartCoroutine(AttackAnimate());
-
         if (isPlayingAttackAnim) return;
 
-        if (anim.IsPlaying(acIdle.name) && isMoving)
+        if (isMoving && !anim.IsPlaying(acWalk.name))
             anim.Play(acWalk.name);
-        else if (anim.IsPlaying(acWalk.name) && !isMoving)
-            anim.Play(acIdle.name);
+
+        else anim.Play(acIdle.name);
+    }
+
+    private IEnumerator DeathAnimate()
+    {
+        anim.Play(acDeath.name);
+        yield return new WaitForSeconds(acDeath.length);
+        isPlayingDeathAnim = false;
+        gameManager.Kill(this);
     }
 
     private IEnumerator AttackAnimate()
     {
         anim.Play(acAttack.name);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(acAttack.length);
         isPlayingAttackAnim = false;
     }
 }

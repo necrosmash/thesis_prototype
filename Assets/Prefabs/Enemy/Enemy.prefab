@@ -59,6 +59,7 @@ MonoBehaviour:
   acIdle: {fileID: 7400002, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
   acWalk: {fileID: 7400000, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
   acAttack: {fileID: 7400006, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
+  acDeath: {fileID: 7400014, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
   orc:
     name: 
     description: 

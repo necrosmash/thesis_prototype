@@ -68,6 +68,7 @@ MonoBehaviour:
   acIdle: {fileID: 7400002, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
   acWalk: {fileID: 7400000, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
   acAttack: {fileID: 7400006, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
+  acDeath: {fileID: 7400016, guid: 1905f6114f8c18f44b69b884c2904a63, type: 3}
   movesPerTurn: 2
   attackRadius: 1
 --- !u!1001 &3223465883857863532
