@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
         turnTakers.AddRange(enemies);
         turnTakers.AddRange(obstacles);
 
-        FinishTurn();
+        turnTakers[0].TakeTurn();
     }
 
     GamePiece createPiece(GameObject newPrefab){
@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
         }
-        turnTakers[turn++ % turnTakers.Count].TakeTurn();
+        turnTakers[++turn % turnTakers.Count].TakeTurn();
         mobDisplayController.UpdateMob(SelectedTile);
     }
 
