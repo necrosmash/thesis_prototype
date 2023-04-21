@@ -57,9 +57,7 @@ public class MobDisplayController : MonoBehaviour
 
             inputField.text += traitsString;
 
-
-
-        } else {
+        }   else {
             mobDisplayWindow.gameObject.SetActive(false);
         }
 

@@ -40,6 +40,16 @@ public class GameManager : MonoBehaviour
         set{
             _selectedTile = value;
             mobDisplayController.UpdateMob(value);
+
+            GamePiece currentPiece = GetPieceAtTile(value);
+
+            if (currentPiece is PlayerController || currentPiece is EnemyController)
+            {
+                AudioManager audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+
+                audioManager.Play(currentPiece.VoiceType);
+            }
+
         }
 
     }

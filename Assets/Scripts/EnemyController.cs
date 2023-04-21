@@ -39,6 +39,28 @@ public class EnemyController : GamePiece
     {
         base.Start();
         healthDisplay = transform.Find("HealthDisplay").GetComponent<HealthDisplay>();
+
+        int tempVoiceInt = UnityEngine.Random.Range(0, 3);
+
+        switch (tempVoiceInt)
+        {
+            case 0:
+                {
+                    VoiceType = "voice0";
+                    break;
+                }
+            case 1:
+                {
+                    VoiceType = "voice1";
+                    break;
+                }
+            case 2:
+                {
+                    VoiceType = "voice2";
+                    break;
+                }
+        }
+
     }
 
     // Update is called once per frame

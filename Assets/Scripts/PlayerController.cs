@@ -28,6 +28,24 @@ public class PlayerController : GamePiece
         moveCount = 0;
         isPlayerTurn = false;
         hasAttacked = false;
+
+
+        int tempVoiceInt = UnityEngine.Random.Range(0, 2);
+
+        switch (tempVoiceInt)
+        {
+            case 0:
+                {
+                    VoiceType = "voiceplayermale";
+                    break;
+                }
+            case 1:
+                {
+                    VoiceType = "voiceplayerfemale";
+                    break;
+                }
+        }
+
     }
 
     // Update is called once per frame

@@ -102,6 +102,11 @@ public class ExplosiveBarrelTrait : Trait
 
         }
 
+        AudioManager audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+
+        audioManager.Play("explosion");
+        audioManager.Play("shatter");
+
         RemainingDuration = 0;
 
     }

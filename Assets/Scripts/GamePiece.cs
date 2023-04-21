@@ -33,6 +33,9 @@ public class GamePiece : MonoBehaviour
 
     public bool skipAttack = false;
 
+    public string VoiceType { get; protected set; }
+
+
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
