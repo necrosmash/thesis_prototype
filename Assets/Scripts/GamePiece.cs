@@ -46,6 +46,8 @@ public class GamePiece : MonoBehaviour
     [SerializeField]
     private AnimationClip acIdle, acWalk, acAttack, acDeath;
 
+    protected ThesisChatController cc;
+
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -59,7 +61,7 @@ public class GamePiece : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-
+        cc = GameObject.Find("Canvas/Log/Chat Controller").GetComponent<ThesisChatController>();
     }
 
     // Update is called once per frame
@@ -189,7 +191,15 @@ public class GamePiece : MonoBehaviour
 
         damage -= Random.Range(minDamageResistRoll, maxDamageResistRoll + 1);
         Debug.Log("Taking damage! My min damage resist roll: " + minDamageResistRoll + ". My max damage resist roll: " + maxDamageResistRoll + " Total damage received: " + damage);
-        
+
+        string output = (
+            this is EnemyController ?
+                ((EnemyController)this).orc.name :
+                gameObject.name) +
+            " takes " + damage + " damage!";
+        ;
+        cc.AddToChatOutput(output);
+
         if (damage < 0)
         {
             damage = 0;

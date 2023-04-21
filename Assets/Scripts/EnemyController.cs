@@ -49,7 +49,10 @@ public class EnemyController : GamePiece
         if (status == Status.ChasingPlayer) return;
 
         if (CheckPlayerVisibility() == true)
+        {
             status = Status.ChasingPlayer;
+            cc.AddToChatOutput(this.orc.name + " spotted the player!");
+        }
     }
 
     public override void TakeTurn()
@@ -103,6 +106,7 @@ public class EnemyController : GamePiece
 
     protected override void Attack(GamePiece newGamePiece)
     {
+        cc.AddToChatOutput(orc.name + " attacks " + newGamePiece.gameObject.name + "!");
         base.Attack(newGamePiece);
     }
 

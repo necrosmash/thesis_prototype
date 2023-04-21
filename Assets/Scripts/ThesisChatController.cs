@@ -35,7 +35,7 @@ public class ThesisChatController : MonoBehaviour {
         // Clear Input Field
         ChatInputField.text = string.Empty;
 
-        outputStrings.Enqueue(newText);
+        outputStrings.Enqueue(newText.Replace("(Clone)", ""));
     }
 
     private void Update()

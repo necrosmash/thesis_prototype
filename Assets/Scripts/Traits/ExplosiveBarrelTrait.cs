@@ -10,6 +10,8 @@ public class ExplosiveBarrelTrait : Trait
     [SerializeField]
     int explosionRadius;
 
+    private ThesisChatController cc;
+
     bool isLit = false;
     int leftUntilExplosion;
 
@@ -24,6 +26,7 @@ public class ExplosiveBarrelTrait : Trait
     protected override void Start()
     {
         base.Start();
+        cc = GameObject.Find("Canvas/Log/Chat Controller").GetComponent<ThesisChatController>();
 
         leftUntilExplosion = fuseTime;
 
@@ -54,6 +57,7 @@ public class ExplosiveBarrelTrait : Trait
 
             if (leftUntilExplosion <= 0)
             {
+                cc.AddToChatOutput("Barrel explodes!");
                 Explode(newGameObject.GetComponent<GamePiece>().currentTile);
                 gameManager.Kill(newGameObject.GetComponent<GamePiece>());
 
@@ -80,6 +84,7 @@ public class ExplosiveBarrelTrait : Trait
             if ((enemy.currentTile - newTile).magnitude <= explosionRadius)
             {
                 gameManager.AddTrait(enemy, "burning");
+                cc.AddToChatOutput(enemy.orc.name + " is engulfed in flames!");
             }
 
         }
@@ -99,7 +104,7 @@ public class ExplosiveBarrelTrait : Trait
         {
 
             gameManager.AddTrait(gameManager.player, "burning");
-
+            cc.AddToChatOutput(gameManager.player.gameObject.name + " is engulfed in flames!");
         }
 
         RemainingDuration = 0;

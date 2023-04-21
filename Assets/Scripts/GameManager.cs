@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using UnityEngine.VFX;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour
     public List<EnemyController> enemies { get; private set; }
     public List<ObstacleController> obstacles { get; private set; }
     List<GamePiece> turnTakers = new List<GamePiece>();
+
+    private ThesisChatController cc;
 
     private int turn;
 
@@ -47,7 +51,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        cc = GameObject.Find("Canvas/Log/Chat Controller").GetComponent<ThesisChatController>();
         TraitManager.Initialise();
 
         enemies = new List<EnemyController>();
@@ -202,11 +206,13 @@ public class GameManager : MonoBehaviour
             turnTakers.Remove((EnemyController) newGamePiece);
             Destroy(((EnemyController) newGamePiece).healthDisplay.gameObject);
             Destroy(newGamePiece.gameObject);
+            cc.AddToChatOutput(((EnemyController) newGamePiece).orc.name + " is defeated!");
             openaiapi.Post("The main character kills " + ((EnemyController)newGamePiece).orc.name + ", who has the following traits: " + newGamePiece.traits.ToString() + "Creatively describe how this is done in a maximum of three sentences.");
         }
 
         else if (newGamePiece is PlayerController)
         {
+            cc.AddToChatOutput(newGamePiece.gameObject.name + " is defeated!");
             GameOverCalled = true;
             SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
         }
