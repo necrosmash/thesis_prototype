@@ -33,12 +33,16 @@ public class GamePiece : MonoBehaviour
 
     public bool skipAttack = false;
 
+    protected AudioManager audioManager;
     public string VoiceType { get; protected set; }
+    public string AttackSound { get; protected set; }
+    public string DamageSound { get; protected set; }
 
 
     protected virtual void Awake(){
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         grid = gameManager.grid;
         tilemap = gameManager.tilemap;
         
@@ -159,6 +163,11 @@ public class GamePiece : MonoBehaviour
         if (damage < 0)
         {
             damage = 0;
+        }
+
+        if (damage > 0 && DamageSound != null)
+        {
+            audioManager.Play(DamageSound);
         }
 
         health -= damage;

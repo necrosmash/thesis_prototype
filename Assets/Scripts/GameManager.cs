@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     MobDisplayController mobDisplayController;
 
+    AudioManager audioManager;
+
     public PlayerController player { get; private set; }
     public List<EnemyController> enemies { get; private set; }
     public List<ObstacleController> obstacles { get; private set; }
@@ -45,8 +47,6 @@ public class GameManager : MonoBehaviour
 
             if (currentPiece is PlayerController || currentPiece is EnemyController)
             {
-                AudioManager audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-
                 audioManager.Play(currentPiece.VoiceType);
             }
 
@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     {
 
         TraitManager.Initialise();
+
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 
         enemies = new List<EnemyController>();
         obstacles = new List<ObstacleController>();

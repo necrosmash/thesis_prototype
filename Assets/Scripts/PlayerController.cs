@@ -46,6 +46,10 @@ public class PlayerController : GamePiece
                 }
         }
 
+        AttackSound = "sword";
+
+        DamageSound = "playerdamage";
+
     }
 
     // Update is called once per frame
@@ -104,6 +108,8 @@ public class PlayerController : GamePiece
     {
 
         base.Attack(newGamePiece);
+
+        audioManager.Play(AttackSound);
 
     }
 

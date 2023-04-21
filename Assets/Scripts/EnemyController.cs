@@ -61,6 +61,9 @@ public class EnemyController : GamePiece
                 }
         }
 
+        DamageSound = "orcdamage";
+
+
     }
 
     // Update is called once per frame
@@ -125,6 +128,8 @@ public class EnemyController : GamePiece
 
         base.Attack(newGamePiece);
 
+        audioManager.Play(AttackSound);
+
     }
 
     public override void Initialise(Vector3Int newStartingTile)
@@ -136,16 +141,19 @@ public class EnemyController : GamePiece
             case BattleInfo.Orc.Weapon.Bow:
                 {
                     attackRadius = 3f;
+                    AttackSound = "bow";
                     break;
                 }
             case BattleInfo.Orc.Weapon.Hammer:
                 {
                     attackRadius = 2f;
+                    AttackSound = "hammer";
                     break;
                 }
             case BattleInfo.Orc.Weapon.Sword:
                 {
                     attackRadius = 1f;
+                    AttackSound = "sword";
                     break;
                 }
             default:

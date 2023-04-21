@@ -20,6 +20,13 @@ public class AudioManager : MonoBehaviour
         soundEffects.Add("voice2", GameObject.Find("VoiceSound2").GetComponent<AudioSource>());
         soundEffects.Add("voiceplayermale", GameObject.Find("VoicePlayerMale").GetComponent<AudioSource>());
         soundEffects.Add("voiceplayerfemale", GameObject.Find("VoicePlayerFemale").GetComponent<AudioSource>());
+        soundEffects.Add("sword", GameObject.Find("SwordSound").GetComponent<AudioSource>());
+        soundEffects.Add("hammer", GameObject.Find("HammerSound").GetComponent<AudioSource>());
+        soundEffects.Add("bow", GameObject.Find("BowSound").GetComponent<AudioSource>());
+        soundEffects.Add("orcdamage", GameObject.Find("DamageOrcSound").GetComponent<AudioSource>());
+        soundEffects.Add("playerdamage", GameObject.Find("DamagePlayerSound").GetComponent<AudioSource>());
+
+
 
 
 
