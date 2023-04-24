@@ -47,4 +47,13 @@ public class AudioManager : MonoBehaviour
         tempAudio.Play();
 
     }
+
+    public void PlayDelayed(string newName, float newDelay)
+    {
+
+        AudioSource tempAudio;
+        soundEffects.TryGetValue(newName, out tempAudio);
+        tempAudio.PlayDelayed(newDelay);
+
+    }
 }

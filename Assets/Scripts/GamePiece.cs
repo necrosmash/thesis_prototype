@@ -167,7 +167,8 @@ public class GamePiece : MonoBehaviour
 
         if (damage > 0 && DamageSound != null)
         {
-            audioManager.Play(DamageSound);
+            // A delay is added so the preceeding attack sound is played first
+            audioManager.PlayDelayed(DamageSound, 0.25f);
         }
 
         health -= damage;
