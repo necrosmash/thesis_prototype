@@ -99,6 +99,7 @@ public class PlayerController : GamePiece
             if (checkMoveLegal(tempNextTile) && moveCount > 0) {
                 moveCount--;
                 movePiece(tempNextTile);
+                audioManager.Play("walk");
             }
         }
 

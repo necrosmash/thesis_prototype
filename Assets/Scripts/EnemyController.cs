@@ -90,8 +90,13 @@ public class EnemyController : GamePiece
                 if (route == null || j >= route.Count)
                     break; // There may always be a chance of this happening despite best efforts.
 
-                if (checkMoveLegal(route[++j])) // only move if the next move is legal
+                if (checkMoveLegal(route[++j]))
+                {
+                    // only move if the next move is legal
                     movePiece(route[j]);
+                    audioManager.Play("walk");
+                }
+
                 else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
 
                 if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)

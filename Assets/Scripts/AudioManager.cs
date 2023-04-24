@@ -25,9 +25,8 @@ public class AudioManager : MonoBehaviour
         soundEffects.Add("bow", GameObject.Find("BowSound").GetComponent<AudioSource>());
         soundEffects.Add("orcdamage", GameObject.Find("DamageOrcSound").GetComponent<AudioSource>());
         soundEffects.Add("playerdamage", GameObject.Find("DamagePlayerSound").GetComponent<AudioSource>());
-
-
-
+        soundEffects.Add("match", GameObject.Find("MatchSound").GetComponent<AudioSource>());
+        soundEffects.Add("walk", GameObject.Find("WalkSound").GetComponent<AudioSource>());
 
 
 

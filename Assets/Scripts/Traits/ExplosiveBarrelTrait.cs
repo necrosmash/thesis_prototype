@@ -66,6 +66,12 @@ public class ExplosiveBarrelTrait : Trait
     public override void OnTakeDamage(GameObject newGameObject)
     {
         base.OnTakeDamage(newGameObject);
+        if (!isLit)
+        {
+            AudioManager audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+
+            audioManager.PlayDelayed("match", 0.25f);
+        }
         isLit = true;
     }
 
