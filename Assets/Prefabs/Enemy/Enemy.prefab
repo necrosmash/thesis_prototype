@@ -51,9 +51,15 @@ MonoBehaviour:
   baseDamage: 10
   minDamageRoll: -10
   maxDamageRoll: 10
+  movementSpeed: 5
   minDamageResistRoll: 0
   maxDamageResistRoll: 0
   skipAttack: 0
+  anim: {fileID: 7946237667407528705}
+  acIdle: {fileID: 7400002, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
+  acWalk: {fileID: 7400000, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
+  acAttack: {fileID: 7400006, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
+  acDeath: {fileID: 7400014, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
   orc:
     name: 
     description: 
@@ -231,6 +237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 4997cdb56d4d3c544a44f54787edb78a, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400002, guid: e91d9f4abbcb83642ab39c2f6116245f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -239,5 +249,10 @@ PrefabInstance:
 --- !u!4 &7946237667397125869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400012, guid: 4997cdb56d4d3c544a44f54787edb78a, type: 3}
+  m_PrefabInstance: {fileID: 7946237667397524577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &7946237667407528705 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 11100000, guid: 4997cdb56d4d3c544a44f54787edb78a, type: 3}
   m_PrefabInstance: {fileID: 7946237667397524577}
   m_PrefabAsset: {fileID: 0}

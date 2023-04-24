@@ -57,6 +57,10 @@ public class PlayerController : GamePiece
     {
         if (MenuCanvas.IsRendered || !isPlayerTurn || OpenAiApi.isPostInProgress) return;
 
+        base.Update();
+
+        if (isMoving) return;
+
         Vector3Int tempNextTile = currentTile;
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -107,7 +111,13 @@ public class PlayerController : GamePiece
 
     protected override void Attack(GamePiece newGamePiece)
     {
-
+        string output = gameObject.name + " attacks " + (
+            newGamePiece is EnemyController ? 
+                ((EnemyController)newGamePiece).orc.name :
+                newGamePiece.gameObject.name) +
+            "!"
+        ;
+        cc.AddToChatOutput(output);
         base.Attack(newGamePiece);
 
         audioManager.Play(AttackSound);

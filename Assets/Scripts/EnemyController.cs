@@ -69,10 +69,15 @@ public class EnemyController : GamePiece
     // Update is called once per frame
     override protected void Update()
     {
+        base.Update();
+
         if (status == Status.ChasingPlayer) return;
 
         if (CheckPlayerVisibility() == true)
+        {
             status = Status.ChasingPlayer;
+            cc.AddToChatOutput(this.orc.name + " spotted the player!");
+        }
     }
 
     public override void TakeTurn()
@@ -87,23 +92,10 @@ public class EnemyController : GamePiece
             int j = 0;
             for (int i = movesPerTurn; i > 0; i--)
             {
-                if (route == null || j >= route.Count)
-                    break; // There may always be a chance of this happening despite best efforts.
-
-                if (checkMoveLegal(route[++j]))
-                {
-                    // only move if the next move is legal
-                    movePiece(route[j]);
-                    audioManager.Play("walk");
-                }
-
-                else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
-
                 if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)
                 {
                     // we have spotted the player but are not currently chasing them
                     route = GetRoute(currentTile, out destination);
-                    j = 0;
                 }
                 else if (currentTile == destination)
                 {
@@ -112,8 +104,21 @@ public class EnemyController : GamePiece
                     else if (status == Status.PatrollingToDest) status = Status.PatrollingFromDest;
 
                     route = GetRoute(currentTile, out destination);
-                    j = 0;
                 }
+
+                if (route == null || j >= route.Count)
+                {
+                    Debug.LogError("Enemy can't follow route");
+                    break; // There may always be a chance of this happening despite best efforts.
+                }
+
+                // only move if the next move is legal
+                if (checkMoveLegal(route[++j]))
+                {
+                    movePiece(route[j]);
+                    audioManager.Play("walk");
+                }
+                else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
             }
 
             if (IsPlayerInAttackDistance())
@@ -130,7 +135,7 @@ public class EnemyController : GamePiece
 
     protected override void Attack(GamePiece newGamePiece)
     {
-
+        cc.AddToChatOutput(orc.name + " attacks " + newGamePiece.gameObject.name + "!");
         base.Attack(newGamePiece);
 
         audioManager.Play(AttackSound);

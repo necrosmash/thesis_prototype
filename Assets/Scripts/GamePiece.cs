@@ -27,12 +27,26 @@ public class GamePiece : MonoBehaviour
     public int minDamageRoll;
     [SerializeField]
     public int maxDamageRoll;
+    [SerializeField]
+    private float movementSpeed;
 
     public int minDamageResistRoll = 0;
     public int maxDamageResistRoll = 0;
 
     public bool skipAttack = false;
 
+    public bool isMoving { get; private set; }
+    private Vector3Int newTile;
+    private Vector3 destination;
+
+    [SerializeField]
+    protected Animation anim;
+    protected bool isPlayingAttackAnim = false, isPlayingDeathAnim = false;
+
+    [SerializeField]
+    private AnimationClip acIdle, acWalk, acAttack, acDeath;
+
+    protected ThesisChatController cc;
     protected AudioManager audioManager;
     public string VoiceType { get; protected set; }
     public string AttackSound { get; protected set; }
@@ -53,13 +67,24 @@ public class GamePiece : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-
+        cc = GameObject.Find("Canvas/Log/Chat Controller").GetComponent<ThesisChatController>();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
+        Animate();
 
+        if (!isMoving) return;
+
+        transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, destination) < 0.001f)
+        {
+            transform.position = destination;
+            currentTile = newTile;
+            isMoving = false;
+        }
     }
 
     public virtual void TakeTurn()
@@ -101,22 +126,35 @@ public class GamePiece : MonoBehaviour
         }
     }
 
-    protected virtual void movePiece(Vector3Int newTile, bool rotate = true){
-
-        if (rotate)
+    protected virtual void movePiece(Vector3Int newTile, bool animate = true)
+    {    
+        if (animate)
         {
-            Vector3Int gridDirection = newTile - currentTile;
-            Vector3Int convertedDirection = new Vector3Int(gridDirection.x, gridDirection.z, gridDirection.y);
-            Quaternion rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
-            transform.rotation = rotation;
-        }
+            isMoving = true;
+            LookAt(newTile);
 
-        transform.position = grid.GetCellCenterWorld(newTile);
-        currentTile = newTile;
+            this.newTile = newTile;
+            destination = grid.GetCellCenterWorld(newTile);
+        }
+        else
+        {
+            transform.position = grid.GetCellCenterWorld(newTile);
+            currentTile = newTile;
+        }
+    }
+
+    private void LookAt(GamePiece gp) => LookAt(gp.currentTile);
+    private void LookAt(Vector3Int tile)
+    {
+        Vector3Int gridDirection = tile - currentTile;
+        Vector3Int convertedDirection = new Vector3Int(gridDirection.x, gridDirection.z, gridDirection.y);
+        transform.rotation = Quaternion.LookRotation(convertedDirection, Vector3.up);
     }
 
     protected virtual void Attack(GamePiece newGamePiece)
     {
+        isPlayingAttackAnim = true;
+        LookAt(newGamePiece);
 
         foreach (Trait trait in traits)
         {
@@ -159,7 +197,15 @@ public class GamePiece : MonoBehaviour
 
         damage -= Random.Range(minDamageResistRoll, maxDamageResistRoll + 1);
         Debug.Log("Taking damage! My min damage resist roll: " + minDamageResistRoll + ". My max damage resist roll: " + maxDamageResistRoll + " Total damage received: " + damage);
-        
+
+        string output = (
+            this is EnemyController ?
+                ((EnemyController)this).orc.name :
+                gameObject.name) +
+            " takes " + damage + " damage!";
+        ;
+        cc.AddToChatOutput(output);
+
         if (damage < 0)
         {
             damage = 0;
@@ -174,7 +220,7 @@ public class GamePiece : MonoBehaviour
         health -= damage;
 
         if (health <= 0)
-            gameManager.Kill(this);
+            isPlayingDeathAnim = true;
     }
 
     protected bool checkMoveLegal(Vector3Int newTile, GamePiece acceptableGamePiece = null)
@@ -188,6 +234,38 @@ public class GamePiece : MonoBehaviour
         return false;
     }
 
+    private void Animate()
+    {
+        if (isPlayingDeathAnim && !anim.IsPlaying(acDeath.name))
+            StartCoroutine(DeathAnimate());
+        if (isPlayingDeathAnim)
+            return;
+
+        if (isPlayingAttackAnim && !anim.IsPlaying(acAttack.name))
+            StartCoroutine(AttackAnimate());
+        if (isPlayingAttackAnim)
+            return;
+
+        if (isMoving && !anim.IsPlaying(acWalk.name))
+            anim.Play(acWalk.name);
+        else if (!isMoving)
+            anim.Play(acIdle.name);
+    }
+
+    private IEnumerator DeathAnimate()
+    {
+        anim.Play(acDeath.name);
+        yield return new WaitForSeconds(acDeath.length);
+        isPlayingDeathAnim = false;
+        gameManager.Kill(this);
+    }
+
+    private IEnumerator AttackAnimate()
+    {
+        anim.Play(acAttack.name);
+        yield return new WaitForSeconds(acAttack.length);
+        isPlayingAttackAnim = false;
+    }
 }
 
 public class BadInitialisationException : System.Exception
