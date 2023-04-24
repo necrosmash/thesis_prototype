@@ -28,6 +28,28 @@ public class PlayerController : GamePiece
         moveCount = 0;
         isPlayerTurn = false;
         hasAttacked = false;
+
+
+        int tempVoiceInt = UnityEngine.Random.Range(0, 2);
+
+        switch (tempVoiceInt)
+        {
+            case 0:
+                {
+                    VoiceType = "voiceplayermale";
+                    break;
+                }
+            case 1:
+                {
+                    VoiceType = "voiceplayerfemale";
+                    break;
+                }
+        }
+
+        AttackSound = "sword";
+
+        DamageSound = "playerdamage";
+
     }
 
     // Update is called once per frame
@@ -77,6 +99,7 @@ public class PlayerController : GamePiece
             if (checkMoveLegal(tempNextTile) && moveCount > 0) {
                 moveCount--;
                 movePiece(tempNextTile);
+                audioManager.Play("walk");
             }
         }
 
@@ -86,6 +109,8 @@ public class PlayerController : GamePiece
     {
 
         base.Attack(newGamePiece);
+
+        audioManager.Play(AttackSound);
 
     }
 

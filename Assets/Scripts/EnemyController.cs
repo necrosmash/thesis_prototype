@@ -39,6 +39,31 @@ public class EnemyController : GamePiece
     {
         base.Start();
         healthDisplay = transform.Find("HealthDisplay").GetComponent<HealthDisplay>();
+
+        int tempVoiceInt = UnityEngine.Random.Range(0, 3);
+
+        switch (tempVoiceInt)
+        {
+            case 0:
+                {
+                    VoiceType = "voice0";
+                    break;
+                }
+            case 1:
+                {
+                    VoiceType = "voice1";
+                    break;
+                }
+            case 2:
+                {
+                    VoiceType = "voice2";
+                    break;
+                }
+        }
+
+        DamageSound = "orcdamage";
+
+
     }
 
     // Update is called once per frame
@@ -65,8 +90,13 @@ public class EnemyController : GamePiece
                 if (route == null || j >= route.Count)
                     break; // There may always be a chance of this happening despite best efforts.
 
-                if (checkMoveLegal(route[++j])) // only move if the next move is legal
+                if (checkMoveLegal(route[++j]))
+                {
+                    // only move if the next move is legal
                     movePiece(route[j]);
+                    audioManager.Play("walk");
+                }
+
                 else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
 
                 if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)
@@ -103,6 +133,8 @@ public class EnemyController : GamePiece
 
         base.Attack(newGamePiece);
 
+        audioManager.Play(AttackSound);
+
     }
 
     public override void Initialise(Vector3Int newStartingTile)
@@ -114,16 +146,19 @@ public class EnemyController : GamePiece
             case BattleInfo.Orc.Weapon.Bow:
                 {
                     attackRadius = 3f;
+                    AttackSound = "bow";
                     break;
                 }
             case BattleInfo.Orc.Weapon.Hammer:
                 {
                     attackRadius = 2f;
+                    AttackSound = "hammer";
                     break;
                 }
             case BattleInfo.Orc.Weapon.Sword:
                 {
                     attackRadius = 1f;
+                    AttackSound = "sword";
                     break;
                 }
             default:
