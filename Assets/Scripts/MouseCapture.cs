@@ -38,8 +38,12 @@ public class mouseCapture : MonoBehaviour
 
             Vector3 mousePos = Input.mousePosition;
             // If the camera is Perspective rather than Orthographic, this needs to be included
-            // I am actually currently a bit confused about what the actual value of mousePos.z is
-            //mousePos.z = Camera.main.transform.position.y;
+            // Yeah, I don't really know what this does, only kinda. Found it on the internet a while back.
+            // Something to do with how geometry and vectors work
+            if (!Camera.main.orthographic)
+            {
+                mousePos.z = Camera.main.transform.position.y;
+            }
 
             Vector3 pos = Camera.main.ScreenToWorldPoint(mousePos);
             Vector3Int posInt = grid.WorldToCell(pos);
