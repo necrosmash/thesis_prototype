@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuseTime: 2
   explosionRadius: 2
+  explosion: {fileID: 1000011797152326, guid: 1d9d7c73f2939f840a54041996d3946d, type: 3}

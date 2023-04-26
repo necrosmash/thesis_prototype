@@ -121,7 +121,7 @@ public class EnemyController : GamePiece
                 else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
             }
 
-            if (IsPlayerInAttackDistance())
+            if (IsPlayerInAttackDistance() && status == Status.ChasingPlayer)
             {
                 Attack(gameManager.player);
             }

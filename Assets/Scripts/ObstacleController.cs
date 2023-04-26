@@ -5,6 +5,11 @@ using UnityEngine;
 public class ObstacleController : GamePiece
 {
     // Currently a stub, but in the future can be used similarly to EnemyController
+
+    public List<GameObject> modelsList;
+
+    bool first = true;
+
     override protected void Awake()
     {
         base.Awake();
@@ -13,11 +18,29 @@ public class ObstacleController : GamePiece
     override protected void Start()
     {
         base.Start();
+
+        if (modelsList.Count == 0) return;
+
+        int randomNumber = Random.Range(0, modelsList.Count);
+
+        modelsList[randomNumber].SetActive(true);
+
+        for (int i = 0; i < modelsList.Count; i++)
+        {
+
+            if (i != randomNumber)
+            {
+                Destroy(modelsList[i].gameObject);
+            }
+
+        }
+
     }
 
     // Update is called once per frame
     override protected void Update()
     {
+
 
     }
 
@@ -36,6 +59,5 @@ public class ObstacleController : GamePiece
     {
         base.TakeDamage(damage);
     }
-
 
 }

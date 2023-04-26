@@ -198,6 +198,13 @@ public class GamePiece : MonoBehaviour
         damage -= Random.Range(minDamageResistRoll, maxDamageResistRoll + 1);
         Debug.Log("Taking damage! My min damage resist roll: " + minDamageResistRoll + ". My max damage resist roll: " + maxDamageResistRoll + " Total damage received: " + damage);
 
+
+        if (damage < 0)
+        {
+            damage = 0;
+        }
+
+        // This should be done AFTER we clamp the damage to 0
         string output = (
             this is EnemyController ?
                 ((EnemyController)this).orc.name :
@@ -205,11 +212,6 @@ public class GamePiece : MonoBehaviour
             " takes " + damage + " damage!";
         ;
         cc.AddToChatOutput(output);
-
-        if (damage < 0)
-        {
-            damage = 0;
-        }
 
         if (damage > 0 && DamageSound != null)
         {
