@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public PlayerController player { get; private set; }
     public List<EnemyController> enemies { get; private set; }
+    private EnemyController enemyAwaitingKill;
+    public static bool isAwaitingKill { get; private set; } = false;
     public List<ObstacleController> obstacles { get; private set; }
     List<GamePiece> turnTakers = new List<GamePiece>();
 
@@ -85,9 +87,6 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Scenes/MenuScene", LoadSceneMode.Additive);
         }
-
-        // for testing
-        DamageKeystroke();
 
         /* -------------------------------------------------------------------------------------------
             The first IF statement needs to be replaced with a proper method to wait for API response
@@ -214,12 +213,9 @@ public class GameManager : MonoBehaviour
 
         if (newGamePiece is EnemyController)
         {
-            enemies.Remove((EnemyController) newGamePiece);
-            turnTakers.Remove((EnemyController) newGamePiece);
-            Destroy(((EnemyController) newGamePiece).healthDisplay.gameObject);
-            Destroy(newGamePiece.gameObject);
-            cc.AddToChatOutput(((EnemyController) newGamePiece).orc.name + " is defeated!");
-            openaiapi.Post("The main character kills " + ((EnemyController)newGamePiece).orc.name + ", who has the following traits: " + newGamePiece.traits.ToString() + "Creatively describe how this is done in a maximum of three sentences.");
+            enemyAwaitingKill = (EnemyController) newGamePiece;
+            cc.AddToChatOutput("How does the elf dispatch this foe?", true);
+            isAwaitingKill = true;
         }
 
         else if (newGamePiece is PlayerController)
@@ -238,10 +234,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // for testing
-    private void DamageKeystroke()
+    public void ProcessEnemyKill(string text)
     {
-        if (MenuCanvas.IsRendered) return;
-        if (Input.GetKeyDown(KeyCode.H)) player.TakeDamage(10);
+        if (!isAwaitingKill) return;
+
+        enemies.Remove(enemyAwaitingKill);
+        turnTakers.Remove(enemyAwaitingKill);
+        Destroy(enemyAwaitingKill.healthDisplay.gameObject);
+        Destroy(enemyAwaitingKill.gameObject);
+        cc.AddToChatOutput(enemyAwaitingKill.orc.name + " is defeated!");
+        openaiapi.Post("The elf kills " + enemyAwaitingKill.orc.name + ", who has the following traits: " + enemyAwaitingKill.traits.ToString() + "Creatively describe how this is done in a maximum of three sentences, but do not violate any policies regarding violence. " + text);
+        isAwaitingKill = false;
     }
 }

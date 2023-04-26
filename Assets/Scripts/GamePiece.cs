@@ -41,7 +41,8 @@ public class GamePiece : MonoBehaviour
 
     [SerializeField]
     protected Animation anim;
-    protected bool isPlayingAttackAnim = false, isPlayingDeathAnim = false;
+    protected bool isPlayingAttackAnim = false;
+    private int deathAnimIdx = 0;
 
     [SerializeField]
     private AnimationClip acIdle, acWalk, acAttack, acDeath;
@@ -220,7 +221,7 @@ public class GamePiece : MonoBehaviour
         health -= damage;
 
         if (health <= 0)
-            isPlayingDeathAnim = true;
+            deathAnimIdx = 1;
     }
 
     protected bool checkMoveLegal(Vector3Int newTile, GamePiece acceptableGamePiece = null)
@@ -236,9 +237,9 @@ public class GamePiece : MonoBehaviour
 
     private void Animate()
     {
-        if (isPlayingDeathAnim && !anim.IsPlaying(acDeath.name))
+        if (deathAnimIdx == 1 && !anim.IsPlaying(acDeath.name))
             StartCoroutine(DeathAnimate());
-        if (isPlayingDeathAnim)
+        if (deathAnimIdx > 0)
             return;
 
         if (isPlayingAttackAnim && !anim.IsPlaying(acAttack.name))
@@ -256,7 +257,7 @@ public class GamePiece : MonoBehaviour
     {
         anim.Play(acDeath.name);
         yield return new WaitForSeconds(acDeath.length);
-        isPlayingDeathAnim = false;
+        deathAnimIdx = 2;
         gameManager.Kill(this);
     }
 
