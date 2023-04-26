@@ -44,7 +44,7 @@ public class MobDisplayController : MonoBehaviour
 
 
             EnemyController tempEnemy = (EnemyController) currentPiece;
-            inputField.text = "<b>Name</b>: " + tempEnemy.orc.name + "\n\n<b>Description</b>: " + tempEnemy.orc.description + "\n\n<b>Weapon</b>: " + tempEnemy.orc.weapon + "\n\n<b>Size</b>: " + tempEnemy.orc.size + "\n\n\t\t<b><color=#0000a0ff>Traits</color></b>:\n\n";
+            inputField.text = "<b>Name</b>: " + tempEnemy.orc.name + (tempEnemy.CurrentStatus == EnemyController.Status.ChasingPlayer ? "\n\n<color=#ff0000ff>SPOTTED THE PLAYER</color>" : "\n\n<color=#00ff00ff>HAS NOT SPOTTED THE PLAYER</color>") + "\n\n<b>Description</b>: " + tempEnemy.orc.description + "\n\n<b>Weapon</b>: " + tempEnemy.orc.weapon + "\n\n<b>Size</b>: " + tempEnemy.orc.size + "\n\n\t\t<b><color=#0000a0ff>Traits</color></b>:\n\n";
 
             string traitsString = "";
 
