@@ -18,8 +18,8 @@ public class ThesisChatController : MonoBehaviour {
     private float DELAY_PER_CHAR;
     private float charCountdown;
 
-    private Queue<string> outputStrings = new Queue<string>();
-    private string currentOutput;
+    private Queue<OutputString> outputStrings = new Queue<OutputString>();
+    private OutputString currentOutput;
     private int charIndex;
 
     private void Start()
@@ -34,7 +34,7 @@ public class ThesisChatController : MonoBehaviour {
 
     void OnDisable()
     {
-        ChatInputField.onSubmit.RemoveListener(AddToChatOutput);
+        ChatInputField.onSubmit.RemoveListener(OnSubmit);
     }
 
     private void OnSubmit(string text)
@@ -43,12 +43,12 @@ public class ThesisChatController : MonoBehaviour {
         gm.ProcessEnemyKill(text);
     }
 
-    public void AddToChatOutput(string newText)
+    public void AddToChatOutput(string newText, bool isItalic = false)
     {
         // Clear Input Field
         ChatInputField.text = string.Empty;
 
-        outputStrings.Enqueue(newText.Replace("(Clone)", ""));
+        outputStrings.Enqueue(new OutputString(newText.Replace("(Clone)", ""), isItalic));
     }
 
     private void Update()
@@ -58,7 +58,7 @@ public class ThesisChatController : MonoBehaviour {
 
         charCountdown -= Time.deltaTime;
 
-        if (string.IsNullOrEmpty(currentOutput) && outputStrings.TryPeek(out _))
+        if (string.IsNullOrEmpty(currentOutput?.ToString()) && outputStrings.TryPeek(out _))
         {
             currentOutput = outputStrings.Dequeue();
             charIndex = 0;
@@ -68,15 +68,16 @@ public class ThesisChatController : MonoBehaviour {
 
         if (charCountdown <= 0)
         {
-            if (charIndex == currentOutput.Length)
+            if (charIndex == currentOutput.ToString().Length)
             {
+                if (currentOutput.isItalic) ChatDisplayOutput.text += "</i>";
                 currentOutput = null;
                 return;
             }
-            else if (charIndex == 0) PrependOutput();
+            else if (charIndex == 0) PrependOutput(currentOutput.isItalic);
 
             charCountdown = DELAY_PER_CHAR;
-            ChatDisplayOutput.text += currentOutput[charIndex++];
+            ChatDisplayOutput.text += currentOutput.ToString()[charIndex++];
             ChatScrollbar.value = 0;
         }
 
@@ -84,16 +85,33 @@ public class ThesisChatController : MonoBehaviour {
         //ChatInputField.ActivateInputField();
     }
 
-    private void PrependOutput()
+    private void PrependOutput(bool isItalic)
     {
         if (ChatDisplayOutput.text != string.Empty)
             ChatDisplayOutput.text += "\n";
 
         var timeNow = System.DateTime.Now;
 
-        string formattedInput = "[<#FFFF80>" + timeNow.Hour.ToString("d2") + ":" + timeNow.Minute.ToString("d2") + ":" + timeNow.Second.ToString("d2") + "</color>] ";
+        string formattedInput = "[<#FFFF80>" + timeNow.Hour.ToString("d2") + ":" + timeNow.Minute.ToString("d2") + ":" + timeNow.Second.ToString("d2") + "</color>] " + (isItalic ? "<i>" : "");
 
         ChatDisplayOutput.text += formattedInput;
+    }
+
+    private class OutputString
+    {
+        private string output;
+        public bool isItalic { get; private set; }
+
+        public OutputString(string output, bool isItalic = false)
+        {
+            this.output = output;
+            this.isItalic = isItalic;
+        }
+
+        public override string ToString()
+        {
+            return output;
+        }
     }
 
 }

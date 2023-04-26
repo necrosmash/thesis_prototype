@@ -214,6 +214,7 @@ public class GameManager : MonoBehaviour
         if (newGamePiece is EnemyController)
         {
             enemyAwaitingKill = (EnemyController) newGamePiece;
+            cc.AddToChatOutput("How does the elf dispatch this foe?", true);
             isAwaitingKill = true;
         }
 
@@ -242,7 +243,7 @@ public class GameManager : MonoBehaviour
         Destroy(enemyAwaitingKill.healthDisplay.gameObject);
         Destroy(enemyAwaitingKill.gameObject);
         cc.AddToChatOutput(enemyAwaitingKill.orc.name + " is defeated!");
-        openaiapi.Post("The elf " + enemyAwaitingKill.orc.name + ", who has the following traits: " + enemyAwaitingKill.traits.ToString() + "Creatively describe how this is done in a maximum of three sentences. " + text);
+        openaiapi.Post("The elf kills " + enemyAwaitingKill.orc.name + ", who has the following traits: " + enemyAwaitingKill.traits.ToString() + "Creatively describe how this is done in a maximum of three sentences, but do not violate any policies regarding violence. " + text);
         isAwaitingKill = false;
     }
 }
