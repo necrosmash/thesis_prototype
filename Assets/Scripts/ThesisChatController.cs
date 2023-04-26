@@ -12,6 +12,8 @@ public class ThesisChatController : MonoBehaviour {
 
     public Scrollbar ChatScrollbar;
 
+    private GameManager gm;
+
     [SerializeField]
     private float DELAY_PER_CHAR;
     private float charCountdown;
@@ -20,14 +22,25 @@ public class ThesisChatController : MonoBehaviour {
     private string currentOutput;
     private int charIndex;
 
+    private void Start()
+    {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     void OnEnable()
     {
-        ChatInputField.onSubmit.AddListener(AddToChatOutput);
+        ChatInputField.onSubmit.AddListener(OnSubmit);
     }
 
     void OnDisable()
     {
         ChatInputField.onSubmit.RemoveListener(AddToChatOutput);
+    }
+
+    private void OnSubmit(string text)
+    {
+        AddToChatOutput(text);
+        gm.ProcessEnemyKill(text);
     }
 
     public void AddToChatOutput(string newText)
@@ -40,6 +53,9 @@ public class ThesisChatController : MonoBehaviour {
 
     private void Update()
     {
+        ChatInputField.gameObject.SetActive(GameManager.isAwaitingKill);
+        ChatInputField.readOnly = MenuCanvas.IsRendered || OpenAiApi.isPostInProgress;
+
         charCountdown -= Time.deltaTime;
 
         if (string.IsNullOrEmpty(currentOutput) && outputStrings.TryPeek(out _))

@@ -608,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -123}
+  m_AnchoredPosition: {x: -2, y: -84}
   m_SizeDelta: {x: 837, y: 490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8247289881723966981
@@ -1553,7 +1553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1062.8, y: 263.4}
+  m_AnchoredPosition: {x: -1062.8, y: 243.4}
   m_SizeDelta: {x: 837, y: 490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4461416036049307853
@@ -1696,7 +1696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &5236728610264426124
@@ -2124,7 +2124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6421989981077015037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2684,3 +2684,4 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   inputField: {fileID: 1597525364884732193}
   mobDisplayWindow: {fileID: 4313761562557729543}
+  scrollRect: {fileID: 5199299280352042034}

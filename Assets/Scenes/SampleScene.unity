@@ -2624,17 +2624,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &427964363 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5199299280352042034, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
-  m_PrefabInstance: {fileID: 809497317}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &674333229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,17 +2735,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 767251915545294908, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
-      propertyPath: scrollRect
-      value: 
-      objectReference: {fileID: 427964363}
-    - target: {fileID: 767251915545294908, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 890999705}
-    - target: {fileID: 3343254450129703202, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 243.4
-      objectReference: {fileID: 0}
     - target: {fileID: 4461416036049307853, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2845,17 +2826,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7025378203736806916, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8247289881723966981, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
       propertyPath: apiClient
       value: 
       objectReference: {fileID: 1744777501}
     - target: {fileID: 8950051270305553930, guid: 19f004adee7fc7b4faba4c133a03417e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
+      value: 0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6,20 +6,17 @@ public class CameraMovement : MonoBehaviour
 {
 
     float speed = 0.03f;
+    private TMPro.TMP_InputField inputField;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        inputField = GameObject.Find("Canvas/Log/Chat Input Field").GetComponent<TMPro.TMP_InputField>();
     }
 
     void LateUpdate(){
+        
+        if (MenuCanvas.IsRendered || inputField.isFocused) return;
 
         Vector3 velocity = new Vector3(0, 0, 0);
 
