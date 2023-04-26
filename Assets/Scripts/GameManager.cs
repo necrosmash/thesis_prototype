@@ -15,7 +15,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
-    public GameObject obstaclePrefab;
+    public GameObject barrelPrefab;
+
+    public GameObject treePrefab;
+    public GameObject rockPrefab;
+
 
     [SerializeField]
     MobDisplayController mobDisplayController;
@@ -33,11 +37,13 @@ public class GameManager : MonoBehaviour
 
     private int turn;
 
-    const int MIN_OBSTACLES = 12;
-    const int MAX_OBSTACLES = 20;
+    const int MIN_OBSTACLES = 40;
+    const int MAX_OBSTACLES = 60;
 
     public const int MAP_SIZE_X = 15;
     public const int MAP_SIZE_Y = 15;
+
+    public float chanceOfBarrel = 30f;
 
     public static bool GameOverCalled { get; private set; }
 
@@ -100,6 +106,8 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < Random.Range(MIN_OBSTACLES, MAX_OBSTACLES + 1); i++)
         {
 
+            float randomNumber = Random.Range(0f, 100f);
+
             Vector3Int startTile = new Vector3Int(0, 0, 0);
             do
             {
@@ -109,12 +117,45 @@ public class GameManager : MonoBehaviour
 
             } while (GetPieceAtTile(startTile) != null);
 
-            ObstacleController tempObstacle = (ObstacleController)createPiece(obstaclePrefab);
-            tempObstacle.Initialise(startTile);
+            ObstacleController tempObstacle;
 
-            AddTrait(tempObstacle, "explosivebarrel");
+            if (randomNumber <= chanceOfBarrel)
+            {
 
-            obstacles.Add(tempObstacle);
+                tempObstacle = (ObstacleController)createPiece(barrelPrefab);
+                tempObstacle.Initialise(startTile);
+
+                AddTrait(tempObstacle, "explosivebarrel");
+                obstacles.Add(tempObstacle);
+
+
+            }
+            else
+            {
+
+
+                randomNumber = Random.Range(0f, 100f);
+
+                if (randomNumber <= 20f)
+                {
+
+                    tempObstacle = (ObstacleController)createPiece(rockPrefab);
+                    tempObstacle.Initialise(startTile);
+
+                } else
+                {
+
+                    tempObstacle = (ObstacleController)createPiece(treePrefab);
+                    tempObstacle.Initialise(startTile);
+
+                }
+
+                obstacles.Add(tempObstacle);
+
+
+
+            }
+
 
         }
 

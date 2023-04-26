@@ -2982,6 +2982,7 @@ MonoBehaviour:
   mobDisplayController: {fileID: 0}
   defaultTile: {fileID: 11400000, guid: 1360f947d0cd50e4fba2b3b45bce1a8a, type: 2}
   selectedTile: {fileID: 11400000, guid: 8d12c7d3497263741a951ca79d907c5d, type: 2}
+  radiusTile: {fileID: 11400000, guid: 0c2438f57b0461448ac604f01c665442, type: 2}
 --- !u!1001 &1744777500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3122,6 +3123,22 @@ PrefabInstance:
       propertyPath: openaiapi
       value: 
       objectReference: {fileID: 1744777501}
+    - target: {fileID: 7752052137033031354, guid: 5412bf83773a5c94f84540ca89e3f1ee, type: 3}
+      propertyPath: rockPrefab
+      value: 
+      objectReference: {fileID: 1723632258167354956, guid: 370e77927f3c8ff469894e940a942656, type: 3}
+    - target: {fileID: 7752052137033031354, guid: 5412bf83773a5c94f84540ca89e3f1ee, type: 3}
+      propertyPath: treePrefab
+      value: 
+      objectReference: {fileID: 1723632258167354956, guid: 4afb88f5c9fcaa94b8f390b9ef3aa50c, type: 3}
+    - target: {fileID: 7752052137033031354, guid: 5412bf83773a5c94f84540ca89e3f1ee, type: 3}
+      propertyPath: barrelPrefab
+      value: 
+      objectReference: {fileID: 1723632258167354956, guid: b9848ed1a0bb4ca4585e2ef57083009b, type: 3}
+    - target: {fileID: 7752052137033031354, guid: 5412bf83773a5c94f84540ca89e3f1ee, type: 3}
+      propertyPath: chanceOfBarrel
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7752052137033031354, guid: 5412bf83773a5c94f84540ca89e3f1ee, type: 3}
       propertyPath: mobDisplayController
       value: 

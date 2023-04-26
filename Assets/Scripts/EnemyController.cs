@@ -16,8 +16,8 @@ public class EnemyController : GamePiece
 
     public HealthDisplay healthDisplay { get; private set; }
 
-    private Status status;
-    private enum Status
+    public Status CurrentStatus { get; private set; }
+    public enum Status
     {
         PatrollingToDest,
         PatrollingFromDest,
@@ -71,11 +71,11 @@ public class EnemyController : GamePiece
     {
         base.Update();
 
-        if (status == Status.ChasingPlayer) return;
+        if (CurrentStatus == Status.ChasingPlayer) return;
 
         if (CheckPlayerVisibility() == true)
         {
-            status = Status.ChasingPlayer;
+            CurrentStatus = Status.ChasingPlayer;
             cc.AddToChatOutput(this.orc.name + " spotted the player!");
         }
     }
@@ -92,7 +92,7 @@ public class EnemyController : GamePiece
             int j = 0;
             for (int i = movesPerTurn; i > 0; i--)
             {
-                if (status == Status.ChasingPlayer && destination != gameManager.player.currentTile)
+                if (CurrentStatus == Status.ChasingPlayer && destination != gameManager.player.currentTile)
                 {
                     // we have spotted the player but are not currently chasing them
                     route = GetRoute(currentTile, out destination);
@@ -100,8 +100,8 @@ public class EnemyController : GamePiece
                 else if (currentTile == destination)
                 {
                     // switch patrol direction
-                    if (status == Status.PatrollingFromDest) status = Status.PatrollingToDest;
-                    else if (status == Status.PatrollingToDest) status = Status.PatrollingFromDest;
+                    if (CurrentStatus == Status.PatrollingFromDest) CurrentStatus = Status.PatrollingToDest;
+                    else if (CurrentStatus == Status.PatrollingToDest) CurrentStatus = Status.PatrollingFromDest;
 
                     route = GetRoute(currentTile, out destination);
                 }
@@ -121,7 +121,7 @@ public class EnemyController : GamePiece
                 else break; // stop attempting to follow the route if we tried moving illegally. Prevents exceptions when chasing the player
             }
 
-            if (IsPlayerInAttackDistance())
+            if (IsPlayerInAttackDistance() && CurrentStatus == Status.ChasingPlayer)
             {
                 Attack(gameManager.player);
             }
@@ -261,7 +261,7 @@ public class EnemyController : GamePiece
 
     private List<Vector3Int> GetRoute(Vector3Int start, out Vector3Int destination)
     {
-        switch (status)
+        switch (CurrentStatus)
         {
             case Status.PatrollingToDest:
                 destination = patrolTile;

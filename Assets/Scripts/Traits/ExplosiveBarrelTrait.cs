@@ -9,6 +9,8 @@ public class ExplosiveBarrelTrait : Trait
     int fuseTime;
     [SerializeField]
     int explosionRadius;
+    [SerializeField]
+    GameObject explosion;
 
     private ThesisChatController cc;
 
@@ -117,6 +119,7 @@ public class ExplosiveBarrelTrait : Trait
 
         audioManager.Play("explosion");
         audioManager.Play("shatter");
+        Instantiate(explosion, this.gameObject.transform.parent.transform.position, Quaternion.identity);
 
         RemainingDuration = 0;
 

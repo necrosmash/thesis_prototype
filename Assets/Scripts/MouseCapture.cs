@@ -20,6 +20,8 @@ public class mouseCapture : MonoBehaviour
     TileBase defaultTile;
     [SerializeField]
     TileBase selectedTile;
+    [SerializeField]
+    TileBase radiusTile;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +35,12 @@ public class mouseCapture : MonoBehaviour
     void Update()
     {
         if (OpenAiApi.isPostInProgress) return;
-        
-       if (Input.GetMouseButtonDown(0)) {
+
+        //if (!(gameManager.GetPieceAtTile(currentTile) is EnemyController))
+        //{
+        //}
+
+        if (Input.GetMouseButtonDown(0)) {
 
             Vector3 mousePos = Input.mousePosition;
             // If the camera is Perspective rather than Orthographic, this needs to be included
@@ -51,19 +57,28 @@ public class mouseCapture : MonoBehaviour
             //Shows the cell reference for the grid
             Debug.Log(posInt);
 
+            // Reset all previous stuff to defaultTile
+            ClearCurrentRange();
+
             if (tilemap.HasTile(posInt))
             {
 
-                if (currentTile != null)
+                // Setting selected tile to selectedTile and if its an enemy, set display the attack radius with radiusTile
+                currentTile = posInt;
+
+                GamePiece tempGamePiece = gameManager.GetPieceAtTile(currentTile);
+
+                if (tempGamePiece is EnemyController)
                 {
-                    Vector3Int oldTile = currentTile;
-                    //tilemap.SetTileFlags(oldTile, TileFlags.None);
-                    tilemap.SetTile(currentTile, defaultTile);
+
+                    int enemyAttackRadius = (int)((EnemyController)tempGamePiece).attackRadius;
+
+                    SetTileRange(currentTile, true, enemyAttackRadius, radiusTile);
+
+                    SetTileRange(currentTile, false, enemyAttackRadius, radiusTile);
 
                 }
 
-                currentTile = posInt;
-                //tilemap.SetTileFlags(currentTile, TileFlags.None);
                 tilemap.SetTile(currentTile, selectedTile);
                 Debug.Log(tilemap.GetTile(currentTile));
 
@@ -75,4 +90,31 @@ public class mouseCapture : MonoBehaviour
 
        }
     }
+
+
+    public void SetTileRange(Vector3Int initialPoint, bool xAxis, int range, TileBase newTile)
+    {
+        for (int i = 0; i <= range * 2; i++)
+        {
+
+            Vector3Int tempTile = xAxis ? new Vector3Int(initialPoint.x - range + i, currentTile.y, currentTile.z) : new Vector3Int(initialPoint.x, currentTile.y - range + i, currentTile.z);
+
+            if (tilemap.HasTile(tempTile))
+            {
+                tilemap.SetTile(tempTile, newTile);
+            }
+
+        }
+    }
+
+    public void ClearCurrentRange()
+    {
+
+        SetTileRange(currentTile, true, 20, defaultTile);
+
+        SetTileRange(currentTile, false, 20, defaultTile);
+
+    }
+
+
 }
