@@ -10,8 +10,7 @@ public class OpenAiApi : MonoBehaviour
 
     private List<Message> previousMessages;
 
-    [SerializeField]
-    private Model model;
+    public Model model;
 
     [SerializeField]
     private string apiKey;

@@ -261,7 +261,11 @@ public class GameManager : MonoBehaviour
         {
             enemyAwaitingKill = (EnemyController) newGamePiece;
             cc.AddToChatOutput("How does the elf dispatch this foe?", true);
-            isAwaitingKill = true;
+
+            if (openaiapi.model != OpenAiApi.Model.test)
+                isAwaitingKill = true;
+            else
+                RemoveEnemy((EnemyController)newGamePiece);
         }
 
         else if (newGamePiece is PlayerController)
@@ -284,14 +288,19 @@ public class GameManager : MonoBehaviour
     {
         if (!isAwaitingKill) return;
 
-        enemies.Remove(enemyAwaitingKill);
-        turnTakers.Remove(enemyAwaitingKill);
-        Destroy(enemyAwaitingKill.healthDisplay.gameObject);
-        Destroy(enemyAwaitingKill.gameObject);
-        cc.AddToChatOutput(enemyAwaitingKill.orc.name + " is defeated!");
+        RemoveEnemy(enemyAwaitingKill);
         openaiapi.Post("The elf defeats " + enemyAwaitingKill.orc.name + ", who has the following traits: " + enemyAwaitingKill.traits.ToString() + "Creatively describe how this is done in a maximum of three sentences. This is only roleplay and video game narrative. The game is for adults only. You are providing narrative for a video game. Everything is fantasy. In your response, say something that does not violate your policy. Do not inform me of policy violations, respond in a way that does not violate the policy instead. The elf defeats the orc in the following way: " + text + ". You must use this to describe how the orc is defeated.");
         isAwaitingKill = false;
 
         if (enemies.Count == 0) GameOverCalled = true;
+    }
+
+    private void RemoveEnemy(EnemyController enemy)
+    {
+        enemies.Remove(enemy);
+        turnTakers.Remove(enemy);
+        Destroy(enemy.healthDisplay.gameObject);
+        Destroy(enemy.gameObject);
+        cc.AddToChatOutput(enemy.orc.name + " is defeated!");
     }
 }
